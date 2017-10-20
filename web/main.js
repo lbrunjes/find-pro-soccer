@@ -65,6 +65,7 @@ var formatTeams = function(data){
 		for(var i = 0; i < markers.length; i++){
 		   map.removeLayer(markers[i]);
 		}
+		markers=[];
 
 
 		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
@@ -137,13 +138,37 @@ var formatTeams = function(data){
 		var icon = L.icon({
 		    iconUrl: team.crest,
 		   iconSize:[64,64],
-		   iconAnchor:[64,32],
-		   popupAnchor: [-3, -76],
+		   iconAnchor:[32,64],
+		  
 		    
-		    
+		    icon
 		});
+		var okay=true;
+		for(var i =0; i < markers.length;i++){
+			if(markers[i]._latlng.lat == team.coords[0] &&
+				markers[i]._latlng.lng == team.coords[1]){
+				console.log(team.name, " moved up slightly");
+				okay = false;
+				break;
+			}
+		}
+
+		if(!okay){
+			icon.options.iconAnchor-= 32;
+			
+			
+		   
+		    
+		    
+		
+	
+
+		}
+		
+
 		markers.push(L.marker(team.coords, {icon:icon}).addTo(map)
 	    .bindPopup(team.name));
+	
 	    
 	}
 	el.appendChild(label);
