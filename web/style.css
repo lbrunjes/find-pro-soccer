@@ -1,0 +1,92 @@
+html, body{
+	background:#222;
+	color:#fff;
+	font:16px sans-serif;
+	padding:0;
+	margin:0;
+}
+header{ 
+	background:#111;
+	padding:1em;
+	border-bottom:1px solid #444;
+	border-top:1px solid #111;
+}
+
+svg{
+	display:;
+}
+path{
+	fill:rgba(255,255,255, .1);
+}
+a{
+	color:#9af;
+}
+img{
+	
+	width:1em;
+}
+label{
+	display:inline-block;
+	width:10em;
+	text-align: right;
+	margin: 0 1ex;
+}
+input, textarea, button{
+	padding:0.5em;
+	border:1px solid #222;
+
+}
+button{
+	background:#9af;
+}
+
+
+.league{
+	margin: 1ex;
+	
+}
+
+.team header{
+	background:#161616;
+	padding: 1ex 1em;
+}
+.team header img, .team header a {
+	width:2em;
+	
+	display:inline-block;
+}
+
+.team header h3{
+	width: 66%;
+    padding: 0 1ex;
+    margin:0;
+    display:inline-block;
+}
+#form{
+	padding:0 1em;
+}
+#display{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding:0 1em;
+	
+}
+#display div{
+
+}
+#teams{
+	width:30%;
+	min-width:325px;
+}
+#result{
+
+}
+#map{
+
+	width: 67%;
+	min-width:325px;
+}
+#svgmap{
+	border:1px solid #000;
+}

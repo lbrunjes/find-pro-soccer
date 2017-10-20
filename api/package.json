@@ -1,0 +1,11 @@
+{
+  "name": "soccer_api",
+  "version": "0.0.1",
+  "description": "An api to runbheind the soccer api app.",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lee Brunjes",
+  "license": "MIT"
+}
