@@ -39,7 +39,12 @@ input, textarea, button{
 button{
 	background:#9af;
 }
+footer{
+	text-align: center;
+	padding:1em;
+	
 
+}
 
 .league{
 	margin: 1ex;

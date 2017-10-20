@@ -386,5 +386,327 @@
 		"website": "https://richmondkickers.com",
 		"league": "USL",
 		"id": "RIC"
+	},
+	
+	"COS": {
+		"name": "Colorado Springs Switchbacks",
+		"stadium": "Weidner Field",
+		"address": ["6303 Barnes Rd", "Colorado Springs, CO 80922"],
+		"coords": [38.895240, -104.711940],
+		"crest": "images/USL/COS.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.switchbacksfc.com/",
+		"league": "USL",
+		"id": "COS"
+	},
+	"LVL": {
+		"name": "Louisville FC",
+		"stadium": "Louisville Slugger Field",
+		"address": ["401 E Main St", "Louisville, KY 40202"],
+		"coords": [38.256852, -85.744013],
+		"crest": "images/USL/LVL.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.louisvillecityfc.com/",
+		"league": "USL",
+		"id": "LVL"
+	},
+	"OCS": {
+		"name": "Orange County Soccer Club",
+		"stadium": "Champion Stadium",
+		"address": [" 700 South Victory Way", "Kissimmee, FL 34747"],
+		"coords": [28.336519, -81.556036],
+		"crest": "images/USL/OCS.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.orangecountysoccer.com/",
+		"league": "USL",
+		"id": "OCS"
+	},
+	"PIT": {
+		"name": "Pittsburgh Riverhounds",
+		"stadium": "Highmark Stadium",
+		"address": ["510 W Station Square Dr","Pittsburgh, PA 15219"],
+		"coords": [40.436105, -80.009656],
+		"crest": "images/USL/PIT.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.riverhounds.com",
+		"league": "USL",
+		"id": "PIT"
+	},
+	
+	"SA": {
+		"name": "San Antonio FC",
+		"stadium": "Toyota Field",
+		"address": ["5106 David Edwards Dr", "San Antonio, TX 78233"],
+		"coords": [29.539108, -98.394600],
+		"crest": "images/USL/SA.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.sanantoniofc.com/",
+		"league": "USL",
+		"id": "SA"
+	},
+	"TAM": {
+		"name": "Tampa Bay Rowdies",
+		"stadium": "Al Lang Stadium",
+		"address": ["230 1st St SE", "St. Petersburg, FL 33701"],
+		"coords": [27.767879, -82.633443],
+		"crest": "images/USL/TAM.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.rowdiessoccer.com/",
+		"league": "USL",
+		"id": "TAM"
+	},
+	"BST": {
+		"name": "www.bethlehemsteelfc.com/",
+		"stadium": "Goodman Stadium",
+		"address": ["150 Goodman Drive","Bethlehem, PA 18015"],
+		"coords": [40.588823, -75.355548],
+		"crest": "images/USL/BST.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://rwww.bethlehemsteelfc.com/",
+		"league": "USL",
+		"id": "BST"
+	},
+	"FCC": {
+		"name": "FC Cincinnati",
+		"stadium": "Nippert Stadium",
+		"address": ["2700 Bearcat Way", "Cincinnati, OH 45221"],
+		"coords": [39.130958, -84.516277],
+		"crest": "images/USL/FCC.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.fccincinnati.com",
+		"league": "USL",
+		"id": "FCC"
+	},
+	
+	"OKC": {
+		"name": "OKC Energy FC",
+		"stadium": "Taft Stadium",
+		"address": ["2501 N May Ave"," Oklahoma City, OK 73107"],
+		"coords": [35.495808, -97.566885],
+		"crest": "images/USL/OKC.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.energyfc.com",
+		"league": "USL",
+		"id": "OKC"
+	},
+	"POR2": {
+		"name": "Portland Timbers 2",
+		"stadium": "Providence Park",
+		"address": ["1844 SW Morrison St", "Portland, OR 97205"],
+		"coords": [45.52185, -122.691794],
+		"crest": "images/USL/POR2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://https://www.timbers.com/t2",
+		"league": "USL",
+		"id": "POR2"
+	},
+	"RMN": {
+		"name": "Real Monarchs",
+		"stadium": "Rio Tinto Stadium",
+		"address": ["9256 State St", "Sandy, UT 84070"],
+		"coords": [40.582544, -111.893576],
+		"crest": "images/USL/RMN.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://https://www.rsl.com/monarchs",
+		"league": "USL",
+		"id": "RMN"
+	},
+	"SEA": {
+		"name": "Seattle Sounders 2",
+		"stadium": "Starfire Sports",
+		"address": ["14800 Starfire Way", "Seattle, WA 98188"],
+		"coords": [47.469481, -122.248796],
+		"crest": "images/USL/SEA2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.soundersfc.com/s2",
+		"league": "USL",
+		"id": "SEA2"
+	},
+	"TOR2": {
+		"name": "TOR2",
+		"stadium": "Ontario Soccer Centre",
+		"address": ["7601 Martin Grove Rd","Woodbridge, ON L4L 9E4, Canada"],
+		"coords": [43.771772, -79.603459],
+		"crest": "images/USL/TOR2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.torontofc.ca/tfcII",
+		"league": "USL",
+		"id": "TOR2"
+	},
+	"CLS": {
+		"name": "Charleston battery",
+		"stadium": "MUSC Health Stadium",
+		"address": ["1990 Daniel Island Dr", "Charleston, SC 29492"],
+		"coords": [32.870624, -79.919920],
+		"crest": "images/USL/CLS.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.charlestonbattery.com/",
+		"league": "USL",
+		"id": "CLS"
+	},
+	"HAR": {
+		"name": "Harrisburg City Islanders",
+		"stadium": "Skyline Sports Complex",
+		"address": ["201 Championship Way","Harrisburg, Pennsylvania 17101"],
+		"coords": [40.257291, -76.891460],
+		"crest": "images/USL/HAR.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://cityislanders.com/",
+		"league": "USL",
+		"id": "HAR"
+	},
+	"NYR2": {
+		"name": "New York Red Bulls 2",
+		"stadium": "Red Bull Arena",
+		"address": ["600 Cape May St", "Harrison, NJ 07029"],
+		"coords": [40.736705, -74.150579],
+		"crest": "images/USL/NYR2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.newyorkredbulls.com/2",
+		"league": "USL",
+		"id": "NYR2"
+	},
+	"OTT": {
+		"name": "OTT",
+		"stadium": "TD Place Stadium",
+		"address": ["1015 Bank St", "Ottawa, ON K1S 3W7, Canada"],
+		"coords": [45.397915, -75.683959],
+		"crest": "images/USL/OTT.png",
+		"colors": ["#f00", "#00f"],
+		"website": "http://www.ottawafuryfc.com/",
+		"league": "USL",
+		"id": "OTT"
+	},
+	"REN": {
+		"name": "Reno 1869 FC",
+		"stadium": "Aces Ballpark",
+		"address": ["250 Evans Ave", "Reno, NV 89501"],
+		"coords": [39.529065, -119.808407],
+		"crest": "images/USL/REN.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.reno1868fc.com",
+		"league": "USL",
+		"id": "REN"
+	},
+	"ROD": {
+		"name": "Rodchester Rhinos",
+		"stadium": "Capelli Sport Stadium",
+		"address": ["460 Oak St", "Rochester, NY 14608"],
+		"coords": [43.162552, -77.629565],
+		"crest": "images/USL/ROD.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://richmondkickers.com",
+		"league": "USL",
+		"id": "ROD"
+	},
+	"SPR": {
+		"name": "Swope Park Rangers",
+		"stadium": "Swope Soccer Village",
+		"address": ["6310 Lewis Road", "Kansas City, MO, 64132"],
+		"coords": [39.012702, -94.521525],
+		"crest": "images/USL/SPR.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.sportingkc.com/rangers",
+		"league": "USL",
+		"id": "SPR"
+	},
+	"TUL": {
+		"name": "Tulsa Roughnecks",
+		"stadium": "ONEOK Field",
+		"address": ["201 N Elgin Ave", "Tulsa, OK 74120"],
+		"coords": [36.159943, -95.988340],
+		"crest": "images/USL/TUL.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.roughnecksfc.com/",
+		"league": "USL",
+		"id": "TUL"
+	},
+	"CLT": {
+		"name": "CLT",
+		"stadium": "Sportsplex at Matthews",
+		"address": ["1505 Tank Town Rd", "Matthews, NC 28105"],
+		"coords": [35.109575, -80.698413],
+		"crest": "images/USL/CLT.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://rwww.charlotteindependence.com/",
+		"league": "USL",
+		"id": "CLT"
+	},
+	"LAG2": {
+		"name": "LA Galaxy 2",
+		"stadium": "StubHub Center",
+		"address": ["18400 S Avalon Blvd", "Carson, CA 90746"],
+		"coords": [33.863986, -118.261143],
+		"crest": "images/USL/LAG2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.lagalaxy.com/2",
+		"league": "USL",
+		"id": "LAG2"
+	},
+	"OCB": {
+		"name": "Orlando City B",
+		"stadium": "Orlando City Stadium",
+		"address": ["655 W Church St", "Orlando, FL 32805"],
+		"coords": [28.540979, -81.389392],
+		"crest": "images/USL/OCB.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.orlandocitysc.com/ocb",
+		"league": "USL",
+		"id": "OCB"
+	},
+	"PHO": {
+		"name": "Phoenix Rising FC",
+		"stadium": "Phoenix Rising FC Soccer Complex",
+		"address": ["751 N McClintock Dr", "Tempe, AZ 85281"],
+		"coords": [33.439933, -111.909031],
+		"crest": "images/USL/PHO.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.phxrisingfc.com/",
+		"league": "USL",
+		"id": "PHO"
+	},
+	"RGV": {
+		"name": "Rio Grande Valley FC",
+		"stadium": "H-E-B Park",
+		"address": ["1616 S Raul Longoria Rd", "Edinburg, TX 78542"],
+		"coords": [26.282154, -98.135089],
+		"crest": "images/USL/RGV.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.rgvfc.com/",
+		"league": "USL",
+		"id": "RGV"
+	},
+	"SAC": {
+		"name": "Sacremento Republic FC",
+		"stadium": "Papa Murphy's Park",
+		"address": ["1600 Exposition Blvd", "Sacramento, CA 95815"],
+		"coords": [38.591580, -121.438143],
+		"crest": "images/USL/SAC.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.sacrepublicfc.com/",
+		"league": "USL",
+		"id": "SAC"
+	},
+	"STL": {
+		"name": "Saint Louis FC",
+		"stadium": "World Wide Technology Soccer Park",
+		"address": ["1 Soccer Park Rd", "Fenton, MO 6302"],
+		"coords": [38.547003, -90.438813],
+		"crest": "images/USL/STL.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.saintlouisfc.com/",
+		"league": "USL",
+		"id": "STL"
+	},
+	"VAN2": {
+		"name": "Vancouver Whitecaps 2",
+		"stadium": "Thunderbird Stadium",
+		"address": ["6288 Stadium Rd, Vancouver, BC V6T 1Z3, Canada"],
+		"coords": [49.254609, -123.245853],
+		"crest": "images/USL/VAN2.png",
+		"colors": ["#f00", "#00f"],
+		"website": "https://www.whitecapsfc.com/wfc2",
+		"league": "USL",
+		"id": "VAN2"
 	}
 }

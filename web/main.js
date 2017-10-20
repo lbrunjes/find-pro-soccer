@@ -5,6 +5,7 @@ Display nearest temas.
 
 
 */
+var api_url = "http://127.0.0.1:9000";
 var ajax = function(url) {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", url, false);
@@ -35,14 +36,19 @@ var lookupzip = function(){
 
 	}
 
-	var pos = JSON.parse(ajax("http://127.0.0.1:9000/zip/"+zip));
+	var pos = JSON.parse(ajax(api_url+"/zip/"+zip));
 	
 	formatTeams(pos);
 
 }
-var lookupmap = function(){
-}
+var lookupcoords= function(lat, lng){
 
+	var pos =JSON.parse(ajax(api_url+"/coords/"+lat+"/"+lng));
+	console.log(pos);
+	formatTeams(pos);
+
+}
+var markers = [];
 //display teams on the teams div
 var formatTeams = function(data){
 	var el = document.getElementById("result");
@@ -56,7 +62,11 @@ var formatTeams = function(data){
 	label =document.createElement("div");
 		
 		//deal with zooming the map to the right places.
-		var markers = []
+		for(var i = 0; i < markers.length; i++){
+		   map.removeLayer(markers[i]);
+		}
+
+
 		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
     
 
@@ -138,6 +148,7 @@ var formatTeams = function(data){
 	}
 	el.appendChild(label);
 
+	//establish a boudnig box for stuff so the suer can see it.
 	var max =[-90,-180];
 	var min = [90,180]
 	for(var i =0; i < markers.length;i++){

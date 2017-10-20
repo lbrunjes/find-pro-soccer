@@ -55,6 +55,15 @@ var rest_api = function(){
 						response.end(JSON.stringify({"zip not found": "Invalid post code, expected /zip/23223 OR /zip/T1G "}));
 					}
 					break;
+					case "coords": //coords/lat/lng
+
+						var teams = api.lookupTeamsByLatLong(api_requested[2],api_requested[3], leagues);
+
+
+						response.writeHead(200,headers);
+						response.end(JSON.stringify({"teams":teams, "input":[api_requested[2],api_requested[3]]}));
+
+					break;
 
 					case "team":
 					var key = api_requested.length>1?api_requested[2] : "xxx";
