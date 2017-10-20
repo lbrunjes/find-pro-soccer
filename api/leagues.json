@@ -1,0 +1,18 @@
+{
+	"MLS":{
+		"pro":true,
+		"website":"",
+		"teams":["ATL","CC","CHI","CO","DCU","FCD","HOU","LAG","MNU","MON","NER","NYC","NYR","OC","PHI","POR","RSL","SEA","SJ","SKC","TOR","VAN"]
+	},
+	
+	"NWSL":{
+		"pro":true,
+		"website":"",
+		"teams":["BOS","FKC","NCC","ORP","SBF","WAS","CRS","HOD","POT","SER"]
+	},
+	"USL":{
+		"pro":true,
+		"website":"",
+		"teams":["RIC"]
+	}
+}

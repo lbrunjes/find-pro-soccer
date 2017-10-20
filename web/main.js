@@ -18,109 +18,33 @@ var ajax = function(url) {
 	};
 //bind events at page load do other good things.
 var startup = function(){
-	var map = document.getElementById("map");
-	map.onmouseup = lookupmap;
-}
-var lookupmap = function(e){
-	//TODO map to lat long
 	
-	// add item to map	
-	var svg= document.getElementById("svgmap");
-	var pt = svg.createSVGPoint(); 
-    pt.x = e.clientX;
-	pt.y = e.clientY;
-    pt =  pt.matrixTransform(svg.getScreenCTM().inverse());
-    console.log(pt.x, pt.y);
-    addcircle(pt.x, pt.y);
-
-	// This does not work
-
-	e.preventDefault();
 }
-var addcircle=function(x,y, style){
-	// var you = document.getElementById("you");
-	// if(you){
-	// 	you.parentElement.removeChild(you);
-	// }
-	// if(!style){
-	// 	style="stroke:#f00"
 
-	// }
-	// var usa= document.getElementById("USA");
-	// var circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
-	// circle.setAttribute("cx",x)
-	// circle.setAttribute("cy",y)
-	// circle.setAttribute("r","5")
-	// circle.setAttribute("style",style);
-	// circle.setAttribute("id","you");
-	// usa.appendChild(circle);
-}
+
+
 var lookupzip = function(){
 	var zip =document.getElementById("zip").value.toUpperCase();
 	//only get major canada post codes
 	if( zip.indexOf(" ") >0){
 		zip = zip.substring(0,zip.indexOf(" "));
 	}
+	if(zip.length < 1){
+		alert("Need your zip, so its not creepy");
+		return;
 
-//	console.log(zip);
+	}
+
 	var pos = JSON.parse(ajax("http://127.0.0.1:9000/zip/"+zip));
 	
-
-	getTeams(pos[0], pos[1]);
-	var pt = latLongtoSvgPoint(pos[0], pos[1]);
-	addcircle(pt.x,pt.y);
-
-	
+	formatTeams(pos);
 
 }
-//do some basic math here 
-var getDist = function(x,y, coords){
-	var _x = Math.abs(x - coords[0]);
-	var _y = Math.abs(y - coords[1]);
-	//console.log(_x, _y,x, y, coords)
-	return _x +_y;
-	return Math.sqrt(Math.pow(_x,2)+Math.pow(_y,2));
-}
-var latLongtoSvgPoint=function(lat,long){
-
-	var r_px = 0.059134619;
- 	var r_py = -0.07778875;
- 	var r_long =16.91056;
- 	var r_lat= -12.85532;
- 	var lat_offset = 0;
- 	var long_offset =0;
- 	var x = lat * r_lat+lat_offset;
- 	var y = long * r_long+long_offset;
-
-	return {"x":x,"y":y};
-}
-
-//evaluate a mouse click to get the closet teams in each league
-var getTeams = function(x,y){
-	//console.log(mouseevent);
-
-
-	var nearest = {};
-
-	for(var lg in leagues){
-		nearest[lg]={"team":"xx", "dist":9999};
-
-		for (var i =0; i < leagues[lg].teams.length;i++){
-			var dist= getDist(x,y, teams[leagues[lg].teams[i]].coords);
-		//	console.log(dist ,leagues[lg].teams[i], teams[leagues[lg].teams[i]].coords);
-			if(dist < nearest[lg].dist){
-				nearest[lg].dist = dist;
-				nearest[lg].team = teams[leagues[lg].teams[i]].id;
-			}
-		}
-	}
-	//console.log(nearest);
-	///at this piint we need to fomrat
-	formatTeams(nearest);
+var lookupmap = function(){
 }
 
 //display teams on the teams div
-var formatTeams = function(closestteams){
+var formatTeams = function(data){
 	var el = document.getElementById("result");
 	while(el.children.length>0){
 		el.removeChild(el.children[0]);
@@ -131,10 +55,15 @@ var formatTeams = function(closestteams){
 
 	label =document.createElement("div");
 		
-	
-	for(var league in closestteams){
+		//deal with zooming the map to the right places.
+		var markers = []
+		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
+    
+
+	for(var league in data.teams){
+
 		
-		var team =teams[closestteams[league].team];
+		var team =data.teams[league].team;
 //		console.log(league, team, closestteams[league]);
 
 		// var lg =document.createElement("div");
@@ -170,7 +99,7 @@ var formatTeams = function(closestteams){
 		tm.appendChild(tm_header);
 
 		var tm_details =document.createElement("p");
-		tm_details.innerText= "About " +Math.ceil(closestteams[league].dist * 69) + " Miles Away";
+		tm_details.innerText= "About " +Math.ceil(data.teams[league].dist * 69) + " Miles Away";
 		tm.appendChild(tm_details);
 		
 		tm_details =document.createElement("a");
@@ -194,11 +123,32 @@ var formatTeams = function(closestteams){
 
 		label.appendChild(tm);
 
-		//add crest to item
-		var locale = latLongtoSvgPoint(team.coords[0], team.coords[1]);
-		console.log(locale);
-		addcircle(locale.x, locale.y, "fill:"+team.colors[0] +"stroke:"+team.colors[1]);
+		//add crest to maps
+		var icon = L.icon({
+		    iconUrl: team.crest,
+		   iconSize:[64,64],
+		   iconAnchor:[64,32],
+		   popupAnchor: [-3, -76],
+		    
+		    
+		});
+		markers.push(L.marker(team.coords, {icon:icon}).addTo(map)
+	    .bindPopup(team.name));
+	    
 	}
 	el.appendChild(label);
+
+	var max =[-90,-180];
+	var min = [90,180]
+	for(var i =0; i < markers.length;i++){
+		min[0] = min[0] < markers[i]._latlng.lat?min[0]: markers[i]._latlng.lat;
+		min[1] = min[1] < markers[i]._latlng.lng?min[1]: markers[i]._latlng.lng;
+		max[0] = max[0] > markers[i]._latlng.lat?max[0]: markers[i]._latlng.lat;
+		max[1] = max[1] > markers[i]._latlng.lng?max[1]: markers[i]._latlng.lng;
+
+	};
+	console.log(min,max);
+	map.fitBounds([min,max]);
+
 }
 

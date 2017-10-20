@@ -11,24 +11,26 @@
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
 <script src="main.js"></script>
-<script src="teams.js"></script>
 
 <script>
-	var leagues = {
-		"MLS":{
-			"pro":true,
-			"teams":["ATL","CC","CHI","CO","DCU","FCD","HOU","LAG","MNU","MON","NER","NYC","NYR","OC","PHI","POR","RSL","SEA","SJ","SKC","TOR","VAN"]		
-		},
-		
-		"NWSL":{
-			"pro":true,
-			"teams":["BOS","FKC","NCC","ORP","SBF","WAS","CRS","HOD","POT","SER"]
-		},
-		"USL":{
-			"pro":true,
-			"teams":["RIC"]//"AUS","COS","LVL","OCS","PIT",,"SA","TAM","BST","FCC","NSH","OKC","POR2","RMN","SEA","TOR2","CLS","HAR","NYR2","OTT","REN","ROD","SPR","TUL","CLT","LAG2","OCB","PHO","RGV","SAC","STL","VAN2"]
-		},
-	};
+	var leagues={
+	"MLS":{
+		"pro":true,
+		"website":"",
+		"teams":["ATL","CC","CHI","CO","DCU","FCD","HOU","LAG","MNU","MON","NER","NYC","NYR","OC","PHI","POR","RSL","SEA","SJ","SKC","TOR","VAN"]
+	},
+	
+	"NWSL":{
+		"pro":true,
+		"website":"",
+		"teams":["BOS","FKC","NCC","ORP","SBF","WAS","CRS","HOD","POT","SER"]
+	},
+	"USL":{
+		"pro":true,
+		"website":"",
+		"teams":["RIC"]
+	}
+}
 	
 	document.addEventListener("DOMContentLoaded", startup);
 	
@@ -59,18 +61,11 @@
 	<footer>
 		<a href="">
 	</footer>
-	<script>var map = L.map('map').setView([51.505, -0.09], 13);
+	<script>var map = L.map('map').setView([40, -95.7129], 3);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-var icon = L.icon({
-    iconUrl: "images/MLS/DCU.svg",
-   iconSize:[32,32],
-   iconAnchor:[32,16]
-});
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();</script>
+</script>
 </body>
 </html>
