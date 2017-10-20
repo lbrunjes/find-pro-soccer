@@ -7,7 +7,7 @@
 		"coords": [33.756, -84.401],
 		"crest": "images/MLS/ATL.svg",
 		"colors": ["#000", "#f00"],
-		"website": "https://atlutd.com",
+		"website": "http://atlutd.com",
 		"league": "MLS",
 		"id": "ATL"
 	},
@@ -19,7 +19,7 @@
 		"coords": [41.764815, -87.806141],
 		"crest": "images/MLS/CHI.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "https://chicago-fire.com",
+		"website": "http://chicago-fire.com",
 		"league": "MLS",
 		"id": "CHI"
 	},
@@ -31,7 +31,7 @@
 		"coords": [39.805399, -104.891984],
 		"crest": "images/MLS/CO.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.coloradorapids.com/",
+		"website": "http://www.coloradorapids.com/",
 		"league": "MLS",
 		"id": "CO"
 	},
@@ -43,7 +43,7 @@
 		"coords": [40.009841, -82.991045],
 		"crest": "images/MLS/CC.svg",
 		"colors": ["#000", "#ff0"],
-		"website": "https://www.columbuscrewsc.com/",
+		"website": "http://www.columbuscrewsc.com/",
 		"league": "MLS",
 		"id": "CC"
 	},
@@ -55,7 +55,7 @@
 		"coords": [38.8689, -77.0129],
 		"crest": "images/MLS/DCU.svg",
 		"colors": ["#000", "#f00"],
-		"website": "https://dcunited.com",
+		"website": "http://dcunited.com",
 		"league": "MLS",
 		"id": "DCU"
 	},
@@ -67,7 +67,7 @@
 		"coords": [38.8689, -77.0129],
 		"crest": "images/MLS/FCD.svg",
 		"colors": ["#fff", "#fa0"],
-		"website": "https://fcdallas.com",
+		"website": "http://fcdallas.com",
 		"league": "MLS",
 		"id": "FCD"
 	},
@@ -79,7 +79,7 @@
 		"coords": [29.751275, -95.353508],
 		"crest": "images/MLS/HOU.svg",
 		"colors": ["#fff", "#fa0"],
-		"website": "https://www.houstondynamo.com/",
+		"website": "http://www.houstondynamo.com/",
 		"league": "MLS",
 		"id": "HOU"
 	},
@@ -91,7 +91,7 @@
 		"coords": [33.863986, -118.261143],
 		"crest": "images/MLS/LAG.svg",
 		"colors": ["#fff", "#00f"],
-		"website": "https://www.lagalaxy.com/",
+		"website": "http://www.lagalaxy.com/",
 		"league": "MLS",
 		"id": "LAG"
 	},
@@ -103,7 +103,7 @@
 		"coords": [44.976525, -93.224986],
 		"crest": "images/MLS/MNU.svg",
 		"colors": ["#fff", "#00f"],
-		"website": "https://www.mnufc.com/",
+		"website": "http://www.mnufc.com/",
 		"league": "MLS",
 		"id": "MNU"
 	},
@@ -115,7 +115,7 @@
 		"coords": [45.563008, -73.552528],
 		"crest": "images/MLS/MON.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.impactmontreal.com",
+		"website": "http://www.impactmontreal.com",
 		"league": "MLS",
 		"id": "MON"
 	},
@@ -127,7 +127,7 @@
 		"coords": [42.090396, -71.263199],
 		"crest": "images/MLS/NER.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.revolutionsoccer.net",
+		"website": "http://www.revolutionsoccer.net",
 		"league": "MLS",
 		"id": "NER"
 	},
@@ -139,7 +139,7 @@
 		"coords": [40.83, -73.925831],
 		"crest": "images/MLS/NYC.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.revolutionsoccer.net",
+		"website": "http://www.revolutionsoccer.net",
 		"league": "MLS",
 		"id": "NYC"
 	},
@@ -151,7 +151,7 @@
 		"coords": [40.736705, -74.150579],
 		"crest": "images/MLS/NYR.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://newyorkredbulls.com",
+		"website": "http://newyorkredbulls.com",
 		"league": "MLS",
 		"id": "NYR"
 	},
@@ -163,7 +163,7 @@
 		"coords": [28.540979, -81.389392],
 		"crest": "images/MLS/OC.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://orlandocitysc.com",
+		"website": "http://orlandocitysc.com",
 		"league": "MLS",
 		"id": "OC"
 	},
@@ -175,7 +175,7 @@
 		"coords": [39.832752, -75.378636],
 		"crest": "images/MLS/PHI.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://orlandocitysc.com",
+		"website": "http://orlandocitysc.com",
 		"league": "MLS",
 		"id": "PHI"
 	},
@@ -187,7 +187,7 @@
 		"coords": [45.52185, -122.691794],
 		"crest": "images/MLS/POR.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.timbers.com/",
+		"website": "http://www.timbers.com/",
 		"league": "MLS",
 		"id": "POR"
 	},
@@ -199,7 +199,7 @@
 		"coords": [40.582544, -111.893576],
 		"crest": "images/MLS/RSL.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.rsl.com/",
+		"website": "http://www.rsl.com/",
 		"league": "MLS",
 		"id": "RSL"
 	},
@@ -211,7 +211,7 @@
 		"coords": [37.21, -121.55],
 		"crest": "images/MLS/SJ.svg",
 		"colors": ["#000", "#f00"],
-		"website": "https://www.sjearthquakes.com/",
+		"website": "http://www.sjearthquakes.com/",
 		"league": "MLS",
 		"id": "SJ"
 	},
@@ -223,7 +223,7 @@
 		"coords": [47.594855, -122.331349],
 		"crest": "images/MLS/SEA.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.soundersfc.com",
+		"website": "http://www.soundersfc.com",
 		"league": "MLS",
 		"id": "SEA"
 	},
@@ -235,7 +235,7 @@
 		"coords": [39.121908, -94.822976],
 		"crest": "images/MLS/SKC.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.soundersfc.com",
+		"website": "http://www.soundersfc.com",
 		"league": "MLS",
 		"id": "SKC"
 	},
@@ -247,7 +247,7 @@
 		"coords": [43.632888, -79.418473],
 		"crest": "images/MLS/TOR.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.torontofc.ca/",
+		"website": "http://www.torontofc.ca/",
 		"league": "MLS",
 		"id": "TOR"
 	},
@@ -259,7 +259,7 @@
 		"coords": [49.276388, -123.112346],
 		"crest": "images/MLS/VAN.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "https://www.whitecapsfc.com/",
+		"website": "http://www.whitecapsfc.com/",
 		"league": "MLS",
 		"id": "VAN"
 	},
@@ -281,7 +281,7 @@
 		"coords": [39.012702, -94.521525],
 		"crest": "images/NWSL/FKC.png",
 		"colors": ["#00f", "#00f"],
-		"website": "https://www.fckansascity.com/",
+		"website": "http://www.fckansascity.com/",
 		"league": "NWSL",
 		"id": "FKC"
 	},
@@ -292,7 +292,7 @@
 		"coords": [35.786483, -78.755051],
 		"crest": "images/NWSL/NCC.PNG",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.northcarolinafc.com",
+		"website": "http://www.northcarolinafc.com",
 		"league": "NWSL",
 		"id": "NCC"
 	},
@@ -304,7 +304,7 @@
 		"coords": [28.540979, -81.389392],
 		"crest": "images/NWSL/ORP.png",
 		"colors": ["#f0F", "#fff"],
-		"website": "https://www.orlandocitysc.com/pride",
+		"website": "http://www.orlandocitysc.com/pride",
 		"league": "NWSL",
 		"id": "ORP"
 	},
@@ -326,7 +326,7 @@
 		"coords": [39.152562, -77.310192],
 		"crest": "images/NWSL/WAS.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.washingtonspirit.com/",
+		"website": "http://www.washingtonspirit.com/",
 		"league": "NWSL",
 		"id": "WAS"
 	},
@@ -337,7 +337,7 @@
 		"coords": [41.764815, -87.806141],
 		"crest": "images/NWSL/CRS.png",
 		"colors": ["#00f", "#00f"],
-		"website": "https://chicagoredstars.com",
+		"website": "http://chicagoredstars.com",
 		"league": "NWSL",
 		"id": "CRS"
 	},
@@ -349,7 +349,7 @@
 		"coords": [29.751275, -95.353508],
 		"crest": "images/NWSL/HOD.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.houstondynamo.com/houstondash",
+		"website": "http://www.houstondynamo.com/houstondash",
 		"league": "NWSL",
 		"id": "HOD"
 	},
@@ -361,7 +361,7 @@
 		"coords": [45.52185, -122.691794],
 		"crest": "images/NWSL/POT.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.timbers.com/thornsfc",
+		"website": "http://www.timbers.com/thornsfc",
 		"league": "NWSL",
 		"id": "POT"
 	},
@@ -372,7 +372,7 @@
 		"coords": [47.622783, -122.349951],
 		"crest": "images/NWSL/SER.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.reignfc.com/",
+		"website": "http://www.reignfc.com/",
 		"league": "NWSL",
 		"id": "SER"
 	},
@@ -383,7 +383,7 @@
 		"coords": [37.550029, -77.487554],
 		"crest": "images/USL/RIC.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://richmondkickers.com",
+		"website": "http://richmondkickers.com",
 		"league": "USL",
 		"id": "RIC"
 	},
@@ -395,7 +395,7 @@
 		"coords": [38.895240, -104.711940],
 		"crest": "images/USL/COS.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.switchbacksfc.com/",
+		"website": "http://www.switchbacksfc.com/",
 		"league": "USL",
 		"id": "COS"
 	},
@@ -406,18 +406,18 @@
 		"coords": [38.256852, -85.744013],
 		"crest": "images/USL/LVL.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.louisvillecityfc.com/",
+		"website": "http://www.louisvillecityfc.com/",
 		"league": "USL",
 		"id": "LVL"
 	},
 	"OCS": {
 		"name": "Orange County Soccer Club",
 		"stadium": "Champion Stadium",
-		"address": [" 700 South Victory Way", "Kissimmee, FL 34747"],
-		"coords": [28.336519, -81.556036],
+		"address": ["8272 Great Park Blvd", "Irvine CA 92618"],
+		"coords": [33.678563, -117.738115],
 		"crest": "images/USL/OCS.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.orangecountysoccer.com/",
+		"website": "http://www.orangecountysoccer.com/",
 		"league": "USL",
 		"id": "OCS"
 	},
@@ -428,7 +428,7 @@
 		"coords": [40.436105, -80.009656],
 		"crest": "images/USL/PIT.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.riverhounds.com",
+		"website": "http://www.riverhounds.com",
 		"league": "USL",
 		"id": "PIT"
 	},
@@ -440,7 +440,7 @@
 		"coords": [29.539108, -98.394600],
 		"crest": "images/USL/SA.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.sanantoniofc.com/",
+		"website": "http://www.sanantoniofc.com/",
 		"league": "USL",
 		"id": "SA"
 	},
@@ -451,7 +451,7 @@
 		"coords": [27.767879, -82.633443],
 		"crest": "images/USL/TAM.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.rowdiessoccer.com/",
+		"website": "http://www.rowdiessoccer.com/",
 		"league": "USL",
 		"id": "TAM"
 	},
@@ -462,7 +462,7 @@
 		"coords": [40.588823, -75.355548],
 		"crest": "images/USL/BST.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://rwww.bethlehemsteelfc.com/",
+		"website": "http://rwww.bethlehemsteelfc.com/",
 		"league": "USL",
 		"id": "BST"
 	},
@@ -473,7 +473,7 @@
 		"coords": [39.130958, -84.516277],
 		"crest": "images/USL/FCC.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.fccincinnati.com",
+		"website": "http://www.fccincinnati.com",
 		"league": "USL",
 		"id": "FCC"
 	},
@@ -485,7 +485,7 @@
 		"coords": [35.495808, -97.566885],
 		"crest": "images/USL/OKC.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.energyfc.com",
+		"website": "http://www.energyfc.com",
 		"league": "USL",
 		"id": "OKC"
 	},
@@ -496,7 +496,7 @@
 		"coords": [45.52185, -122.691794],
 		"crest": "images/USL/POR2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://https://www.timbers.com/t2",
+		"website": "http://http://www.timbers.com/t2",
 		"league": "USL",
 		"id": "POR2"
 	},
@@ -507,7 +507,7 @@
 		"coords": [40.582544, -111.893576],
 		"crest": "images/USL/RMN.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://https://www.rsl.com/monarchs",
+		"website": "http://http://www.rsl.com/monarchs",
 		"league": "USL",
 		"id": "RMN"
 	},
@@ -518,7 +518,7 @@
 		"coords": [47.469481, -122.248796],
 		"crest": "images/USL/SEA2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.soundersfc.com/s2",
+		"website": "http://www.soundersfc.com/s2",
 		"league": "USL",
 		"id": "SEA2"
 	},
@@ -529,7 +529,7 @@
 		"coords": [43.771772, -79.603459],
 		"crest": "images/USL/TOR2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.torontofc.ca/tfcII",
+		"website": "http://www.torontofc.ca/tfcII",
 		"league": "USL",
 		"id": "TOR2"
 	},
@@ -538,9 +538,9 @@
 		"stadium": "MUSC Health Stadium",
 		"address": ["1990 Daniel Island Dr", "Charleston, SC 29492"],
 		"coords": [32.870624, -79.919920],
-		"crest": "images/USL/CLS.png",
+		"crest": "images/USL/CLS.gif",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.charlestonbattery.com/",
+		"website": "http://www.charlestonbattery.com/",
 		"league": "USL",
 		"id": "CLS"
 	},
@@ -551,7 +551,7 @@
 		"coords": [40.257291, -76.891460],
 		"crest": "images/USL/HAR.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://cityislanders.com/",
+		"website": "http://cityislanders.com/",
 		"league": "USL",
 		"id": "HAR"
 	},
@@ -562,12 +562,12 @@
 		"coords": [40.736705, -74.150579],
 		"crest": "images/USL/NYR2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.newyorkredbulls.com/2",
+		"website": "http://www.newyorkredbulls.com/2",
 		"league": "USL",
 		"id": "NYR2"
 	},
 	"OTT": {
-		"name": "OTT",
+		"name": "Ottowa Fury",
 		"stadium": "TD Place Stadium",
 		"address": ["1015 Bank St", "Ottawa, ON K1S 3W7, Canada"],
 		"coords": [45.397915, -75.683959],
@@ -584,7 +584,7 @@
 		"coords": [39.529065, -119.808407],
 		"crest": "images/USL/REN.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.reno1868fc.com",
+		"website": "http://www.reno1868fc.com",
 		"league": "USL",
 		"id": "REN"
 	},
@@ -595,7 +595,7 @@
 		"coords": [43.162552, -77.629565],
 		"crest": "images/USL/ROD.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://richmondkickers.com",
+		"website": "http://richmondkickers.com",
 		"league": "USL",
 		"id": "ROD"
 	},
@@ -606,7 +606,7 @@
 		"coords": [39.012702, -94.521525],
 		"crest": "images/USL/SPR.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.sportingkc.com/rangers",
+		"website": "http://www.sportingkc.com/rangers",
 		"league": "USL",
 		"id": "SPR"
 	},
@@ -617,7 +617,7 @@
 		"coords": [36.159943, -95.988340],
 		"crest": "images/USL/TUL.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.roughnecksfc.com/",
+		"website": "http://www.roughnecksfc.com/",
 		"league": "USL",
 		"id": "TUL"
 	},
@@ -628,7 +628,7 @@
 		"coords": [35.109575, -80.698413],
 		"crest": "images/USL/CLT.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://rwww.charlotteindependence.com/",
+		"website": "http://rwww.charlotteindependence.com/",
 		"league": "USL",
 		"id": "CLT"
 	},
@@ -639,7 +639,7 @@
 		"coords": [33.863986, -118.261143],
 		"crest": "images/USL/LAG2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.lagalaxy.com/2",
+		"website": "http://www.lagalaxy.com/2",
 		"league": "USL",
 		"id": "LAG2"
 	},
@@ -650,7 +650,7 @@
 		"coords": [28.540979, -81.389392],
 		"crest": "images/USL/OCB.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.orlandocitysc.com/ocb",
+		"website": "http://www.orlandocitysc.com/ocb",
 		"league": "USL",
 		"id": "OCB"
 	},
@@ -661,7 +661,7 @@
 		"coords": [33.439933, -111.909031],
 		"crest": "images/USL/PHO.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.phxrisingfc.com/",
+		"website": "http://www.phxrisingfc.com/",
 		"league": "USL",
 		"id": "PHO"
 	},
@@ -672,7 +672,7 @@
 		"coords": [26.282154, -98.135089],
 		"crest": "images/USL/RGV.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.rgvfc.com/",
+		"website": "http://www.rgvfc.com/",
 		"league": "USL",
 		"id": "RGV"
 	},
@@ -683,7 +683,7 @@
 		"coords": [38.591580, -121.438143],
 		"crest": "images/USL/SAC.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.sacrepublicfc.com/",
+		"website": "http://www.sacrepublicfc.com/",
 		"league": "USL",
 		"id": "SAC"
 	},
@@ -694,7 +694,7 @@
 		"coords": [38.547003, -90.438813],
 		"crest": "images/USL/STL.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.saintlouisfc.com/",
+		"website": "http://www.saintlouisfc.com/",
 		"league": "USL",
 		"id": "STL"
 	},
@@ -705,7 +705,7 @@
 		"coords": [49.254609, -123.245853],
 		"crest": "images/USL/VAN2.png",
 		"colors": ["#f00", "#00f"],
-		"website": "https://www.whitecapsfc.com/wfc2",
+		"website": "http://www.whitecapsfc.com/wfc2",
 		"league": "USL",
 		"id": "VAN2"
 	}

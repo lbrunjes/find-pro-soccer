@@ -6,16 +6,23 @@ Display nearest temas.
 
 */
 var api_url = "http://127.0.0.1:9000";
-var ajax = function(url) {
+var ajax = function(url, load) {
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET", url, false);
-		if (xhr.overrideMimeType) {
-			xhr.overrideMimeType("text/plain");
+		xhr.open("GET", url,true);
+		xhr.onload=(e)=>{
+			 if (xhr.readyState === 4) {
+			    if (xhr.status === 200) {
+			    	load(xhr.responseText);
+			    }
+			    else{
+			    	console.log(xhr.responseCode, xhr.responseText);
+			    }
+			}
 		}
+		
+
 		xhr.send(null);
-		// failed request?
-		if (xhr.status !== 200 && xhr.status !== 0) { throw ("XMLHttpRequest failed, status code " + xhr.status); }
-		return xhr.responseText;
+
 	};
 //bind events at page load do other good things.
 var startup = function(){
@@ -36,16 +43,19 @@ var lookupzip = function(){
 
 	}
 
-	var pos = JSON.parse(ajax(api_url+"/zip/"+zip));
+	ajax(api_url+"/zip/"+zip, 
+	function(res){
+		formatTeams(JSON.parse(res));
+	});
 	
-	formatTeams(pos);
-
 }
 var lookupcoords= function(lat, lng){
 
-	var pos =JSON.parse(ajax(api_url+"/coords/"+lat+"/"+lng));
-	console.log(pos);
-	formatTeams(pos);
+
+ajax(api_url+"/coords/"+lat+"/"+lng, 
+	function(res){
+		formatTeams(JSON.parse(res));
+	})
 
 }
 var markers = [];
@@ -139,30 +149,21 @@ var formatTeams = function(data){
 		    iconUrl: team.crest,
 		   iconSize:[64,64],
 		   iconAnchor:[32,64],
-		  
-		    
-		    icon
+
 		});
 		var okay=true;
 		for(var i =0; i < markers.length;i++){
 			if(markers[i]._latlng.lat == team.coords[0] &&
 				markers[i]._latlng.lng == team.coords[1]){
-				console.log(team.name, " moved up slightly");
+		//		console.log(team.name, " moved up slightly");
 				okay = false;
 				break;
 			}
 		}
 
 		if(!okay){
-			icon.options.iconAnchor-= 32;
-			
-			
-		   
-		    
-		    
-		
-	
-
+			icon.options.iconAnchor[1] -= 32 + Math.random() *32;
+			icon.options.iconAnchor[0] -=  Math.random() *32;
 		}
 		
 
@@ -183,8 +184,8 @@ var formatTeams = function(data){
 		max[1] = max[1] > markers[i]._latlng.lng?max[1]: markers[i]._latlng.lng;
 
 	};
-	console.log(min,max);
+//	console.log(min,max);
 	map.fitBounds([min,max]);
 
-}
+};
 

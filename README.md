@@ -1,13 +1,12 @@
 # Soccer In America
-A simple zip/postal code lookup
+A simple zip/postal code/ Map click lookup for us and Canadian soccer teams
 
-#TODO
+## TODO
 * maybe setup data base?
-* start gettting game data for 2018
-* Anti stack for stacked icons
+* fins schedule of game data for 2018
 * support National Teams and competitions
-* remove outlines on all icons
-* set icons square ish
+* remove outlines on NYRB2
+* set icons squareish
 
 
 
