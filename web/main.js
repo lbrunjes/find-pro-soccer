@@ -108,13 +108,15 @@ var formatTeams = function(data){
 		tm_header.appendChild(tm_name);
 		
 		//add logo for league
-		var lg_el =document.createElement("a");
+		var lg_el =document.createElement("span");
 		lg_el.setAttribute("class","league_logo");
 		
 		var lg_img =document.createElement("img");
 		lg_img.setAttribute("class","league_logo");
 		lg_img.setAttribute("src","images/"+league+"/"+league+".svg");
-		lg_el.appendChild(lg_img);
+		
+		lg_el.innerText = league;
+		lg_el.prepend(lg_img);
 		tm_header.appendChild(lg_el);
 
 		tm.appendChild(tm_header);
@@ -138,8 +140,10 @@ var formatTeams = function(data){
 		tm_details.appendChild(tm_stadium_address);
 		tm.appendChild(tm_details);
 
+		tm_details =document.createElement("p");
+		tm_details.innerHTML = "Next home game: 2018/NA/NA";
 
-
+		tm.appendChild(tm_details);
 		
 
 		label.appendChild(tm);
@@ -167,8 +171,9 @@ var formatTeams = function(data){
 		}
 		
 
-		markers.push(L.marker(team.coords, {icon:icon}).addTo(map)
-	    .bindPopup(team.name));
+		markers.push(L.marker(team.coords, {icon:icon,
+			riseOnHover:true}).addTo(map)
+	    .bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
 	
 	    
 	}

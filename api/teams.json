@@ -534,7 +534,7 @@
 		"id": "TOR2"
 	},
 	"CLS": {
-		"name": "Charleston battery",
+		"name": "Charleston Battery",
 		"stadium": "MUSC Health Stadium",
 		"address": ["1990 Daniel Island Dr", "Charleston, SC 29492"],
 		"coords": [32.870624, -79.919920],
@@ -622,7 +622,7 @@
 		"id": "TUL"
 	},
 	"CLT": {
-		"name": "CLT",
+		"name": "Charlotte Independence",
 		"stadium": "Sportsplex at Matthews",
 		"address": ["1505 Tank Town Rd", "Matthews, NC 28105"],
 		"coords": [35.109575, -80.698413],
