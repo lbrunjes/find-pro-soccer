@@ -1,18 +1,18 @@
 {
-	"MLS":{
-		"pro":true,
-		"website":"",
-		"teams":["ATL","CC","CHI","CO","DCU","FCD","HOU","LAG","MNU","MON","NER","NYC","NYR","OC","PHI","POR","RSL","SEA","SJ","SKC","TOR","VAN"]
+	"MLS": {
+		"pro": true,
+		"website": "",
+		"teams": ["ATL", "CC", "CHI", "CO", "DCU", "FCD", "HOU", "LAG", "MNU", "MON", "NER", "NYC", "NYR", "OC", "PHI", "POR", "RSL", "SEA", "SJ", "SKC", "TOR", "VAN"]
 	},
-	
-	"NWSL":{
-		"pro":true,
-		"website":"",
-		"teams":["BOS","FKC","NCC","ORP","SBF","WAS","CRS","HOD","POT","SER"]
+
+	"NWSL": {
+		"pro": true,
+		"website": "",
+		"teams": ["BOS", "FKC", "NCC", "ORP", "SBF", "WAS", "CRS", "HOD", "POT", "SER"]
 	},
-	"USL":{
-		"pro":true,
-		"website":"",
-		"teams":["RIC",,"COS","LVL","OCS","PIT","SA","TAM","BST","FCC","OKC","POR2","RMN","SEA","TOR2","CLS","HAR","NYR2","OTT","REN","ROD","SPR","TUL","CLT","LAG2","OCB","PHO","RGV","SAC","STL","VAN2"]
+	"USL": {
+		"pro": true,
+		"website": "",
+		"teams": ["RIC", "COS", "LVL", "OCS", "PIT", "SA", "TAM", "BST", "FCC", "OKC", "POR2", "RMN", "SEA2", "TOR2", "CLS", "HAR", "NYR2", "OTT", "REN", "ROD", "SPR", "TUL", "CLT", "LAG2", "OCB", "PHO", "RGV", "SAC", "STL", "VAN2"]
 	}
 }
