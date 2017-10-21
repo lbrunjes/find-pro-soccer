@@ -14,5 +14,10 @@
 		"pro": true,
 		"website": "",
 		"teams": ["RIC", "COS", "LVL", "OCS", "PIT", "SA", "TAM", "BST", "FCC", "OKC", "POR2", "RMN", "SEA2", "TOR2", "CLS", "HAR", "NYR2", "OTT", "REN", "ROD", "SPR", "TUL", "CLT", "LAG2", "OCB", "PHO", "RGV", "SAC", "STL", "VAN2", "VGS", "FFC","NSH"]
+	},
+	"NASL": {
+		"pro": true,
+		"website": "",
+		"teams": ["CSMS","EDM","IND","JAX","MIA","NCF","PUR","SFO"]
 	}
 }

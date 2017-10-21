@@ -5,7 +5,7 @@ Display nearest temas.
 
 
 */
-var api_url = "http://brunjes.org:9000";
+var api_url = "http://127.0.0.1:9000";
 var ajax = function(url, load) {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", url,true);

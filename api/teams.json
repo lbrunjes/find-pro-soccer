@@ -741,5 +741,101 @@
 		"website": "http://www.fresnofc.com/",
 		"league": "USL",
 		"id": "FFC"
+	},
+	"JAX": {
+		"name": "Jacksonville Armada FC",
+		"stadium": "Hodges Stadium",
+		"address": ["N Entrance Rd", "Jacksonville, FL 32224"],
+	
+		"coords": [30.275449, -81.511730],
+		"crest": "images/NASL/JAX.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.armadafc.com/",
+		"league": "NASL",
+		"id": "JAX"
+	},
+	"EDM": {
+		"name": "FC Edmonton",
+		"stadium": "Clarke Stadium",
+		"address": ["11000 Stadium Road","Edmonton, Alberta"],
+	
+		"coords": [53.557007, -113.478417],
+		"crest": "images/NASL/EDM.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.fcedmonton.com/",
+		"league": "NASL",
+		"id": "EDM"
+	},
+	"IND": {
+		"name": "Indy Eleven",
+		"stadium": "Carroll Stadium",
+		"address": ["1001 West New York Street", "Indianapolis, IN 46202"],
+	
+		"coords": [39.771007, -86.178202],
+		"crest": "images/NASL/IND.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.indyeleven.com/",
+		"league": "NASL",
+		"id": "IND"
+	},
+	"CSMS": {
+		"name": "New York Cosmos",
+		"stadium": "MCU Park",
+		"address": ["40.574253, -73.983811"],
+	
+		"coords": [40.574253, -73.983811],
+		"crest": "images/NASL/CSMS.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.nycosmos.com/",
+		"league": "NASL",
+		"id": "CSMS"
+	},
+	"PUR": {
+		"name": "Puerto Rico FC",
+		"stadium": "Juan Ramón Loubriel Stadium",
+		"address": ["Calle Estadio", "Bayamón, 00959, Puerto Rico"],
+	
+		"coords": [18.393598, -66.150953],
+		"crest": "images/NASL/PUR.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.puertoricofc.com",
+		"league": "NASL",
+		"id": "PUR"
+	},
+	"SFO": {
+		"name": "San Fancisco Deltas",
+		"stadium": " Kezar Stadium",
+		"address": ["670 Kezar Dr", "San Francisco, CA 94118"],
+	
+		"coords": [37.766774, -122.456476],
+		"crest": "images/NASL/SFO.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.sfdeltas.com/",
+		"league": "NASL",
+		"id": "SFO"
+	},
+	"MIA": {
+		"name": "Miami FC",
+		"stadium": "Riccardo Silva Stadium",
+		"address": ["11310 SW 17th St", "Miami, FL 33199"],
+	
+		"coords": [25.752474, -80.378304],
+		"crest": "images/NASL/MIA.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.miamifc.com/",
+		"league": "NASL",
+		"id": "MIA"
+	},
+	"NCF": {
+		"name": "North Carolina FC",
+		"stadium": "WakeMed Soccer Park",
+		"address": ["201 Soccer Park Dr", "Cary, NC 27511"],
+		"coords": [35.786483, -78.755051],
+		"crest": "images/NASL/NCF.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.northcarolinafc.com/",
+		"league": "NCF",
+		"id": "MIA"
 	}
+	
 }

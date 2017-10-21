@@ -134,11 +134,19 @@ var rest_api = function(){
 		}
 
 		//get manhattan distance less accurate in canada but not a huge issue really
-		this.getDist = function(x,y, coords){
-			var _x = Math.abs(x - coords[0]);
-			var _y = Math.abs(y - coords[1]);
-			//console.log(_x, _y,x, y, coords)
-			return _x +_y;
+		this.getDist = function(_x,_y, target){
+			
+			var radius_earth = 3959; //miles (AMERAICA)
+			var pi_180 = 0.017453292519943295;
+			var x = (_x - target[0]) * pi_180;
+			var y = (_y - target[1]) * pi_180;
+			var tmp = Math.sin(x/2)* Math.sin(x/2) + 
+			Math.cos(_x * pi_180)* Math.cos(_y * pi_180)*
+			Math.sin(y/2) *Math.sin(y/2);
+//im not sure this works
+			return  Math.round(radius_earth * 2 * Math.atan2(Math.sqrt(tmp), Math.sqrt(1-tmp)));
+
+		
 		}
 
 }
