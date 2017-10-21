@@ -3,7 +3,7 @@
 		"name": "Atlanta United United",
 		"stadium": "Mercedes-Benz Stadium",
 		"address": ["1414 Andrew Young International Blvd NW", "Atlanta, GA 30313"],
-		"mapcoods": [],
+	
 		"coords": [33.756, -84.401],
 		"crest": "images/MLS/ATL.svg",
 		"colors": ["#000", "#f00"],
@@ -15,7 +15,7 @@
 		"name": "Chicago Fire",
 		"stadium": "Toyota Park",
 		"address": ["7000 Harlem Ave", "Bridgeview, IL 60455"],
-		"mapcoods": [],
+	
 		"coords": [41.764815, -87.806141],
 		"crest": "images/MLS/CHI.svg",
 		"colors": ["#f00", "#00f"],
@@ -27,7 +27,7 @@
 		"name": "Colorado Rapids",
 		"stadium": "Dick's Sporting Goods Park",
 		"address": ["6000 Victory Way", "Commerce City, CO 80022"],
-		"mapcoods": [],
+	
 		"coords": [39.805399, -104.891984],
 		"crest": "images/MLS/CO.svg",
 		"colors": ["#f00", "#00f"],
@@ -39,7 +39,7 @@
 		"name": "Columbus Crew",
 		"stadium": "Mapfre Stadium",
 		"address": ["One Black & Gold Blvd", "Columbus, OH 43211"],
-		"mapcoods": [],
+	
 		"coords": [40.009841, -82.991045],
 		"crest": "images/MLS/CC.svg",
 		"colors": ["#000", "#ff0"],
@@ -51,7 +51,7 @@
 		"name": "DC United",
 		"stadium": "Audi Field",
 		"address": ["32-60 R St SW", "Washington, DC 20024"],
-		"mapcoods": [],
+	
 		"coords": [38.8689, -77.0129],
 		"crest": "images/MLS/DCU.svg",
 		"colors": ["#000", "#f00"],
@@ -63,8 +63,8 @@
 		"name": "FC Dallas",
 		"stadium": "Toyota Stadium",
 		"address": ["9200 World Cup Way", "Frisco, TX 75033"],
-		"mapcoods": [],
-		"coords": [38.8689, -77.0129],
+	
+		"coords": [33.153525, -96.835515],
 		"crest": "images/MLS/FCD.svg",
 		"colors": ["#fff", "#fa0"],
 		"website": "http://fcdallas.com",
@@ -75,7 +75,7 @@
 		"name": "Houston Dynamo",
 		"stadium": "BBVA Compass Stadium",
 		"address": ["2200 Texas Ave", "Houston, TX 77003"],
-		"mapcoods": [],
+	
 		"coords": [29.751275, -95.353508],
 		"crest": "images/MLS/HOU.svg",
 		"colors": ["#fff", "#fa0"],
@@ -87,7 +87,7 @@
 		"name": "Los Angeles Galaxy",
 		"stadium": "StubHub Center",
 		"address": ["18400 S Avalon Blvd", "Carson, CA 90746"],
-		"mapcoods": [],
+	
 		"coords": [33.863986, -118.261143],
 		"crest": "images/MLS/LAG.svg",
 		"colors": ["#fff", "#00f"],
@@ -99,7 +99,7 @@
 		"name": "Minnesota United",
 		"stadium": "TCF Bank Stadium",
 		"address": ["420 SE 23rd Ave", "Minneapolis, MN 55455"],
-		"mapcoods": [],
+	
 		"coords": [44.976525, -93.224986],
 		"crest": "images/MLS/MNU.svg",
 		"colors": ["#fff", "#00f"],
@@ -111,7 +111,7 @@
 		"name": "Montreal Impact",
 		"stadium": "Saputo Stadium",
 		"address": ["4750 Sherbrooke East Street", "MontrÃ©al, QC H1V 3S8, Canada"],
-		"mapcoods": [],
+	
 		"coords": [45.563008, -73.552528],
 		"crest": "images/MLS/MON.svg",
 		"colors": ["#f00", "#fff"],
@@ -123,7 +123,7 @@
 		"name": "New England Revolution",
 		"stadium": "Gillette Stadium",
 		"address": ["1 Patriot Pl", "Foxborough, MA 02035"],
-		"mapcoods": [],
+	
 		"coords": [42.090396, -71.263199],
 		"crest": "images/MLS/NER.svg",
 		"colors": ["#f00", "#fff"],
@@ -135,7 +135,7 @@
 		"name": "New York City FC",
 		"stadium": "Yankee Stadium",
 		"address": ["1 E 161st St", "Bronx, NY 10451"],
-		"mapcoods": [],
+	
 		"coords": [40.83, -73.925831],
 		"crest": "images/MLS/NYC.svg",
 		"colors": ["#f00", "#fff"],
@@ -147,7 +147,7 @@
 		"name": "New York Red Bulls",
 		"stadium": "Red Bull Arena",
 		"address": ["600 Cape May St", "Harrison, NJ 07029"],
-		"mapcoods": [],
+	
 		"coords": [40.736705, -74.150579],
 		"crest": "images/MLS/NYR.svg",
 		"colors": ["#f00", "#fff"],
@@ -159,7 +159,7 @@
 		"name": "Orlando City SC",
 		"stadium": "Orlando City Stadium",
 		"address": ["655 W Church St", "Orlando, FL 32805"],
-		"mapcoods": [],
+	
 		"coords": [28.540979, -81.389392],
 		"crest": "images/MLS/OC.svg",
 		"colors": ["#f00", "#fff"],
@@ -171,7 +171,7 @@
 		"name": "Philadelphia Union",
 		"stadium": "Talen Energy Stadium",
 		"address": ["1 Stadium Dr", "Chester, PA 19013"],
-		"mapcoods": [],
+	
 		"coords": [39.832752, -75.378636],
 		"crest": "images/MLS/PHI.svg",
 		"colors": ["#f00", "#fff"],
@@ -183,7 +183,7 @@
 		"name": "Portland Timbers",
 		"stadium": "Providence Park",
 		"address": ["1844 SW Morrison St", "Portland, OR 97205"],
-		"mapcoods": [],
+	
 		"coords": [45.52185, -122.691794],
 		"crest": "images/MLS/POR.svg",
 		"colors": ["#f00", "#fff"],
@@ -195,7 +195,7 @@
 		"name": "Real Salt Lake",
 		"stadium": "Rio Tinto Stadium",
 		"address": ["9256 State St", "Sandy, UT 84070"],
-		"mapcoods": [],
+	
 		"coords": [40.582544, -111.893576],
 		"crest": "images/MLS/RSL.svg",
 		"colors": ["#f00", "#fff"],
@@ -207,7 +207,7 @@
 		"name": "San Jose Earthquakes",
 		"stadium": "Avaya Stadium",
 		"address": ["1123 Coleman Avenue", "San Jose, California, 95110"],
-		"mapcoods": [],
+	
 		"coords": [37.21, -121.55],
 		"crest": "images/MLS/SJ.svg",
 		"colors": ["#000", "#f00"],
@@ -219,7 +219,7 @@
 		"name": "Seattle Sounders",
 		"stadium": "CenturyLink Field",
 		"address": ["800 Occidental Ave S", "Seattle, WA 98134"],
-		"mapcoods": [],
+	
 		"coords": [47.594855, -122.331349],
 		"crest": "images/MLS/SEA.svg",
 		"colors": ["#f00", "#fff"],
@@ -231,7 +231,7 @@
 		"name": "Sporting Kansas City",
 		"stadium": "Children's Mercy Park",
 		"address": ["1 Sporting Way", "Kansas City, KS 66111"],
-		"mapcoods": [],
+	
 		"coords": [39.121908, -94.822976],
 		"crest": "images/MLS/SKC.svg",
 		"colors": ["#f00", "#fff"],
@@ -243,7 +243,7 @@
 		"name": "Toronto FC",
 		"stadium": "BMO Field",
 		"address": ["170 Princes' Blvd", "Toronto, ON M6K 3C3, Canada"],
-		"mapcoods": [],
+	
 		"coords": [43.632888, -79.418473],
 		"crest": "images/MLS/TOR.svg",
 		"colors": ["#f00", "#fff"],
@@ -255,7 +255,7 @@
 		"name": "Vancouver Whitecaps",
 		"stadium": "CenturyLink Field",
 		"address": ["777 Pacific Blvd", "Vancouver, BC V6B 4Y8, Canada"],
-		"mapcoods": [],
+	
 		"coords": [49.276388, -123.112346],
 		"crest": "images/MLS/VAN.svg",
 		"colors": ["#f00", "#fff"],
@@ -268,7 +268,7 @@
 		"stadium": "Jordan Field",
 		"address": ["65 North Harvard Avenue", "Boston, MA 02134"],
 		"coords": [42.367739, -71.129926],
-		"crest": "images/NWSL/BOS.png",
+		"crest": "images/NWSL/BOS.svg",
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.bostonbreakerssoccer.com",
 		"league": "NWSL",
@@ -300,7 +300,7 @@
 		"name": "Orlando Pride",
 		"stadium": "Orlando City Stadium",
 		"address": ["655 W Church St", "Orlando, FL 32805"],
-		"mapcoods": [],
+	
 		"coords": [28.540979, -81.389392],
 		"crest": "images/NWSL/ORP.png",
 		"colors": ["#f0F", "#fff"],
@@ -313,7 +313,7 @@
 		"stadium": "Yurcak Field",
 		"address": ["83 Fitch Rd", "Piscataway Township, NJ 08854"],
 		"coords": [40.51829, -74.463932],
-		"crest": "images/NWSL/SBF.png",
+		"crest": "images/NWSL/SBF.svg",
 		"colors": ["#f00", "#00f"],
 		"website": "www.skybluefc.com/",
 		"league": "NWSL",
@@ -345,7 +345,7 @@
 		"name": "Houston Dash",
 		"stadium": "BBVA Compass Stadium",
 		"address": ["2200 Texas Ave", "Houston, TX 77003"],
-		"mapcoods": [],
+	
 		"coords": [29.751275, -95.353508],
 		"crest": "images/NWSL/HOD.svg",
 		"colors": ["#f00", "#00f"],
@@ -357,7 +357,7 @@
 		"name": "Portland Thorns",
 		"stadium": "Providence Park",
 		"address": ["1844 SW Morrison St", "Portland, OR 97205"],
-		"mapcoods": [],
+	
 		"coords": [45.52185, -122.691794],
 		"crest": "images/NWSL/POT.svg",
 		"colors": ["#f00", "#00f"],
@@ -370,7 +370,7 @@
 		"stadium": "Memorial Stadium",
 		"address": ["401 5th Ave N", "Seattle, WA 98109"],
 		"coords": [47.622783, -122.349951],
-		"crest": "images/NWSL/SER.png",
+		"crest": "images/NWSL/SER.svg",
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.reignfc.com/",
 		"league": "NWSL",
@@ -708,5 +708,38 @@
 		"website": "http://www.whitecapsfc.com/wfc2",
 		"league": "USL",
 		"id": "VAN2"
+	},
+	"NSH": {
+		"name": "Nashvile SC (2018)",
+		"stadium": "First Tennessee Park",
+		"address": ["19 Jr Gilliam Way", "Nashville, TN 37219"],
+		"coords": [36.172857, -86.785072],
+		"crest": "images/USL/NSH.png",
+		"colors": ["#f00", "#00f"],
+		"website": "http://www.nashvillesc.com/",
+		"league": "USL",
+		"id": "NSH"
+	},
+	"VGS": {
+		"name": "Las Vegas Lights (2018)",
+		"stadium": "Thunderbird Stadium",
+		"address": ["850 N Las Vegas Blvd", "Las Vegas, NV 89101"],
+		"coords": [36.179926, -115.129383],
+		"crest": "images/USL/USL.png",
+		"colors": ["#f00", "#00f"],
+		"website": "http://www.lasvegaslightsfc.com/",
+		"league": "USL",
+		"id": "VGS"
+	},
+	"FFC": {
+		"name": "Fresno FC(2018)",
+		"stadium": "Chukchansi Park",
+		"address": ["1800 Tulare St", "Fresno, CA 93721"],
+		"coords": [36.731890, -119.789391],
+		"crest": "images/USL/FFC.png",
+		"colors": ["#f00", "#00f"],
+		"website": "http://www.fresnofc.com/",
+		"league": "USL",
+		"id": "FFC"
 	}
 }

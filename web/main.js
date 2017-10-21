@@ -5,7 +5,7 @@ Display nearest temas.
 
 
 */
-var api_url = "http://127.0.0.1:9000";
+var api_url = "http://brunjes.org:9000";
 var ajax = function(url, load) {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", url,true);
@@ -59,6 +59,18 @@ ajax(api_url+"/coords/"+lat+"/"+lng,
 
 }
 var markers = [];
+var approxDist = function(input, target){
+	var radius_earth = 3959; //miles (AMERAICA)
+	var pi_180 = 0.017453292519943295;
+	var x = (input[0] - target[0]) * pi_180;
+	var y = (input[1] - target[1]) * pi_180;
+	var tmp = Math.sin(x/2)* Math.sin(x/2) + 
+	Math.cos(input[0] * pi_180)* Math.cos(target[0] * pi_180)*
+	Math.sin(y/2) *Math.sin(y/2);
+
+	return  Math.round(radius_earth * 2 * Math.atan2(Math.sqrt(tmp), Math.sqrt(1-tmp)));
+
+}
 //display teams on the teams div
 var formatTeams = function(data){
 	var el = document.getElementById("result");
@@ -66,7 +78,10 @@ var formatTeams = function(data){
 		el.removeChild(el.children[0]);
 	}
 	var label =document.createElement("h3");
-		label.innerText="Nearest Teams";
+		label.innerText="Nearest Teams";//
+		//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
+
+		
 		el.appendChild(label);
 
 	label =document.createElement("div");
@@ -121,23 +136,22 @@ var formatTeams = function(data){
 
 		tm.appendChild(tm_header);
 
-		var tm_details =document.createElement("p");
-		tm_details.innerText= "About " +Math.ceil(data.teams[league].dist * 69) + " Miles Away";
-		tm.appendChild(tm_details);
 		
-		tm_details =document.createElement("a");
+		
+		var tm_details =document.createElement("a");
 		tm_details.setAttribute("href",team.website);
 		tm_details.innerText = team.website;
 		tm.appendChild(tm_details);
 
 		tm_details =document.createElement("p");
-		tm_details.innerHTML = team.stadium;
+		tm_details.innerHTML = team.stadium +" (About " + approxDist(data.input, team.coords) + " Miles  Away)";
 		var tm_stadium_address =document.createElement("br");
 		tm_details.appendChild(tm_stadium_address);
 		tm_stadium_address =document.createElement("a");
 		tm_stadium_address.setAttribute("href","https://www.google.com/maps/dir//"+team.address);
 		tm_stadium_address.innerHTML = team.address;
 		tm_details.appendChild(tm_stadium_address);
+		
 		tm.appendChild(tm_details);
 
 		tm_details =document.createElement("p");
