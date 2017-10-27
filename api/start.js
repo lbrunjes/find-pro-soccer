@@ -1,3 +1,4 @@
+ #!/usr/bin/env nodejs
 /*
 Startup for soccer api
 

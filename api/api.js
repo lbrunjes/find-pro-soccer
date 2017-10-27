@@ -143,7 +143,7 @@ var rest_api = function(){
 			var tmp = Math.sin(x/2)* Math.sin(x/2) + 
 			Math.cos(_x * pi_180)* Math.cos(_y * pi_180)*
 			Math.sin(y/2) *Math.sin(y/2);
-//im not sure this works
+
 			return  Math.round(radius_earth * 2 * Math.atan2(Math.sqrt(tmp), Math.sqrt(1-tmp)));
 
 		
