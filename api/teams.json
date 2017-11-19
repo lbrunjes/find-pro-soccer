@@ -11,6 +11,7 @@
 		"league": "MLS",
 		"id": "ATL"
 	},
+	
 	"CHI": {
 		"name": "Chicago Fire",
 		"stadium": "Toyota Park",
@@ -387,7 +388,18 @@
 		"league": "USL",
 		"id": "RIC"
 	},
+	"ATL2": {
+		"name": "Atlanta United United 2",
+		"stadium": "Coolray Field",
+		"address": ["1414 Andrew Young International Blvd NW", "Atlanta, GA 30313"],
 	
+		"coords": [34.040302, -83.991828],
+		"crest": "images/USL/ATL2.svg",
+		"colors": ["#000", "#f00"],
+		"website": "http://atlutd.com",
+		"league": "USL",
+		"id": "ATL2"
+	},
 	"COS": {
 		"name": "Colorado Springs Switchbacks",
 		"stadium": "Weidner Field",
