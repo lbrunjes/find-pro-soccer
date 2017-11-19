@@ -1,4 +1,4 @@
- #!/usr/bin/env nodejs
+//#!/usr/bin/env nodejs
 /*
 Startup for soccer api
 
@@ -14,8 +14,8 @@ const api = require("./api.js");
 global.settings={
 	port:9000,
 	use_https:false,
-	https_priv_key:"../pki/",
-	https_cert:"../pki/"
+	https_priv_key:"../pki/privkey.pem",
+	https_cert:"../pki/fullchain.pem"
 }
 
 if(process.argv.length > 2){

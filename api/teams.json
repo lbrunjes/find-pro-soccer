@@ -544,16 +544,16 @@
 		"league": "USL",
 		"id": "CLS"
 	},
-	"HAR": {
-		"name": "Harrisburg City Islanders",
+	"PFC": {
+		"name": "Penn FC",
 		"stadium": "Skyline Sports Complex",
 		"address": ["201 Championship Way","Harrisburg, Pennsylvania 17101"],
 		"coords": [40.257291, -76.891460],
-		"crest": "images/USL/HAR.png",
+		"crest": "images/USL/PFC.png",
 		"colors": ["#f00", "#00f"],
-		"website": "http://cityislanders.com/",
+		"website": "http://pennfc.com/",
 		"league": "USL",
-		"id": "HAR"
+		"id": "PFC"
 	},
 	"NYR2": {
 		"name": "New York Red Bulls 2",
@@ -834,8 +834,8 @@
 		"crest": "images/NASL/NCF.png",
 		"colors": ["#000", "#f00"],
 		"website": "http://www.northcarolinafc.com/",
-		"league": "NCF",
-		"id": "MIA"
+		"league": "USL",
+		"id": "NCF"
 	}
 	
 }

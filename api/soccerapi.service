@@ -2,10 +2,10 @@
 Description=Soccer teams locations api
 After=network.target
 [Service]
-ExecStart=/var/www/soccerapi/start.js
+ExecStart=/usr/bin/nodejs /var/www/soccerapi/start.js /var/www/soccerapi/production.json
 Restart=always
-User=nobody
-Group=nobody
+User=soccer
+Group=soccer
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
 WorkingDirectory=/var/www/soccerapi
