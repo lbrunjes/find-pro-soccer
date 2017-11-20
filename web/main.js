@@ -5,29 +5,49 @@ Display nearest temas.
 
 
 */
-//var api_url = "https://brunjes.org:9000";
-var api_url = "http://127.0.0.1:9000";
+var api_url = "https://brunjes.org:9000";
+
 var ajax = function(url, load) {
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", url,true);
-		xhr.onload=(e)=>{
-			 if (xhr.readyState === 4) {
-			    if (xhr.status === 200) {
-			    	load(xhr.responseText);
-			    }
-			    else{
-			    	console.log(xhr.responseCode, xhr.responseText);
-			    }
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", url,true);
+	xhr.onload=(e)=>{
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200) {
+				load(xhr.responseText);
+			}
+			else{
+				console.log(xhr.responseCode, xhr.responseText);
 			}
 		}
-		
+	}
 
-		xhr.send(null);
 
-	};
+	xhr.send(null);
+
+};
+var getQS = function(){
+
+	var querystring = {};
+	var qs= location.search.substring(1).split("&");
+	for(var i = 0 ; i <qs.length;i++){
+		var item = qs[i].split("=");
+		querystring[item[0]]= item.length>1?item[1]:'';
+	}
+	return querystring;
+}
 //bind events at page load do other good things.
 var startup = function(){
-	
+	if(location.search.indexOf("league=")>=0){
+		lookupleague(getQS()["league"]);
+	}
+	else if(location.search.indexOf("zip=")>=0){
+		lookupzip(getQS()["zip"])
+	}
+	else if(location.search.indexOf("lat=")>=0 && location.search.indexOf("lng=")>=0){
+		var qs = getQS();
+		lookupcoords(qs["lat"],qs["lng"]);
+	}
+
 }
 
 
@@ -45,25 +65,30 @@ var lookupzip = function(){
 	}
 
 	ajax(api_url+"/zip/"+zip, 
-	function(res){
-		formatTeams(JSON.parse(res));
-	});
+		function(res){
+			history.replaceState({}, "Data for zip:"+zip, location.pathname+"?zip="+zip);
+			formatTeams(JSON.parse(res));
+		});
 	
 }
- var lookupleague=function(leaguename){
-ajax(api_url+"/league/"+leaguename, 
-	function(res){
-		formatLeague(JSON.parse(res));
-	})
+var lookupleague=function(leaguename){
+	ajax(api_url+"/league/"+leaguename, 
+		function(res){
+			history.replaceState({}, "Data for league:"+leaguename, location.pathname+"?league="+leaguename);
 
- }
+			formatLeague(JSON.parse(res));
+		})
+
+}
 var lookupcoords= function(lat, lng){
 
 
-ajax(api_url+"/coords/"+lat+"/"+lng, 
-	function(res){
-		formatTeams(JSON.parse(res));
-	})
+	ajax(api_url+"/coords/"+lat+"/"+lng, 
+		function(res){
+			history.replaceState({}, "Looking up that location ("+lat+","+lng+")", location.pathname+"?lat="+lat+"&lng="+lng);
+
+			formatTeams(JSON.parse(res));
+		})
 
 }
 var markers = [];
@@ -93,22 +118,22 @@ var formatTeams = function(data){
 		
 		el.appendChild(label);
 
-	label =document.createElement("div");
+		label =document.createElement("div");
 		
 		//deal with zooming the map to the right places.
 		for(var i = 0; i < markers.length; i++){
-		   map.removeLayer(markers[i]);
+			map.removeLayer(markers[i]);
 		}
 		markers=[];
 
 
 		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
-    
 
-	for(var league in data.teams){
 
-		
-		var team =data.teams[league].team;
+		for(var league in data.teams){
+
+
+			var team =data.teams[league].team;
 //		console.log(league, team, closestteams[league]);
 
 		// var lg =document.createElement("div");
@@ -174,9 +199,9 @@ var formatTeams = function(data){
 
 		//add crest to maps
 		var icon = L.icon({
-		    iconUrl: team.crest,
-		   iconSize:[64,64],
-		   iconAnchor:[32,64],
+			iconUrl: team.crest,
+			iconSize:[64,64],
+			iconAnchor:[32,64],
 
 		});
 		var okay=true;
@@ -184,24 +209,24 @@ var formatTeams = function(data){
 			if(markers[i]._latlng.lat == team.coords[0] &&
 				markers[i]._latlng.lng == team.coords[1]){
 		//		console.log(team.name, " moved up slightly");
-				okay = false;
-				break;
-			}
-		}
+	okay = false;
+	break;
+}
+}
 
-		if(!okay){
-			icon.options.iconAnchor[1] -= 32 + Math.random() *32;
-			icon.options.iconAnchor[0] -=  Math.random() *32;
-		}
-		
+if(!okay){
+	icon.options.iconAnchor[1] -= 32 + Math.random() *32;
+	icon.options.iconAnchor[0] -=  Math.random() *32;
+}
 
-		markers.push(L.marker(team.coords, {icon:icon,
-			riseOnHover:true}).addTo(map)
-	    .bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
-	
-	    
-	}
-	el.appendChild(label);
+
+markers.push(L.marker(team.coords, {icon:icon,
+	riseOnHover:true}).addTo(map)
+.bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
+
+
+}
+el.appendChild(label);
 
 	//establish a boudnig box for stuff so the suer can see it.
 	var max =[-90,-180];
@@ -214,7 +239,7 @@ var formatTeams = function(data){
 
 	};
 //	console.log(min,max);
-	map.fitBounds([min,max]);
+map.fitBounds([min,max]);
 
 };
 //display teams on the teams div
@@ -235,23 +260,23 @@ var formatLeague = function(data){
 		label.prepend(lg_img);
 		el.appendChild(label);
 
-	label =document.createElement("div");
+		label =document.createElement("div");
 		
 		//deal with zooming the map to the right places.
 		for(var i = 0; i < markers.length; i++){
-		   map.removeLayer(markers[i]);
+			map.removeLayer(markers[i]);
 		}
 		markers=[];
 
 
-	
 
-	for(var teamcode in data.teams){
 
-		
-		var team =data.teams[teamcode];
+		for(var teamcode in data.teams){
 
-		
+
+			var team =data.teams[teamcode];
+
+
 
 		//add team
 		var tm =document.createElement("div");
@@ -277,9 +302,9 @@ var formatLeague = function(data){
 
 		//add crest to maps
 		var icon = L.icon({
-		    iconUrl: team.crest,
-		   iconSize:[64,64],
-		   iconAnchor:[32,64],
+			iconUrl: team.crest,
+			iconSize:[64,64],
+			iconAnchor:[32,64],
 
 		});
 		var okay=true;
@@ -287,24 +312,24 @@ var formatLeague = function(data){
 			if(markers[i]._latlng.lat == team.coords[0] &&
 				markers[i]._latlng.lng == team.coords[1]){
 		//		console.log(team.name, " moved up slightly");
-				okay = false;
-				break;
-			}
-		}
+	okay = false;
+	break;
+}
+}
 
-		if(!okay){
-			icon.options.iconAnchor[1] -= 32 + Math.random() *32;
-			icon.options.iconAnchor[0] -=  Math.random() *32;
-		}
-		
+if(!okay){
+	icon.options.iconAnchor[1] -= 32 + Math.random() *32;
+	icon.options.iconAnchor[0] -=  Math.random() *32;
+}
 
-		markers.push(L.marker(team.coords, {icon:icon,
-			riseOnHover:true}).addTo(map)
-	    .bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
-	
-	    
-	}
-	el.appendChild(label);
+
+markers.push(L.marker(team.coords, {icon:icon,
+	riseOnHover:true}).addTo(map)
+.bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
+
+
+}
+el.appendChild(label);
 
 	//establish a boudnig box for stuff so the suer can see it.
 	var max =[-90,-180];
@@ -317,7 +342,7 @@ var formatLeague = function(data){
 
 	};
 //	console.log(min,max);
-	map.fitBounds([min,max]);
+map.fitBounds([min,max]);
 
 };
 
