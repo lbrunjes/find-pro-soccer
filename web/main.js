@@ -6,7 +6,7 @@ Display nearest temas.
 
 */
 var api_url = "https://brunjes.org:9000";
-var api_url = "http://localhost:9000";
+//var api_url = "http://localhost:9000";
 
 var ajax = function(url, load) {
 	var xhr = new XMLHttpRequest();
@@ -355,18 +355,18 @@ map.fitBounds([min,max]);
 
 var generateSocialIcons = function(team){
 	var urls={
-		"googleplus":"https://plus.google.com/",
-		"rss":""
+		"googleplus":"https://plus.google.com/"
 	};
+	var blanks = ["rss","web"]
 	var iconurl = " images/icons/";
 
 	var list = document.createElement("div");
 	list.setAttribute("class", "social");
 	for(var media in team.social){
-		if(team.social[media]){
+		if(team.social[media] ){
 			var link = document.createElement("a");
 			var icon = document.createElement("img");
-			var root =(urls[media]? urls[media]:"https://"+media+".com/");
+			var root =(blanks.indexOf(media)>=0? "":urls[media]? urls[media]:"https://"+media+".com/");
 			link.setAttribute("href", root+team.social[media]);
 			link.setAttribute("target","_blank");
 			icon.setAttribute("src", iconurl+media+".svg");

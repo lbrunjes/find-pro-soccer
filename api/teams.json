@@ -314,7 +314,7 @@
 			"instagram":"OrlandoCitySC",
 			"reddit":"r/OrlandoCitySC",
 			"facebook":"OrlandoCitySC",
-			"pintrest":"OrlandoCitySC"
+			"pinterest":"OrlandoCitySC"
 		}
 	},
 	"PHI": {
@@ -380,7 +380,7 @@
 			"facebook":"RealSaltLake",
 			"googleplus":"+RealSaltLake/posts",
 			"flickr":"realsaltlake",
-			"pintrest":"realsaltlake"
+			"pinterest":"realsaltlake"
 
 		}
 	},
@@ -434,12 +434,12 @@
 		"coords": [39.121908, -94.822976],
 		"crest": "images/MLS/SKC.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "http://www.soundersfc.com",
+		"website": "http://www.sportingkc.com",
 		
 		"league": "MLS",
 		"id": "SKC",
 		"social":{
-			"rss": "http://www.soundersfc.com/rss.xml",
+			"rss": "http://www.sportingkc.com/rss.xml",
 			"twitter":"SportingKC",
 			"youtube":"user/sportingkansascity",
 			"instagram":"sportingkc",
@@ -1208,7 +1208,7 @@
 			"reddit":"r/sacrepublicfc",
 			"facebook":"SacRepublicFC",
 			"snapchat":"add/sacrepublicfc",
-			"pintrest":"sacrepublicfc"
+			"pinterest":"sacrepublicfc"
 		}
 	},
 	"STL": {
