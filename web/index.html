@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Soccer Near You</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" media="all"/>
 	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
@@ -13,31 +14,27 @@
 <script src="main.js"></script>
 
 <script>
-	
-	
 	document.addEventListener("DOMContentLoaded", startup);
-	
 </script>
 </head>
 <body>
 	<header>
-		The nearest US Pro Soccer teams to you. Click the map or enter your zip to get started.
 		
-	</header>
-
-	<div id="display">
-		<div id="teams">
-			<p>
+		The nearest US Pro Soccer teams to you. Click the map or enter your zip or Candadian postal code to get started.<br/>
+		
 				<input name="post_code" placeholder="ZIP Code (12345 or H0H)" id="zip"/>
 				<button onclick="lookupzip()"> Find Teams</button>
-			</p>
 			
-			<div id="result"></div>
-		</div>
+	
+	</header>
+	
+	<div id="display">
+		<div id="result"></div>
+		
 		<div id="map" style="min-height:600px;">
 			
 		</div>
-
+		
 	</div>
 	<footer>
 		<a href="about.html">About this Page</a>

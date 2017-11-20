@@ -37,11 +37,12 @@ var getQS = function(){
 }
 //bind events at page load do other good things.
 var startup = function(){
+
 	if(location.search.indexOf("league=")>=0){
 		lookupleague(getQS()["league"]);
 	}
 	else if(location.search.indexOf("zip=")>=0){
-		lookupzip(getQS()["zip"])
+		lookupzip(getQS()["zip"]);
 	}
 	else if(location.search.indexOf("lat=")>=0 && location.search.indexOf("lng=")>=0){
 		var qs = getQS();
@@ -111,15 +112,15 @@ var formatTeams = function(data){
 	while(el.children.length>0){
 		el.removeChild(el.children[0]);
 	}
-	var label =document.createElement("h3");
-		label.innerText="Nearest Teams";//
+	// var label =document.createElement("h3");
+	// 	label.innerText="Nearest Teams";//
 		//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
 
 		
-		el.appendChild(label);
+		// el.appendChild(label);
 
-		label =document.createElement("div");
-		
+		var label =document.createElement("div");
+		label.setAttribute("id","result-list");
 		//deal with zooming the map to the right places.
 		for(var i = 0; i < markers.length; i++){
 			map.removeLayer(markers[i]);
@@ -158,6 +159,7 @@ var formatTeams = function(data){
 		
 		//add logo for league
 		var lg_el =document.createElement("a");
+		//tm_details.setAttribute("href","?league="+league);
 		lg_el.setAttribute("onclick", "lookupleague(\""+league+"\")");
 		lg_el.setAttribute("class","league_logo");
 		
@@ -165,27 +167,27 @@ var formatTeams = function(data){
 		lg_img.setAttribute("class","league_logo");
 		lg_img.setAttribute("src","images/"+league+"/"+league+".svg");
 		
-		lg_el.innerText = league;
+		
 		lg_el.prepend(lg_img);
-		tm_header.appendChild(lg_el);
+		tm_header.prepend(lg_el);
 
 		tm.appendChild(tm_header);
 
 		
 		
-		var tm_details =document.createElement("a");
-		tm_details.setAttribute("href",team.website);
-		tm_details.innerText = team.website;
-		tm.appendChild(tm_details);
-
-		tm_details =document.createElement("p");
-		tm_details.innerHTML = team.stadium +" (About " + approxDist(data.input, team.coords) + " Miles  Away)";
+		var tm_details =document.createElement("p");
+		tm_details.innerHTML = "<br/>"+team.stadium +"<br/> (About " + approxDist(data.input, team.coords) + " Miles  Away)";
 		var tm_stadium_address =document.createElement("br");
 		tm_details.appendChild(tm_stadium_address);
 		tm_stadium_address =document.createElement("a");
 		tm_stadium_address.setAttribute("href","https://www.google.com/maps/dir//"+team.address);
 		tm_stadium_address.innerHTML = team.address;
 		tm_details.appendChild(tm_stadium_address);
+
+		var team_site=document.createElement("a");
+		team_site.setAttribute("href",team.website);
+		team_site.innerText = team.website;
+		tm_details.prepend(team_site);
 		
 		tm.appendChild(tm_details);
 
@@ -248,69 +250,72 @@ var formatLeague = function(data){
 	while(el.children.length>0){
 		el.removeChild(el.children[0]);
 	}
-	var label =document.createElement("h3");
-		label.innerText="All Teams in "+data.league;//
-		//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
+	var header = document.createElement("header");
+	header.setAttribute("class","league_list");
+	var label =document.createElement("h2");
+	label.innerText="All Teams in "+data.league;//
+	//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
 
-		var lg_img =document.createElement("img");
-		lg_img.setAttribute("class","league_logo");
-		lg_img.setAttribute("src","images/"+data.league+"/"+data.league+".svg");
-		
-		
-		label.prepend(lg_img);
-		el.appendChild(label);
-
-		label =document.createElement("div");
-		
-		//deal with zooming the map to the right places.
-		for(var i = 0; i < markers.length; i++){
-			map.removeLayer(markers[i]);
-		}
-		markers=[];
-
-
-
-
-		for(var teamcode in data.teams){
-
-
-			var team =data.teams[teamcode];
+	var lg_img =document.createElement("img");
+	lg_img.setAttribute("class","league_logo_big");
+	lg_img.setAttribute("src","images/"+data.league+"/"+data.league+".svg");
+	
+	
+	header.prepend(lg_img);
+	header.appendChild(label);
+	el.appendChild(header);
+	label =document.createElement("div");
+	label.setAttribute("class","league_teams")
+	
+	//deal with zooming the map to the right places.
+	for(var i = 0; i < markers.length; i++){
+		map.removeLayer(markers[i]);
+	}
+	markers=[];
 
 
 
-		//add team
-		var tm =document.createElement("div");
-		tm.setAttribute("class","team");
-		
-		var tm_header =document.createElement("header");
 
-		var tm_logo =document.createElement("img");
-		tm_logo.setAttribute("class","team_crest");
-		tm_logo.setAttribute("src",team.crest);
-		tm_header.appendChild(tm_logo);
+	for(var teamcode in data.teams){
 
-		var tm_name =document.createElement("h3");
-		tm_name.innerText=team.name;
-		tm_header.appendChild(tm_name);
-		
 
-		tm.appendChild(tm_header);
+		var team =data.teams[teamcode];
 
-		
 
-		label.appendChild(tm);
 
-		//add crest to maps
-		var icon = L.icon({
-			iconUrl: team.crest,
-			iconSize:[64,64],
-			iconAnchor:[32,64],
+	//add team
+	var tm =document.createElement("div");
+	tm.setAttribute("class","team");
+	
+	var tm_header =document.createElement("header");
 
-		});
-		var okay=true;
-		for(var i =0; i < markers.length;i++){
-			if(markers[i]._latlng.lat == team.coords[0] &&
-				markers[i]._latlng.lng == team.coords[1]){
+	var tm_logo =document.createElement("img");
+	tm_logo.setAttribute("class","team_crest");
+	tm_logo.setAttribute("src",team.crest);
+	tm_header.appendChild(tm_logo);
+
+	var tm_name =document.createElement("h3");
+	tm_name.innerText=team.name;
+	tm_header.appendChild(tm_name);
+	
+
+	tm.appendChild(tm_header);
+
+	
+
+	label.appendChild(tm);
+
+	//add crest to maps
+	var icon = L.icon({
+		iconUrl: team.crest,
+		iconSize:[64,64],
+		iconAnchor:[32,64],
+
+	});
+	var okay=true;
+	for(var i =0; i < markers.length;i++){
+		if(markers[i]._latlng.lat == team.coords[0] &&
+			markers[i]._latlng.lng == team.coords[1]){
 		//		console.log(team.name, " moved up slightly");
 	okay = false;
 	break;
