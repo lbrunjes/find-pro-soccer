@@ -2,7 +2,7 @@
 	"MLS": {
 		"pro": true,
 		"website": "",
-		"teams": ["ATL", "CC", "CHI", "CO", "DCU", "FCD", "HOU", "LAG", "MNU", "MON", "NER", "NYC", "NYR", "OC", "PHI", "POR", "RSL", "SEA", "SJ", "SKC", "TOR", "VAN"]
+		"teams": ["ATL", "CC", "CHI", "CO", "DCU", "FCD", "HOU","LAF", "LAG", "MNU", "MON", "NER", "NYC", "NYR", "OC", "PHI", "POR", "RSL", "SEA", "SJ", "SKC", "TOR", "VAN"]
 	},
 
 	"NWSL": {

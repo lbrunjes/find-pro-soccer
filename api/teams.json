@@ -84,6 +84,18 @@
 		"league": "MLS",
 		"id": "HOU"
 	},
+	"LAF": {
+		"name": "Los Angeles Galaxy",
+		"stadium": "BANC OF CALIFORNIA STADIUM",
+		"address": ["3939 S Figueroa St, Los Angeles, CA 90037"],
+	
+		"coords": [34.012577, -118.285068],
+		"crest": "images/MLS/LAF.svg",
+		"colors": ["#000", "#ff0"],
+		"website": "http://www.lafc.com/",
+		"league": "MLS",
+		"id": "LAF"
+	},
 	"LAG": {
 		"name": "Los Angeles Galaxy",
 		"stadium": "StubHub Center",
