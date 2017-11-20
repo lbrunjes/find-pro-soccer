@@ -5,7 +5,8 @@ Display nearest temas.
 
 
 */
-var api_url = "https://brunjes.org:9000";
+//var api_url = "https://brunjes.org:9000";
+var api_url = "http://127.0.0.1:9000";
 var ajax = function(url, load) {
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", url,true);
@@ -49,6 +50,13 @@ var lookupzip = function(){
 	});
 	
 }
+ var lookupleague=function(leaguename){
+ajax(api_url+"/league/"+leaguename, 
+	function(res){
+		formatLeague(JSON.parse(res));
+	})
+
+ }
 var lookupcoords= function(lat, lng){
 
 
@@ -71,6 +79,7 @@ var approxDist = function(input, target){
 	return  Math.round(radius_earth * 2 * Math.atan2(Math.sqrt(tmp), Math.sqrt(1-tmp)));
 
 }
+
 //display teams on the teams div
 var formatTeams = function(data){
 	var el = document.getElementById("result");
@@ -123,7 +132,8 @@ var formatTeams = function(data){
 		tm_header.appendChild(tm_name);
 		
 		//add logo for league
-		var lg_el =document.createElement("span");
+		var lg_el =document.createElement("a");
+		lg_el.setAttribute("onclick", "lookupleague(\""+league+"\")");
 		lg_el.setAttribute("class","league_logo");
 		
 		var lg_img =document.createElement("img");
@@ -158,6 +168,109 @@ var formatTeams = function(data){
 		tm_details.innerHTML = "Next home game: 2018/NA/NA";
 
 		tm.appendChild(tm_details);
+		
+
+		label.appendChild(tm);
+
+		//add crest to maps
+		var icon = L.icon({
+		    iconUrl: team.crest,
+		   iconSize:[64,64],
+		   iconAnchor:[32,64],
+
+		});
+		var okay=true;
+		for(var i =0; i < markers.length;i++){
+			if(markers[i]._latlng.lat == team.coords[0] &&
+				markers[i]._latlng.lng == team.coords[1]){
+		//		console.log(team.name, " moved up slightly");
+				okay = false;
+				break;
+			}
+		}
+
+		if(!okay){
+			icon.options.iconAnchor[1] -= 32 + Math.random() *32;
+			icon.options.iconAnchor[0] -=  Math.random() *32;
+		}
+		
+
+		markers.push(L.marker(team.coords, {icon:icon,
+			riseOnHover:true}).addTo(map)
+	    .bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
+	
+	    
+	}
+	el.appendChild(label);
+
+	//establish a boudnig box for stuff so the suer can see it.
+	var max =[-90,-180];
+	var min = [90,180]
+	for(var i =0; i < markers.length;i++){
+		min[0] = min[0] < markers[i]._latlng.lat?min[0]: markers[i]._latlng.lat;
+		min[1] = min[1] < markers[i]._latlng.lng?min[1]: markers[i]._latlng.lng;
+		max[0] = max[0] > markers[i]._latlng.lat?max[0]: markers[i]._latlng.lat;
+		max[1] = max[1] > markers[i]._latlng.lng?max[1]: markers[i]._latlng.lng;
+
+	};
+//	console.log(min,max);
+	map.fitBounds([min,max]);
+
+};
+//display teams on the teams div
+var formatLeague = function(data){
+	var el = document.getElementById("result");
+	while(el.children.length>0){
+		el.removeChild(el.children[0]);
+	}
+	var label =document.createElement("h3");
+		label.innerText="All Teams in "+data.league;//
+		//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
+
+		var lg_img =document.createElement("img");
+		lg_img.setAttribute("class","league_logo");
+		lg_img.setAttribute("src","images/"+data.league+"/"+data.league+".svg");
+		
+		
+		label.prepend(lg_img);
+		el.appendChild(label);
+
+	label =document.createElement("div");
+		
+		//deal with zooming the map to the right places.
+		for(var i = 0; i < markers.length; i++){
+		   map.removeLayer(markers[i]);
+		}
+		markers=[];
+
+
+	
+
+	for(var teamcode in data.teams){
+
+		
+		var team =data.teams[teamcode];
+
+		
+
+		//add team
+		var tm =document.createElement("div");
+		tm.setAttribute("class","team");
+		
+		var tm_header =document.createElement("header");
+
+		var tm_logo =document.createElement("img");
+		tm_logo.setAttribute("class","team_crest");
+		tm_logo.setAttribute("src",team.crest);
+		tm_header.appendChild(tm_logo);
+
+		var tm_name =document.createElement("h3");
+		tm_name.innerText=team.name;
+		tm_header.appendChild(tm_name);
+		
+
+		tm.appendChild(tm_header);
+
 		
 
 		label.appendChild(tm);

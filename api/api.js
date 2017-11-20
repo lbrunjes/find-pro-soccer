@@ -78,7 +78,24 @@ var rest_api = function(){
 					break;
 
 					
+					case "league":
+					var key = api_requested.length>1?api_requested[2] : "xxx";
+					if(api.leagues[key]){
+						var data= {teams:{}, league:""};
+						for(var i =0; i <  api.leagues[key].teams.length;i++){
+							var team = api.leagues[key].teams[i];
+							data.teams[team] = api.teams[team];
+							data.league = api.teams[team].league;
+						}
 
+						response.writeHead(200,headers);
+						response.end(JSON.stringify(data));
+					}
+					else{
+						response.writeHead(404,headers);
+						response.end(JSON.stringify({"teams not found": "Invalid post code, expected /team/DCU"}));
+					}
+					break;
 
 					
 					default:
@@ -135,6 +152,9 @@ var rest_api = function(){
 
 		//get manhattan distance less accurate in canada but not a huge issue really
 		this.getDist = function(_x,_y, target){
+			return Math.abs(_x - target[0])+ Math.abs(_y - target[1])
+		}
+		this.getDistHav = function(_x,_y, target){
 			
 			var radius_earth = 3959; //miles (AMERAICA)
 			var pi_180 = 0.017453292519943295;
