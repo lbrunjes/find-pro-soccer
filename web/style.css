@@ -95,6 +95,15 @@ flex-basis: 25%;
 	width:2em;
 	margin:0 1ex 0 0 ;
 }
+.team .social{
+	margin : 1em 0;
+	display:flex;
+	flex-direction: row;
+}
+.team .social a{
+	margin :0 10px;
+	display:inline-block;
+}
 #form{
 	padding:0 1em;
 }

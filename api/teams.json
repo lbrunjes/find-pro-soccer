@@ -9,7 +9,17 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://atlutd.com",
 		"league": "MLS",
-		"id": "ATL"
+		
+		"id": "ATL",
+		"social":{
+			"twitter":"atlutd",
+			"youtube":"channel/UC8fg8L4X7qpQdHJgxpM4qxw",
+			"instagram":"atlutd",
+			"reddit":"r/AtlantaUnited",
+			"rss":"https://www.atlutd.com/rss.xml",
+			"facebook":"AtlantaUnitedFC"
+		}
+
 	},
 	
 	"CHI": {
@@ -22,7 +32,16 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://chicago-fire.com",
 		"league": "MLS",
-		"id": "CHI"
+		"id": "CHI",
+		"social":{
+			"rss":"https://www.chicago-fire.com/rss/en.xml",
+		
+			"twitter":"chicagofire",
+			"youtube":"officialfiresoccer",
+			"instagram":"chicagofire",
+			"reddit":"r/chicagofire",
+			"facebook":"chicagofire"
+		}
 	},
 	"CO": {
 		"name": "Colorado Rapids",
@@ -34,7 +53,16 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.coloradorapids.com/",
 		"league": "MLS",
-		"id": "CO"
+		"id": "CO",
+		"social":{
+			"rss":"https://www.coloradorapids.com/rss.xml",
+			"twitter":"ColoradoRapids",
+			"youtube":"",
+			"instagram":"coloradorapids",
+			"reddit":"r/Rapids",
+			"facebook":"coloradorapids",
+			"googleplus":"/u/0/b/116607512184604169531/+coloradorapids/posts"
+		}
 	},
 	"CC": {
 		"name": "Columbus Crew",
@@ -46,7 +74,17 @@
 		"colors": ["#000", "#ff0"],
 		"website": "http://www.columbuscrewsc.com/",
 		"league": "MLS",
-		"id": "CC"
+		"id": "CC",
+		"social":{
+			"rss": "http://www.columbuscrewsc.com/rss.xml",
+
+			"twitter":"columbuscrewsc",
+			"youtube":"user/CrewCommunications",
+			"instagram":"columbuscrewsc",
+			"reddit":"r/TheMassive/",
+			"facebook":"columbuscrewsc",
+			"googleplus":"+ColumbusCrewSC"
+		}
 	},
 	"DCU": {
 		"name": "DC United",
@@ -58,7 +96,15 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://dcunited.com",
 		"league": "MLS",
-		"id": "DCU"
+		"id": "DCU",
+		"social":{
+			"rss": "http://dcunited.com/rss.xml",
+			"twitter":"dcunited",
+			"youtube":"user/dcunited",
+			"instagram":"dcunited",
+			"reddit":"r/dcunited",
+			"facebook":"dcunited"
+		}
 	},
 	"FCD": {
 		"name": "FC Dallas",
@@ -70,7 +116,16 @@
 		"colors": ["#fff", "#fa0"],
 		"website": "http://fcdallas.com",
 		"league": "MLS",
-		"id": "FCD"
+		
+		"id": "FCD",
+		"social":{
+			"rss": "http://fcdallas.com/rss.xml",
+			"twitter":"fcdallas",
+			"youtube":"user/fcdcommunications",
+			"instagram":"fcdallas",
+			"reddit":"r/fcdallas",
+			"facebook":"fcdallas"
+		}
 	},
 	"HOU": {
 		"name": "Houston Dynamo",
@@ -82,7 +137,17 @@
 		"colors": ["#fff", "#fa0"],
 		"website": "http://www.houstondynamo.com/",
 		"league": "MLS",
-		"id": "HOU"
+	
+		"id": "HOU",
+		"social":{
+				"rss": "http://www.houstondynamo.com/rss.xml",
+			"twitter":"houstondynamo",
+			"youtube":"user/HoustonDynamoVideos",
+			"instagram":"houstondynamo",
+			"reddit":"r/dynamo",
+			"facebook":"houstondynamo",
+			"googleplus":"+houstondynamo/posts"
+		}
 	},
 	"LAF": {
 		"name": "Los Angeles Galaxy",
@@ -93,8 +158,17 @@
 		"crest": "images/MLS/LAF.svg",
 		"colors": ["#000", "#ff0"],
 		"website": "http://www.lafc.com/",
+		
 		"league": "MLS",
-		"id": "LAF"
+		"id": "LAF",
+		"social":{
+			"rss": "http://www.lafc.com/rss.xml",
+			"twitter":"lafc",
+			"youtube":"lafc",
+			"instagram":"lafc",
+			"reddit":"r/LAGalaxy",
+			"facebook":"lafc"
+		}
 	},
 	"LAG": {
 		"name": "Los Angeles Galaxy",
@@ -105,8 +179,17 @@
 		"crest": "images/MLS/LAG.svg",
 		"colors": ["#fff", "#00f"],
 		"website": "http://www.lagalaxy.com/",
+		
 		"league": "MLS",
-		"id": "LAG"
+		"id": "LAG",
+		"social":{
+			"rss": "http://www.lagalaxy.com/rss.xml",
+			"twitter":"LAGalaxy",
+			"youtube":"LAGalaxy",
+			"instagram":"lagalaxy",
+			"reddit":"r/LAFC",
+			"facebook":"lagalaxy"
+		}
 	},
 	"MNU": {
 		"name": "Minnesota United",
@@ -117,8 +200,17 @@
 		"crest": "images/MLS/MNU.svg",
 		"colors": ["#fff", "#00f"],
 		"website": "http://www.mnufc.com/",
+		
 		"league": "MLS",
-		"id": "MNU"
+		"id": "MNU",
+		"social":{
+			"rss": "http://www.mnufc.com/rss.xml",
+			"twitter":"",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"MON": {
 		"name": "Montreal Impact",
@@ -129,8 +221,17 @@
 		"crest": "images/MLS/MON.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.impactmontreal.com",
+		
 		"league": "MLS",
-		"id": "MON"
+		"id": "MON",
+		"social":{
+			"rss": "http://www.impactmontreal.com/rss.xml",
+			"twitter":"impactmontreal",
+			"youtube":"user/ImpactMontrealFC",
+			"instagram":"impactmontreal",
+			"reddit":"r/montrealimpact",
+			"facebook":"impactmontreal"
+		}
 	},
 	"NER": {
 		"name": "New England Revolution",
@@ -142,7 +243,15 @@
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.revolutionsoccer.net",
 		"league": "MLS",
-		"id": "NER"
+		"id": "NER",
+		"social":{
+			"rss": "http://www.revolutionsoccer.net/rss.xml",
+			"twitter":"nerevolution",
+			"youtube":"user/NERevolutionsoccer",
+			"instagram":"nerevolution",
+			"reddit":"r/NERevolution",
+			"facebook":"nerevolution"
+		}
 	},
 	"NYC": {
 		"name": "New York City FC",
@@ -152,9 +261,18 @@
 		"coords": [40.83, -73.925831],
 		"crest": "images/MLS/NYC.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "http://www.revolutionsoccer.net",
+		"website": "http://www.nycfc.com",
+		
 		"league": "MLS",
-		"id": "NYC"
+		"id": "NYC",
+		"social":{
+			"rss": "http://www.nycfc.com/rss.xml",
+			"twitter":"nycfc",
+			"youtube":"nycfcoffcial",
+			"instagram":"nycfc",
+			"reddit":"r/NYCFC",
+			"facebook":"newyorkcityfc"
+		}
 	},
 	"NYR": {
 		"name": "New York Red Bulls",
@@ -165,8 +283,17 @@
 		"crest": "images/MLS/NYR.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://newyorkredbulls.com",
+		
 		"league": "MLS",
-		"id": "NYR"
+		"id": "NYR",
+		"social":{
+			"rss": "http://newyorkredbulls.com/rss.xml",
+			"twitter":"NewYorkRedBulls",
+			"youtube":"newyorkredbulls",
+			"instagram":"NewYorkRedBulls",
+			"reddit":"r/NewYorkRedBulls",
+			"facebook":"newyorkredbulls"
+		}
 	},
 	"OC": {
 		"name": "Orlando City SC",
@@ -177,8 +304,18 @@
 		"crest": "images/MLS/OC.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://orlandocitysc.com",
+		
 		"league": "MLS",
-		"id": "OC"
+		"id": "OC",
+		"social":{
+			"rss": "http://orlandocitysc.com/rss.xml",
+			"twitter":"orlandocitysc",
+			"youtube":"user/OrlandoCitySC",
+			"instagram":"OrlandoCitySC",
+			"reddit":"r/OrlandoCitySC",
+			"facebook":"OrlandoCitySC",
+			"pintrest":"OrlandoCitySC"
+		}
 	},
 	"PHI": {
 		"name": "Philadelphia Union",
@@ -188,9 +325,18 @@
 		"coords": [39.832752, -75.378636],
 		"crest": "images/MLS/PHI.svg",
 		"colors": ["#f00", "#fff"],
-		"website": "http://orlandocitysc.com",
+		"website": "http://www.philadelphiaunion.com",
+		
 		"league": "MLS",
-		"id": "PHI"
+		"id": "PHI",
+		"social":{
+			"rss": "http://www.philadelphiaunion.com/rss.xml",
+			"twitter":"philaunion",
+			"youtube":"user/philadelphiaunion",
+			"instagram":"philaunion",
+			"reddit":"r/PhillyUnion/",
+			"facebook":"philadelphiaunion"
+		}
 	},
 	"POR": {
 		"name": "Portland Timbers",
@@ -201,8 +347,17 @@
 		"crest": "images/MLS/POR.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.timbers.com/",
+		
 		"league": "MLS",
-		"id": "POR"
+		"id": "POR",
+		"social":{
+			"rss": "http://www.timbers.com/rss.xml",
+			"twitter":"TimbersFC",
+			"youtube":"user/TimbersFC",
+			"instagram":"TimbersFC",
+			"reddit":"r/timbers/",
+			"facebook":"portlandtimbers"
+		}
 	},
 	"RSL": {
 		"name": "Real Salt Lake",
@@ -213,8 +368,21 @@
 		"crest": "images/MLS/RSL.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.rsl.com/",
+		
 		"league": "MLS",
-		"id": "RSL"
+		"id": "RSL",
+		"social":{
+			"rss": "https://www.rsl.com/rss.xml",
+			"twitter":"RealSaltLake",
+			"youtube":"realsaltlakesoccer",
+			"instagram":"realsaltlake",
+			"reddit":"r/ReAlSaltLake/",
+			"facebook":"RealSaltLake",
+			"googleplus":"+RealSaltLake/posts",
+			"flickr":"realsaltlake",
+			"pintrest":"realsaltlake"
+
+		}
 	},
 	"SJ": {
 		"name": "San Jose Earthquakes",
@@ -225,8 +393,17 @@
 		"crest": "images/MLS/SJ.svg",
 		"colors": ["#000", "#f00"],
 		"website": "http://www.sjearthquakes.com/",
+		
 		"league": "MLS",
-		"id": "SJ"
+		"id": "SJ",
+		"social":{
+			"rss": "http://www.sjearthquakes.com/rss.xml",
+			"twitter":"sjearthquakes",
+			"youtube":"user/sanjoseearthquakes",
+			"instagram":"sjearthquakes",
+			"reddit":"r/SJEarthquakes/",
+			"facebook":"sanjoseearthquakes"
+		}
 	},
 	"SEA": {
 		"name": "Seattle Sounders",
@@ -237,8 +414,17 @@
 		"crest": "images/MLS/SEA.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.soundersfc.com",
+		
 		"league": "MLS",
-		"id": "SEA"
+		"id": "SEA",
+		"social":{
+			"rss": "http://www.soundersfc.com/rss.xml",
+			"twitter":"SoundersFC",
+			"youtube":"channel/UCVhbRUhe_hfmgi-UN1gcQzw",
+			"instagram":"soundersfc",
+			"reddit":"r/SoundersFC/",
+			"facebook":"SoundersFC"
+		}
 	},
 	"SKC": {
 		"name": "Sporting Kansas City",
@@ -249,8 +435,18 @@
 		"crest": "images/MLS/SKC.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.soundersfc.com",
+		
 		"league": "MLS",
-		"id": "SKC"
+		"id": "SKC",
+		"social":{
+			"rss": "http://www.soundersfc.com/rss.xml",
+			"twitter":"SportingKC",
+			"youtube":"user/sportingkansascity",
+			"instagram":"sportingkc",
+			"reddit":"r/SportingKC",
+			"facebook":"SportingKC",
+			"googleplus":"+SportingKC"
+		}
 	},
 	"TOR": {
 		"name": "Toronto FC",
@@ -261,8 +457,17 @@
 		"crest": "images/MLS/TOR.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.torontofc.ca/",
+		
 		"league": "MLS",
-		"id": "TOR"
+		"id": "TOR",
+		"social":{
+			"rss": "http://www.torontofc.ca/rss.xml",
+			"twitter":"torontofc",
+			"youtube":"torontofc",
+			"instagram":"torontofc",
+			"reddit":"r/tfc",
+			"facebook":"torontofc"
+		}
 	},
 	"VAN": {
 		"name": "Vancouver Whitecaps",
@@ -273,8 +478,17 @@
 		"crest": "images/MLS/VAN.svg",
 		"colors": ["#f00", "#fff"],
 		"website": "http://www.whitecapsfc.com/",
+		
 		"league": "MLS",
-		"id": "VAN"
+		"id": "VAN",
+		"social":{
+			"rss": "http://www.whitecapsfc.com/rss.xml",
+			"twitter":"whitecapsfc",
+			"youtube":"user/VancouverWhitecapsFC",
+			"instagram":"whitecapsfc",
+			"reddit":"r/whitecapsfc",
+			"facebook":"whitecapsfc"
+		}
 	},
 	"BOS": {
 		"name": "Boston Breakers",
@@ -284,19 +498,37 @@
 		"crest": "images/NWSL/BOS.svg",
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.bostonbreakerssoccer.com",
+		
 		"league": "NWSL",
-		"id": "BOS"
+		"id": "BOS",
+		"social":{
+			"rss":"",
+			"twitter":"bostonbreakers",
+			"youtube":"bostonbreakerstv",
+			"instagram":"bostonbreakers",
+			"reddit":"r/breakers",
+			"facebook":"bostonbreakers"
+		}
 	},
 	"FKC": {
-		"name": "FC Kansas City",
-		"stadium": "Swope Soccer Village",
-		"address": ["6310 Lewis Road", "Kansas City, MO, 64132"],
-		"coords": [39.012702, -94.521525],
+		"name": "Formerly FC Kansas City Blues",
+		"stadium": "Rio Tinto Stadium",
+		"address": ["9256 State St", "Sandy, UT 84070"],
+		"coords": [40.582544, -111.893576],
 		"crest": "images/NWSL/FKC.png",
 		"colors": ["#00f", "#00f"],
 		"website": "http://www.fckansascity.com/",
 		"league": "NWSL",
-		"id": "FKC"
+		"id": "FKC",
+		"social":{
+			"rss":"https://www.fckansascity.com/index?format=RSS",
+		
+			"twitter":"fckansascity",
+			"youtube":"",
+			"instagram":"fckansascityblues",
+			"reddit":"",
+			"facebook":"FCKansasCity"
+		}
 	},
 	"NCC": {
 		"name": "North Carolina Courage",
@@ -305,9 +537,18 @@
 		"coords": [35.786483, -78.755051],
 		"crest": "images/NWSL/NCC.PNG",
 		"colors": ["#f00", "#00f"],
-		"website": "http://www.northcarolinafc.com",
+		"website": "http://www.nccourage.com/",
+		
 		"league": "NWSL",
-		"id": "NCC"
+		"id": "NCC",
+		"social":{
+			"rss":"",
+			"twitter":"TheNCCourage",
+			"youtube":"",
+			"instagram":"TheNCCourage",
+			"reddit":"",
+			"facebook":"TheNCCourage"
+		}
 	},
 	"ORP": {
 		"name": "Orlando Pride",
@@ -319,7 +560,15 @@
 		"colors": ["#f0F", "#fff"],
 		"website": "http://www.orlandocitysc.com/pride",
 		"league": "NWSL",
-		"id": "ORP"
+		"id": "ORP",
+		"social":{
+			"rss":"",
+			"twitter":"ORLPride",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"SBF": {
 		"name": "Sky Blue FC",
@@ -328,9 +577,17 @@
 		"coords": [40.51829, -74.463932],
 		"crest": "images/NWSL/SBF.svg",
 		"colors": ["#f00", "#00f"],
-		"website": "www.skybluefc.com/",
+		"website": "http://www.skybluefc.com/",
 		"league": "NWSL",
-		"id": "SBF"
+		"id": "SBF",
+		"social":{
+			"rss":"http://www.skybluefc.com/feed/",
+			"twitter":"SkyBlueFC",
+			"youtube":"skybluefcvideo",
+			"instagram":"skybluefc",
+			"reddit":"r/skyblue",
+			"facebook":"skybluefc"
+		}
 	},
 	"WAS": {
 		"name": "Washington Spirit",
@@ -341,7 +598,15 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.washingtonspirit.com/",
 		"league": "NWSL",
-		"id": "WAS"
+		"id": "WAS",
+		"social":{
+			"twitter":"washspirit",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"r/washingtonspirit",
+			"facebook":"washingtonspirit",
+			"rss":"http://www.washingtonspirit.com/feed"
+		}
 	},
 	"CRS": {
 		"name": "Chicago Red Stars",
@@ -351,8 +616,17 @@
 		"crest": "images/NWSL/CRS.png",
 		"colors": ["#00f", "#00f"],
 		"website": "http://chicagoredstars.com",
+
 		"league": "NWSL",
-		"id": "CRS"
+		"id": "CRS",
+		"social":{
+			"twitter":"chicagoredstars",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"r/redstars",
+			"facebook":"chicagoredstars",
+			"rss":"http://chicagoredstars.com/feed/"
+		}
 	},
 	"HOD": {
 		"name": "Houston Dash",
@@ -364,7 +638,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.houstondynamo.com/houstondash",
 		"league": "NWSL",
-		"id": "HOD"
+		"id": "HOD",
+		"social":{
+			"twitter":"houstondash",
+			"youtube":"",
+			"instagram":"houstondash",
+			"reddit":"r/dash",
+			"facebook":"houston.dash"
+		}
 	},
 	"POT": {
 		"name": "Portland Thorns",
@@ -376,7 +657,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.timbers.com/thornsfc",
 		"league": "NWSL",
-		"id": "POT"
+		"id": "POT",
+		"social":{
+			"twitter":"thornsfc",
+			"youtube":"",
+			"instagram":"PortlandThornsFC",
+			"reddit":"",
+			"facebook":"thornsfc"
+		}
 	},
 	"SER": {
 		"name": "Seattle Reign",
@@ -387,7 +675,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.reignfc.com/",
 		"league": "NWSL",
-		"id": "SER"
+		"id": "SER",
+		"social":{
+			"twitter":"reignfc",
+			"youtube":"seattlereignfc",
+			"instagram":"reignfc",
+			"reddit":"r/Reignfc",
+			"facebook":"ReignFC"
+		}
 	},
 	"RIC": {
 		"name": "Richmond Kickers",
@@ -398,7 +693,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://richmondkickers.com",
 		"league": "USL",
-		"id": "RIC"
+		"id": "RIC",
+		"social":{
+			"twitter":"richmondkickers",
+			"youtube":"richmondkickers",
+			"instagram":"",
+			"reddit":"r/RichmondKickers",
+			"facebook":"richmondkickers"
+		}
 	},
 	"ATL2": {
 		"name": "Atlanta United United 2",
@@ -410,7 +712,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://atlutd.com",
 		"league": "USL",
-		"id": "ATL2"
+		"id": "ATL2",
+		"social":{
+			"twitter":"",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"COS": {
 		"name": "Colorado Springs Switchbacks",
@@ -421,7 +730,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.switchbacksfc.com/",
 		"league": "USL",
-		"id": "COS"
+		"id": "COS",
+		"social":{
+			"twitter":"switchbacksfc",
+			"youtube":"/channel/UCx-yk4pk9wKalQrQCx7_saA",
+			"instagram":"switchbacksfc",
+			"reddit":"",
+			"facebook":"switchbacksfc"
+		}
 	},
 	"LVL": {
 		"name": "Louisville FC",
@@ -432,7 +748,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.louisvillecityfc.com/",
 		"league": "USL",
-		"id": "LVL"
+		"id": "LVL",
+		"social":{
+			"twitter":"loucityfc",
+			"youtube":"",
+			"instagram":"louisvillecityfc",
+			"reddit":"",
+			"facebook":"louisvillecityfc"
+		}
 	},
 	"OCS": {
 		"name": "Orange County Soccer Club",
@@ -443,7 +766,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.orangecountysoccer.com/",
 		"league": "USL",
-		"id": "OCS"
+		"id": "OCS",
+		"social":{
+			"twitter":"OrangeCountySC",
+			"youtube":"",
+			"instagram":"orangecountysoccer",
+			"reddit":"",
+			"facebook":"OrangeCountySoccer"
+		}
 	},
 	"PIT": {
 		"name": "Pittsburgh Riverhounds",
@@ -454,7 +784,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.riverhounds.com",
 		"league": "USL",
-		"id": "PIT"
+		"id": "PIT",
+		"social":{
+			"twitter":"PghRiverhounds",
+			"youtube":"user/ThePghRiverHounds",
+			"instagram":"pittsburghriverhounds",
+			"reddit":"",
+			"facebook":"PittsburghRiverhounds"
+		}
 	},
 	
 	"SA": {
@@ -466,7 +803,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.sanantoniofc.com/",
 		"league": "USL",
-		"id": "SA"
+		"id": "SA",
+		"social":{
+			"twitter":"SanAntonioFC",
+			"youtube":"channel/UCcHbwFPNTkGtro5Hoi725-Q",
+			"instagram":"sanantoniofc",
+			"reddit":"",
+			"facebook":"SAFCUSL"
+		}
 	},
 	"TAM": {
 		"name": "Tampa Bay Rowdies",
@@ -477,7 +821,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.rowdiessoccer.com/",
 		"league": "USL",
-		"id": "TAM"
+		"id": "TAM",
+		"social":{
+			"twitter":"TampaBayRowdies",
+			"youtube":"user/RowdiesOfficial",
+			"instagram":"TampaBayRowdies",
+			"reddit":"",
+			"facebook":"TampaBayRowdies"
+		}
 	},
 	"BST": {
 		"name": "Bethlehem Steel FC",
@@ -488,7 +839,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://rwww.bethlehemsteelfc.com/",
 		"league": "USL",
-		"id": "BST"
+		"id": "BST",
+		"social":{
+			"twitter":"bsteelfc",
+			"youtube":"playlist?list=PL8r52B1yHkY5gmXFDK1QlarbT4mGvEv6m",
+			"instagram":"bsteelfc",
+			"reddit":"",
+			"facebook":"BSteelFC"
+		}
 	},
 	"FCC": {
 		"name": "FC Cincinnati",
@@ -499,7 +857,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.fccincinnati.com",
 		"league": "USL",
-		"id": "FCC"
+		"id": "FCC",
+		"social":{
+			"twitter":"fccincinnati",
+			"youtube":"channel/UCqT7uS7skbqqNrn5LCCozMg",
+			"instagram":"fccincinnati",
+			"reddit":"",
+			"facebook":"fccincinnati"
+		}
 	},
 	
 	"OKC": {
@@ -511,7 +876,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.energyfc.com",
 		"league": "USL",
-		"id": "OKC"
+		"id": "OKC",
+		"social":{
+			"twitter":"EnergyFC",
+			"youtube":"okcenergyfc",
+			"instagram":"energyfc",
+			"reddit":"",
+			"facebook":"energyfc"
+		}
 	},
 	"POR2": {
 		"name": "Portland Timbers 2",
@@ -522,7 +894,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://http://www.timbers.com/t2",
 		"league": "USL",
-		"id": "POR2"
+		"id": "POR2",
+		"social":{
+			"twitter":"TimbersFC2",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"RMN": {
 		"name": "Real Monarchs",
@@ -533,7 +912,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://http://www.rsl.com/monarchs",
 		"league": "USL",
-		"id": "RMN"
+		"id": "RMN",
+		"social":{
+			"twitter":"RealMonarchs",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":"RealMonarchs"
+		}
 	},
 	"SEA2": {
 		"name": "Seattle Sounders 2",
@@ -544,10 +930,17 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.soundersfc.com/s2",
 		"league": "USL",
-		"id": "SEA2"
+		"id": "SEA2",
+		"social":{
+			"twitter":"soundersfc2",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"TOR2": {
-		"name": "TOR2",
+		"name": "Toronto FC 2",
 		"stadium": "Ontario Soccer Centre",
 		"address": ["7601 Martin Grove Rd","Woodbridge, ON L4L 9E4, Canada"],
 		"coords": [43.771772, -79.603459],
@@ -555,7 +948,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.torontofc.ca/tfcII",
 		"league": "USL",
-		"id": "TOR2"
+		"id": "TOR2",
+		"social":{
+			"twitter":"torontofcii",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"CLS": {
 		"name": "Charleston Battery",
@@ -566,7 +966,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.charlestonbattery.com/",
 		"league": "USL",
-		"id": "CLS"
+		"id": "CLS",
+		"social":{
+			"twitter":"Chas_Battery",
+			"youtube":"",
+			"instagram":"charlestonbattery",
+			"reddit":"",
+			"facebook":"charlestonbattery"
+		}
 	},
 	"PFC": {
 		"name": "Penn FC",
@@ -577,7 +984,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://pennfc.com/",
 		"league": "USL",
-		"id": "PFC"
+		"id": "PFC",
+		"social":{
+			"twitter":"Penn_FC",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"NYR2": {
 		"name": "New York Red Bulls 2",
@@ -588,7 +1002,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.newyorkredbulls.com/2",
 		"league": "USL",
-		"id": "NYR2"
+		"id": "NYR2",
+		"social":{
+			"twitter":"NYRBII",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":"NYRBII"
+		}
 	},
 	"OTT": {
 		"name": "Ottowa Fury",
@@ -599,7 +1020,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.ottawafuryfc.com/",
 		"league": "USL",
-		"id": "OTT"
+		"id": "OTT",
+		"social":{
+			"twitter":"ottawafuryfc",
+			"youtube":"channel/UCFfqErp9nL9W2emBtqfzDgw",
+			"instagram":"furyfc",
+			"reddit":"",
+			"facebook":"ottawafuryfc"
+		}
 	},
 	"REN": {
 		"name": "Reno 1869 FC",
@@ -610,7 +1038,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.reno1868fc.com",
 		"league": "USL",
-		"id": "REN"
+		"id": "REN",
+		"social":{
+			"twitter":"reno1868fc",
+			"youtube":"channel/UCXjRLkdZZxerbu2b7PCUJkg",
+			"instagram":"reno1868fc",
+			"reddit":"",
+			"facebook":"reno1868fc"
+		}
 	},
 	"ROD": {
 		"name": "Rodchester Rhinos",
@@ -619,9 +1054,16 @@
 		"coords": [43.162552, -77.629565],
 		"crest": "images/USL/ROD.png",
 		"colors": ["#f00", "#00f"],
-		"website": "http://richmondkickers.com",
+		"website": "http://www.rhinossoccer.com",
 		"league": "USL",
-		"id": "ROD"
+		"id": "ROD",
+		"social":{
+			"twitter":"RochesterRhinos",
+			"youtube":"RocRhinos",
+			"instagram":"RochesterRhinos",
+			"reddit":"",
+			"facebook":"RochesterRhinos"
+		}
 	},
 	"SPR": {
 		"name": "Swope Park Rangers",
@@ -632,7 +1074,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.sportingkc.com/rangers",
 		"league": "USL",
-		"id": "SPR"
+		"id": "SPR",
+		"social":{
+			"twitter":"swoperangers",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":"SwopeParkRangers"
+		}
 	},
 	"TUL": {
 		"name": "Tulsa Roughnecks",
@@ -643,7 +1092,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.roughnecksfc.com/",
 		"league": "USL",
-		"id": "TUL"
+		"id": "TUL",
+		"social":{
+			"twitter":"roughnecksfc",
+			"youtube":"tulsaroughnecksfc",
+			"instagram":"roughnecksfc",
+			"reddit":"",
+			"facebook":"roughnecksfc"
+		}
 	},
 	"CLT": {
 		"name": "Charlotte Independence",
@@ -652,9 +1108,16 @@
 		"coords": [35.109575, -80.698413],
 		"crest": "images/USL/CLT.png",
 		"colors": ["#f00", "#00f"],
-		"website": "http://rwww.charlotteindependence.com/",
+		"website": "http://www.charlotteindependence.com/",
 		"league": "USL",
-		"id": "CLT"
+		"id": "CLT",
+		"social":{
+			"twitter":"CLTIndependence",
+			"youtube":"channel/UCriCPWEuBymgkaSO5xcEoow",
+			"instagram":"cltindependence",
+			"reddit":"",
+			"facebook":"charlotteindependence"
+		}
 	},
 	"LAG2": {
 		"name": "LA Galaxy 2",
@@ -665,7 +1128,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.lagalaxy.com/2",
 		"league": "USL",
-		"id": "LAG2"
+		"id": "LAG2",
+		"social":{
+			"twitter":"lagalaxyii",
+			"youtube":"",
+			"instagram":"lagalaxyii",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"OCB": {
 		"name": "Orlando City B",
@@ -676,7 +1146,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.orlandocitysc.com/ocb",
 		"league": "USL",
-		"id": "OCB"
+		"id": "OCB",
+		"social":{
+			"twitter":"orlandocityb",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"PHO": {
 		"name": "Phoenix Rising FC",
@@ -687,7 +1164,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.phxrisingfc.com/",
 		"league": "USL",
-		"id": "PHO"
+		"id": "PHO",
+		"social":{
+			"twitter":"PHXRisingFC",
+			"youtube":"PhoenixRisingFootbalClub",
+			"instagram":"PHXRisingFC",
+			"reddit":"",
+			"facebook":"PHXRisingFC"
+		}
 	},
 	"RGV": {
 		"name": "Rio Grande Valley FC",
@@ -698,7 +1182,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.rgvfc.com/",
 		"league": "USL",
-		"id": "RGV"
+		"id": "RGV",
+		"social":{
+			"twitter":"rgvfc",
+			"youtube":"",
+			"instagram":"rgvfc",
+			"reddit":"",
+			"facebook":"RVGFC"
+		}
 	},
 	"SAC": {
 		"name": "Sacremento Republic FC",
@@ -709,7 +1200,16 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.sacrepublicfc.com/",
 		"league": "USL",
-		"id": "SAC"
+		"id": "SAC",
+		"social":{
+			"twitter":"SacRepublicFC",
+			"youtube":"SacRepublicFC",
+			"instagram":"sacrepublicfc",
+			"reddit":"r/sacrepublicfc",
+			"facebook":"SacRepublicFC",
+			"snapchat":"add/sacrepublicfc",
+			"pintrest":"sacrepublicfc"
+		}
 	},
 	"STL": {
 		"name": "Saint Louis FC",
@@ -720,7 +1220,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.saintlouisfc.com/",
 		"league": "USL",
-		"id": "STL"
+		"id": "STL",
+		"social":{
+			"twitter":"SaintLouisFC",
+			"youtube":"channel/UCsU6waIwpGB8LGSWss0AiOw",
+			"instagram":"saintlouisfc",
+			"reddit":"",
+			"facebook":"pages/Saint-Louis-FC/245170082355398"
+		}
 	},
 	"VAN2": {
 		"name": "Vancouver Whitecaps 2",
@@ -731,10 +1238,17 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.whitecapsfc.com/wfc2",
 		"league": "USL",
-		"id": "VAN2"
+		"id": "VAN2",
+		"social":{
+			"twitter":"wfc2",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":""
+		}
 	},
 	"NSH": {
-		"name": "Nashvile SC (2018)",
+		"name": "Nashvile SC",
 		"stadium": "First Tennessee Park",
 		"address": ["19 Jr Gilliam Way", "Nashville, TN 37219"],
 		"coords": [36.172857, -86.785072],
@@ -742,10 +1256,17 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.nashvillesc.com/",
 		"league": "USL",
-		"id": "NSH"
+		"id": "NSH",
+		"social":{
+			"twitter":"NashvileSC",
+			"youtube":"nashvilesc",
+			"instagram":"nashvilesc",
+			"reddit":"",
+			"facebook":"NashvileSC"
+		}
 	},
 	"VGS": {
-		"name": "Las Vegas Lights (2018)",
+		"name": "Las Vegas Lights ",
 		"stadium": "Thunderbird Stadium",
 		"address": ["850 N Las Vegas Blvd", "Las Vegas, NV 89101"],
 		"coords": [36.179926, -115.129383],
@@ -753,10 +1274,17 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.lasvegaslightsfc.com/",
 		"league": "USL",
-		"id": "VGS"
+		"id": "VGS",
+		"social":{
+			"twitter":"lvlightsfc",
+			"youtube":"",
+			"instagram":"lvlightsfc",
+			"reddit":"",
+			"facebook":"LVLightsFC"
+		}
 	},
 	"FFC": {
-		"name": "Fresno FC(2018)",
+		"name": "Fresno FC",
 		"stadium": "Chukchansi Park",
 		"address": ["1800 Tulare St", "Fresno, CA 93721"],
 		"coords": [36.731890, -119.789391],
@@ -764,7 +1292,14 @@
 		"colors": ["#f00", "#00f"],
 		"website": "http://www.fresnofc.com/",
 		"league": "USL",
-		"id": "FFC"
+		"id": "FFC",
+		"social":{
+			"twitter":"FresnoFC2018",
+			"youtube":"",
+			"instagram":"fresnofc2018",
+			"reddit":"",
+			"facebook":"fresnofc2018"
+		}
 	},
 	"JAX": {
 		"name": "Jacksonville Armada FC",
@@ -776,7 +1311,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.armadafc.com/",
 		"league": "NASL",
-		"id": "JAX"
+		"id": "JAX",
+		"social":{
+			"twitter":"jaxAramadaFC",
+			"youtube":"jaxAramadaFC",
+			"instagram":"jaxAramadaFC",
+			"reddit":"",
+			"facebook":"jaxAramadaFC"
+		}
 	},
 	"EDM": {
 		"name": "FC Edmonton",
@@ -788,7 +1330,15 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.fcedmonton.com/",
 		"league": "NASL",
-		"id": "EDM"
+		"id": "EDM",
+		"social":{
+			"twitter":"fcedmontonNOW",
+			"youtube":"user/fcedmonton",
+			"instagram":"fcedmontonNOW",
+			"reddit":"",
+			"facebook":"fcedmonton",
+			"flickr":"fcedmonton"
+		}
 	},
 	"IND": {
 		"name": "Indy Eleven",
@@ -800,7 +1350,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.indyeleven.com/",
 		"league": "NASL",
-		"id": "IND"
+		"id": "IND",
+		"social":{
+			"twitter":"IndyEleven",
+			"youtube":"",
+			"instagram":"IndyEleven",
+			"reddit":"",
+			"facebook":"IndyEleven"
+		}
 	},
 	"CSMS": {
 		"name": "New York Cosmos",
@@ -812,7 +1369,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.nycosmos.com/",
 		"league": "NASL",
-		"id": "CSMS"
+		"id": "CSMS",
+		"social":{
+			"twitter":"NYCosmos",
+			"youtube":"TheNewYorkCosmos",
+			"instagram":"NYCosmos",
+			"reddit":"",
+			"facebook":"NYCosmos"
+		}
 	},
 	"PUR": {
 		"name": "Puerto Rico FC",
@@ -824,7 +1388,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.puertoricofc.com",
 		"league": "NASL",
-		"id": "PUR"
+		"id": "PUR",
+		"social":{
+			"twitter":"",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":"Puerto-Rico-Football-Club-827324200684817"
+		}
 	},
 	"SFO": {
 		"name": "San Fancisco Deltas",
@@ -836,7 +1407,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.sfdeltas.com/",
 		"league": "NASL",
-		"id": "SFO"
+		"id": "SFO",
+		"social":{
+			"twitter":"PRfootballclub",
+			"youtube":"channel/UCPU23a658Pb1jMreqOQOKXg",
+			"instagram":"PRfootballclub",
+			"reddit":"",
+			"facebook":"Puerto-Rico-Football-Club-827324200684817"
+		}
 	},
 	"MIA": {
 		"name": "Miami FC",
@@ -848,7 +1426,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.miamifc.com/",
 		"league": "NASL",
-		"id": "MIA"
+		"id": "MIA",
+		"social":{
+			"twitter":"TheMiamiFC",
+			"youtube":"channel/UC-aBQVJnb11rPVyxXNXbqXA",
+			"instagram":"themiamifc",
+			"reddit":"",
+			"facebook":"The-Miami-FC-1633204423567419"
+		}
 	},
 	"NCF": {
 		"name": "North Carolina FC",
@@ -859,7 +1444,14 @@
 		"colors": ["#000", "#f00"],
 		"website": "http://www.northcarolinafc.com/",
 		"league": "USL",
-		"id": "NCF"
+		"id": "NCF",
+		"social":{
+			"twitter":"NorthCarolinaFC",
+			"youtube":"",
+			"instagram":"NorthCarolinaFC",
+			"reddit":"",
+			"facebook":"NorthCarolinaFC"
+		}
 	}
 	
 }

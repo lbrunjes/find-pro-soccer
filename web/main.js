@@ -6,6 +6,7 @@ Display nearest temas.
 
 */
 var api_url = "https://brunjes.org:9000";
+var api_url = "http://localhost:9000";
 
 var ajax = function(url, load) {
 	var xhr = new XMLHttpRequest();
@@ -193,6 +194,7 @@ var formatTeams = function(data){
 
 		tm_details =document.createElement("p");
 		tm_details.innerHTML = "Next home game: 2018/NA/NA";
+		tm_details.appendChild(generateSocialIcons(team));
 
 		tm.appendChild(tm_details);
 		
@@ -298,9 +300,9 @@ var formatLeague = function(data){
 	tm_name.innerText=team.name;
 	tm_header.appendChild(tm_name);
 	
-
+	
 	tm.appendChild(tm_header);
-
+	tm.appendChild(generateSocialIcons(team));
 	
 
 	label.appendChild(tm);
@@ -351,3 +353,27 @@ map.fitBounds([min,max]);
 
 };
 
+var generateSocialIcons = function(team){
+	var urls={
+		"googleplus":"https://plus.google.com/",
+		"rss":""
+	};
+	var iconurl = " images/icons/";
+
+	var list = document.createElement("div");
+	list.setAttribute("class", "social");
+	for(var media in team.social){
+		if(team.social[media]){
+			var link = document.createElement("a");
+			var icon = document.createElement("img");
+			var root =(urls[media]? urls[media]:"https://"+media+".com/");
+			link.setAttribute("href", root+team.social[media]);
+			link.setAttribute("target","_blank");
+			icon.setAttribute("src", iconurl+media+".svg");
+			link.appendChild(icon);
+			list.appendChild(link);
+		}
+
+	}
+	return list;
+}

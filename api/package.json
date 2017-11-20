@@ -7,5 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lee Brunjes",
-  "license": "MIT"
+  "license": "MIT",
+   "dependencies" :
+   {
+   	"xml":"1.0.1"
+
+  },
+  "repository":
+  { "type" : "git"
+  , "url" : "https://github.com/lbrunjes/find-pro-soccer"
+  },
+  "bugs":{ "url" : "https://github.com/lbrunjes/find-pro-soccer/issues"}
 }
