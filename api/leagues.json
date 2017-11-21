@@ -1,23 +1,51 @@
 {
 	"MLS": {
 		"pro": true,
-		"website": "",
+		"website": "https://www.mlssoccer.com/",
+		"social":{
+			"twitter":"mls",
+			"youtube":"mls",
+			"instagram":"mls",
+			"reddit":"r/MLS",
+			"facebook":"NYCosmos",
+			"snapchat":"mls"
+		},
 		"teams": ["ATL", "CC", "CHI", "CO", "DCU", "FCD", "HOU","LAF", "LAG", "MNU", "MON", "NER", "NYC", "NYR", "OC", "PHI", "POR", "RSL", "SEA", "SJ", "SKC", "TOR", "VAN"]
 	},
 
 	"NWSL": {
 		"pro": true,
-		"website": "",
+		"website": "http://www.nwslsoccer.com",
+		"social":{
+			"twitter":"NWSL",
+			"instagram":"nwsl",
+			"reddit":"r/NWSL",
+			"facebook":"NWSL"
+		},
 		"teams": ["BOS", "FKC", "NCC", "ORP", "SBF", "WAS", "CRS", "HOD", "POT", "SER"]
 	},
 	"USL": {
 		"pro": true,
-		"website": "",
+		"website": "http://www.uslsoccer.com/",
+		"social":{
+			"twitter":"usl",
+			"youtube":"usl",
+			"instagram":"uslsoccer",
+			"reddit":"r/USLPRO",
+			"facebook":"USLSoccer"
+		},
 		"teams": ["RIC","ATL2", "COS", "LVL", "OCS", "PIT", "SA", "TAM", "BST", "FCC", "OKC", "POR2", "RMN", "SEA2", "TOR2", "CLS", "PFC", "NYR2", "OTT", "REN", "ROD", "SPR", "TUL", "CLT", "LAG2", "OCB", "PHO", "RGV", "SAC", "STL", "VAN2", "VGS", "FFC","NSH", "NCF", "VGS"]
 	},
 	"NASL": {
 		"pro": true,
-		"website": "",
+		"website": "http://www.nasl.com/",
+		"social":{
+			"twitter":"NASLOfficial",
+			"youtube":"user/NASLOfficial",
+			"instagram":"NASLOfficial",
+			"reddit":"r/NASlSoccer",
+			"facebook":"NASLFanPage"
+		},
 		"teams": ["CSMS","EDM","IND","JAX","MIA","PUR"]
 	}
 }

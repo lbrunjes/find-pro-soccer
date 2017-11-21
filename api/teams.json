@@ -1207,7 +1207,7 @@
 			"instagram":"sacrepublicfc",
 			"reddit":"r/sacrepublicfc",
 			"facebook":"SacRepublicFC",
-			"snapchat":"add/sacrepublicfc",
+			"snapchat":"sacrepublicfc",
 			"pinterest":"sacrepublicfc"
 		}
 	},
@@ -1362,7 +1362,7 @@
 	"CSMS": {
 		"name": "New York Cosmos",
 		"stadium": "MCU Park",
-		"address": ["40.574253, -73.983811"],
+		"address": ["1904 Surf Ave", "Brooklyn, NY 11224"],
 	
 		"coords": [40.574253, -73.983811],
 		"crest": "images/NASL/CSMS.png",

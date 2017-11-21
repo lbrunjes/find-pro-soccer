@@ -355,7 +355,8 @@ map.fitBounds([min,max]);
 
 var generateSocialIcons = function(team){
 	var urls={
-		"googleplus":"https://plus.google.com/"
+		"googleplus":"https://plus.google.com/",
+		"snapchat":"https://go.snapchat.com/add/"
 	};
 	var blanks = ["rss","web"]
 	var iconurl = " images/icons/";
