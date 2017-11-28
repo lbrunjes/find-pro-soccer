@@ -15,11 +15,11 @@ console.log("Testing team to league match up");
 for(var i in leagues){
 	var league = leagues[i];
 	if(!league.website){
-		console.log("  league has no website", team.id);
+		console.log("  league has no website", i);
 		errors++;
 	}
 	if(league.website.indexOf("http")<0){
-		console.log("  league website has no http, thus links are borked", team.id);
+		console.log("  league website has no http, thus links are borked", i);
 		errors++;
 	}
 	if(!fs.existsSync("../web/images/"+i+"/"+i+".svg") ){
@@ -33,7 +33,11 @@ for(var i in leagues){
 			console.log("  TEAM IN LEAGUE DOES NOT EXIST:", i , league.teams[j]);
 			errors++;
 		}
-		if(!teams[league.teams[j]].league === i ){
+		if(!teams[league.teams[j]]){
+			console.log("  TEAM DOESNT EXIST!!:", i , league.teams[j]);
+			errors++;
+		}
+		else	if(!teams[league.teams[j]].league === i ){
 			console.log("  TEAM IN LEAGUE SAYS it is in another league:", i , league.teams[j]);
 			errors++;
 		}
@@ -55,6 +59,7 @@ for(var i in teams){
 
 	if(leagues[team.league].teams.indexOf(team.id) <0 ){
 		console.log("  TEAM ASSIGNED TO LEAGUE, BUT LEAGUE DOES NOT USE TEAM:", team.id, team.league);
+		console.log("  =->DEFUNCT?")
 			errors++;
 	}
 	///assume the default layout 

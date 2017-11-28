@@ -1,0 +1,1710 @@
+"NPSL-AFC Cleveland": {
+		"name": "AFC Cleveland",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_AFC_Cleveland.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-AFC Cleveland",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Erie Commodores FC": {
+		"name": "Erie Commodores FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Erie_Commodores_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Erie Commodores FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Buffalo": {
+		"name": "FC Buffalo",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Buffalo.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Buffalo",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Fort Pitt Regiment": {
+		"name": "Fort Pitt Regiment",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Fort_Pitt_Regiment.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Fort Pitt Regiment",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Rochester Lancers": {
+		"name": "Rochester Lancers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Rochester_Lancers.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Rochester Lancers",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Syracuse FC": {
+		"name": "Syracuse FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Syracuse_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Syracuse FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-AFC Ann Arbor": {
+		"name": "AFC Ann Arbor",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_AFC_Ann_Arbor.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-AFC Ann Arbor",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Detroit City FC": {
+		"name": "Detroit City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Detroit_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Detroit City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Indiana": {
+		"name": "FC Indiana",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Indiana.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Indiana",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Grand Rapids FC": {
+		"name": "Grand Rapids FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Grand_Rapids_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Grand Rapids FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Kalamazoo FC": {
+		"name": "Kalamazoo FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Kalamazoo_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Kalamazoo FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Michigan Stars FC": {
+		"name": "Michigan Stars FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Michigan_Stars_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Michigan Stars FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Milwaukee Torrent": {
+		"name": "Milwaukee Torrent",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Milwaukee_Torrent.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Milwaukee Torrent",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Dakota Fusion FC": {
+		"name": "Dakota Fusion FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Dakota_Fusion_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Dakota Fusion FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Duluth FC": {
+		"name": "Duluth FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Duluth_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Duluth FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-LC Aris FC": {
+		"name": "LC Aris FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_LC_Aris_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-LC Aris FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Med City FC": {
+		"name": "Med City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Med_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Med City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Minneapolis City SC": {
+		"name": "Minneapolis City SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Minneapolis_City_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Minneapolis City SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Minnesota": {
+		"name": "Minnesota ",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Minnesota.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Minnesota",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-TwinStars FC": {
+		"name": "TwinStars FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_TwinStars_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-TwinStars FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Sioux Falls Thunder FC": {
+		"name": "Sioux Falls Thunder FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Sioux_Falls_Thunder_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Sioux Falls Thunder FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-VSLT FC": {
+		"name": "VSLT FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_VSLT_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-VSLT FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Brooklyn Italians": {
+		"name": "Brooklyn Italians",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Brooklyn_Italians.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Brooklyn Italians",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Elm City Express": {
+		"name": "Elm City Express",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Elm_City_Express.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Elm City Express",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Greater Lowell NPSL FC": {
+		"name": "Greater Lowell NPSL FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Greater_Lowell_NPSL_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Greater Lowell NPSL FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-New York Cosmos B": {
+		"name": "New York Cosmos B",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_New_York_Cosmos_B.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-New York Cosmos B",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Seacoast United Phantoms": {
+		"name": "Seacoast United Phantoms",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Seacoast_United_Phantoms.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Seacoast United Phantoms",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-TSF FC": {
+		"name": "TSF FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_TSF_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-TSF FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Boston City FC": {
+		"name": "Boston City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Boston_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Boston City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Hartford City FC": {
+		"name": "Hartford City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Hartford_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Hartford City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Kingston Stockade FC": {
+		"name": "Kingston Stockade FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Kingston_Stockade_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Kingston Stockade FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-New York Athletic Club": {
+		"name": "New York Athletic Club",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_New_York_Athletic_Club.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-New York Athletic Club",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Rhode Island Reds FC": {
+		"name": "Rhode Island Reds FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Rhode_Island_Reds_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Rhode Island Reds FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Seacoast United Mariners": {
+		"name": "Seacoast United Mariners",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Seacoast_United_Mariners.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Seacoast United Mariners",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Buxmont Torch": {
+		"name": "Buxmont Torch",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Buxmont_Torch.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Buxmont Torch",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Clarkstown SC Eagles": {
+		"name": "Clarkstown SC Eagles",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Clarkstown_SC_Eagles.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Clarkstown SC Eagles",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Electric City Shock": {
+		"name": "Electric City Shock",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Electric_City_Shock.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Electric City Shock",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Greater Binghamton FC Thunder": {
+		"name": "Greater Binghamton FC Thunder",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Greater_Binghamton_FC_Thunder.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Greater Binghamton FC Thunder",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Hershey FC": {
+		"name": "Hershey FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Hershey_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Hershey FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Junior Lone Star FC": {
+		"name": "Junior Lone Star FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Junior_Lone_Star_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Junior Lone Star FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-New Jersey Copa FC": {
+		"name": "New Jersey Copa FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_New_Jersey_Copa_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-New Jersey Copa FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-West Chester United SC": {
+		"name": "West Chester United SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_West_Chester_United_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-West Chester United SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Frederick": {
+		"name": "FC Frederick",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Frederick.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Frederick",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Fredericksburg FC": {
+		"name": "Fredericksburg FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Fredericksburg_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Fredericksburg FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Legacy 76": {
+		"name": "Legacy 76",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Legacy 76.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Legacy 76",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Virginia Beach City FC": {
+		"name": "Virginia Beach City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Virginia_Beach_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Virginia Beach City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Dallas City FC": {
+		"name": "Dallas City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Dallas_City_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Dallas City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Demize NPSL": {
+		"name": "Demize NPSL",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Demize_NPSL.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Demize NPSL",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Wichita": {
+		"name": "FC Wichita",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Wichita.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Wichita",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Little Rock Rangers": {
+		"name": "Little Rock Rangers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Little_Rock_Rangers.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Little Rock Rangers",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Ozark FC": {
+		"name": "Ozark FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Ozark_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Ozark FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Tulsa Athletic": {
+		"name": "Tulsa Athletic",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Tulsa_Athletic.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Tulsa Athletic",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Dutch Lions FC": {
+		"name": "Dutch Lions FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Dutch_Lions_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Dutch Lions FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Fort Worth Vaqueros FC": {
+		"name": "Fort Worth Vaqueros FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Fort_Worth_Vaqueros_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Fort Worth Vaqueros FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Houston Regals SCA": {
+		"name": "Houston Regals SCA",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Houston_Regals_SCA.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Houston Regals SCA",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Midland-Odessa Sockers FC": {
+		"name": "Midland-Odessa Sockers FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Midland-Odessa_Sockers_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Midland-Odessa Sockers FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Shreveport Rafters FC": {
+		"name": "Shreveport Rafters FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Shreveport_Rafters_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Shreveport Rafters FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Tyler FC": {
+		"name": "Tyler FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Tyler_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Tyler FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Asheville City SC": {
+		"name": "Asheville City SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Asheville_City_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Asheville City SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Atlanta Silverbacks FC": {
+		"name": "Atlanta Silverbacks FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Atlanta_Silverbacks_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Atlanta Silverbacks FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Chattanooga FC": {
+		"name": "Chattanooga FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Chattanooga_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Chattanooga FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Emerald Force SC": {
+		"name": "Emerald Force SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Emerald_Force_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Emerald Force SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Carolina United": {
+		"name": "FC Carolina United",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Carolina_United.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Carolina United",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Georgia Revolution FC": {
+		"name": "Georgia Revolution FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Georgia_Revolution_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Georgia Revolution FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Inter Nashville FC": {
+		"name": "Inter Nashville FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Inter_Nashville_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Inter Nashville FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-New Orleans Jesters": {
+		"name": "New Orleans Jesters",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_New_Orleans_Jesters.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-New Orleans Jesters",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Beaches FC": {
+		"name": "Beaches FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Beaches_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Beaches FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Boca Raton FC": {
+		"name": "Boca Raton FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Boca_Raton_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Boca Raton FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Jacksonville Armada U-23": {
+		"name": "Jacksonville Armada U-23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Jacksonville_Armada_U-23.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Jacksonville Armada U-23",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Kraze United": {
+		"name": "Kraze United",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Kraze_United.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Kraze United",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Miami Fusion FC": {
+		"name": "Miami Fusion FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Miami_Fusion_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Miami Fusion FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Miami United FC": {
+		"name": "Miami United FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Miami_United_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Miami United FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Naples United FC": {
+		"name": "Naples United FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Naples_United_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Naples United FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Academica SC": {
+		"name": "Academica SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Academica_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Academica SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-CD Aguiluchos USA": {
+		"name": "CD Aguiluchos USA",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_CD_Aguiluchos_USA.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-CD Aguiluchos USA",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-East Bay FC Stompers": {
+		"name": "East Bay FC Stompers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_East_Bay_FC_Stompers.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-East Bay FC Stompers",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-El Farolito": {
+		"name": "El Farolito",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_El_Farolito.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-El Farolito",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Davis": {
+		"name": "FC Davis",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Davis.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Davis",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Napa Valley 1839 FC": {
+		"name": "Napa Valley 1839 FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Napa_Valley 1839 FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Napa Valley 1839 FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Sacramento Gold FC": {
+		"name": "Sacramento Gold FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Sacramento_Gold_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Sacramento Gold FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Sonoma County Sol FC": {
+		"name": "Sonoma County Sol FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Sonoma_County_Sol_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Sonoma County Sol FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FCM Portland": {
+		"name": "FCM Portland",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FCM_Portland.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FCM Portland",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Kitsap Pumas": {
+		"name": "Kitsap Pumas",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Kitsap_Pumas.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Kitsap Pumas",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-OSA FC": {
+		"name": "OSA FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_OSA_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-OSA FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-PDX FC": {
+		"name": "PDX FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_PDX_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-PDX FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Pierce County FC": {
+		"name": "Pierce County FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Pierce_County_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Pierce County FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Spokane SC Shadow": {
+		"name": "Spokane SC Shadow",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Spokane_SC_Shadow.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Spokane SC Shadow",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Albion SC": {
+		"name": "Albion SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Albion_SC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Albion SC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-City of Angels FC": {
+		"name": "City of Angels FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_City_of_Angels_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-City of Angels FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-FC Arizona": {
+		"name": "FC Arizona",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_FC_Arizona.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-FC Arizona",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Orange County FC": {
+		"name": "Orange County FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Orange_County_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Orange County FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Oxnard Guerreros FC": {
+		"name": "Oxnard Guerreros FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Oxnard_Guerreros_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Oxnard Guerreros FC",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Riverside Coras": {
+		"name": "Riverside Coras",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Riverside_Coras.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Riverside Coras",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Sports Club Corinthians USA": {
+		"name": "Sports Club Corinthians USA",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Sports_Club_Corinthians_USA.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Sports Club Corinthians USA",
+		"social":{
+			
+		}
+
+	},
+	
+"NPSL-Temecula FC": {
+		"name": "Temecula FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],
+	
+		"coords": [0,0],
+		"crest": "images/NPSL/logo_Temecula_FC.svg",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "NPSL",
+		
+		"id": "NPSL-Temecula FC",
+		"social":{
+			
+		}
+
+	},
+	

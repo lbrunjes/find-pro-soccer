@@ -1,0 +1,1153 @@
+
+"PDL-AC Connecticut": {
+		"name": "AC Connecticut",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lAC Connecticut.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-AC Connecticut",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Albuquerque Sol F.C.": {
+		"name": "Albuquerque Sol F.C.",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lAlbuquerque Sol F.C..png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Albuquerque Sol F.C.",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-BYU Cougars": {
+		"name": "BYU Cougars",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lBYU Cougars.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-BYU Cougars",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Brazos Valley Cavalry F.C.": {
+		"name": "Brazos Valley Cavalry F.C.",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lBrazos Valley Cavalry F.C..png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Brazos Valley Cavalry F.C.",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Burlingame Dragons FC": {
+		"name": "Burlingame Dragons FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lBurlingame Dragons FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Burlingame Dragons FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Calgary Foothills FC": {
+		"name": "Calgary Foothills FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lCalgary Foothills FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Calgary Foothills FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Carolina Dynamo": {
+		"name": "Carolina Dynamo",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lCarolina Dynamo.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Carolina Dynamo",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Charlotte Eagles": {
+		"name": "Charlotte Eagles",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lCharlotte Eagles.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Charlotte Eagles",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Chicago FC United": {
+		"name": "Chicago FC United",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lChicago FC United.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Chicago FC United",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Cincinnati Dutch Lions": {
+		"name": "Cincinnati Dutch Lions",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lCincinnati Dutch Lions.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Cincinnati Dutch Lions",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Colorado Rapids U23": {
+		"name": "Colorado Rapids U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lColorado Rapids U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Colorado Rapids U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Dayton Dutch Lions": {
+		"name": "Dayton Dutch Lions",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lDayton Dutch Lions.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Dayton Dutch Lions",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Derby City Rovers": {
+		"name": "Derby City Rovers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lDerby City Rovers.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Derby City Rovers",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Des Moines Menace": {
+		"name": "Des Moines Menace",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lDes Moines Menace.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Des Moines Menace",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Evergreen FC": {
+		"name": "Evergreen FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lEvergreen FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Evergreen FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FA Euro New York": {
+		"name": "FA Euro New York",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFA Euro New York.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FA Euro New York",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Boston": {
+		"name": "FC Boston",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Boston.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Boston",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Boulder U23": {
+		"name": "FC Boulder U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Boulder U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Boulder U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Cleburne": {
+		"name": "FC Cleburne",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Cleburne.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Cleburne",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Golden State Force": {
+		"name": "FC Golden State Force",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Golden State Force.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Golden State Force",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Miami City": {
+		"name": "FC Miami City",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Miami City.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Miami City",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-FC Tucson": {
+		"name": "FC Tucson",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFC Tucson.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-FC Tucson",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Fresno Fuego": {
+		"name": "Fresno Fuego",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lFresno Fuego.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Fresno Fuego",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-GPS Portland Phoenix": {
+		"name": "GPS Portland Phoenix",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lGPS Portland Phoenix.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-GPS Portland Phoenix",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Houston FC": {
+		"name": "Houston FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lHouston FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Houston FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-IMG Academy Bradenton": {
+		"name": "IMG Academy Bradenton",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lIMG Academy Bradenton.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-IMG Academy Bradenton",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Jersey Express": {
+		"name": "Jersey Express",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lJersey Express.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Jersey Express",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-K-W United FC": {
+		"name": "K-W United FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lK-W United FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-K-W United FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Lakeland Tropics": {
+		"name": "Lakeland Tropics",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lLakeland Tropics.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Lakeland Tropics",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Lane United FC": {
+		"name": "Lane United FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lLane United FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Lane United FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Lehigh Valley United": {
+		"name": "Lehigh Valley United",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lLehigh Valley United.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Lehigh Valley United",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Long Island Rough Riders": {
+		"name": "Long Island Rough Riders",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lLong Island Rough Riders.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Long Island Rough Riders",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Michigan Bucks": {
+		"name": "Michigan Bucks",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lMichigan Bucks.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Michigan Bucks",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Mississippi Brilla FC": {
+		"name": "Mississippi Brilla FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lMississippi Brilla FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Mississippi Brilla FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Myrtle Beach Mutiny": {
+		"name": "Myrtle Beach Mutiny",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lMyrtle Beach Mutiny.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Myrtle Beach Mutiny",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Nashville SC U23": {
+		"name": "Nashville SC U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lNashville SC U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Nashville SC U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-New York Red Bulls U23": {
+		"name": "New York Red Bulls U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lNew York Red Bulls U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-New York Red Bulls U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-North Carolina FC U23": {
+		"name": "North Carolina FC U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lNorth Carolina FC U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-North Carolina FC U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-OKC Energy U23": {
+		"name": "OKC Energy U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lOKC Energy U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-OKC Energy U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Ocean City Nor'easters": {
+		"name": "Ocean City Nor'easters",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lOcean City Nor'easters.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Ocean City Nor'easters",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Orange County SC U23": {
+		"name": "Orange County SC U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lOrange County SC U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Orange County SC U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Palm Beach Suns FC": {
+		"name": "Palm Beach Suns FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lPalm Beach Suns FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Palm Beach Suns FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Peachtree City MOBA": {
+		"name": "Peachtree City MOBA",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lPeachtree City MOBA.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Peachtree City MOBA",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Portland Timbers U23": {
+		"name": "Portland Timbers U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lPortland Timbers U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Portland Timbers U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Reading United AC": {
+		"name": "Reading United AC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lReading United AC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Reading United AC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-SC United Bantams": {
+		"name": "SC United Bantams",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSC United Bantams.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-SC United Bantams",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-SIMA Aguilas": {
+		"name": "SIMA Aguilas",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSIMA Aguilas.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-SIMA Aguilas",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Saint Louis FC U23": {
+		"name": "Saint Louis FC U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSaint Louis FC U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Saint Louis FC U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-San Diego Zest FC": {
+		"name": "San Diego Zest FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSan Diego Zest FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-San Diego Zest FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-San Francisco City FC": {
+		"name": "San Francisco City FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSan Francisco City FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-San Francisco City FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Seacoast United Phantoms": {
+		"name": "Seacoast United Phantoms",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSeacoast United Phantoms.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Seacoast United Phantoms",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Sounders FC U23": {
+		"name": "Sounders FC U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSounders FC U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Sounders FC U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-South Florida Surf": {
+		"name": "South Florida Surf",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSouth Florida Surf.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-South Florida Surf",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-South Georgia Tormenta FC": {
+		"name": "South Georgia Tormenta FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSouth Georgia Tormenta FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-South Georgia Tormenta FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Southern California Seahorses": {
+		"name": "Southern California Seahorses",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSouthern California Seahorses.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Southern California Seahorses",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Southern California Surf": {
+		"name": "Southern California Surf",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSouthern California Surf.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Southern California Surf",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-St. Louis Lions": {
+		"name": "St. Louis Lions",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lSt. Louis Lions.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-St. Louis Lions",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-TSS FC Rovers": {
+		"name": "TSS FC Rovers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lTSS FC Rovers.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-TSS FC Rovers",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Tampa Bay Rowdies U23": {
+		"name": "Tampa Bay Rowdies U23",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lTampa Bay Rowdies U23.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Tampa Bay Rowdies U23",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Texas United": {
+		"name": "Texas United",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lTexas United.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Texas United",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-The Villages SC": {
+		"name": "The Villages SC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lThe Villages SC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-The Villages SC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Thunder Bay Chill": {
+		"name": "Thunder Bay Chill",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lThunder Bay Chill.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Thunder Bay Chill",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Tobacco Road FC": {
+		"name": "Tobacco Road FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lTobacco Road FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Tobacco Road FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Tri-Cities Otters": {
+		"name": "Tri-Cities Otters",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lTri-Cities Otters.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Tri-Cities Otters",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Ventura County Fusion": {
+		"name": "Ventura County Fusion",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lVentura County Fusion.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Ventura County Fusion",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Victoria Highlanders FC": {
+		"name": "Victoria Highlanders FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lVictoria Highlanders FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Victoria Highlanders FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-WSA Winnipeg": {
+		"name": "WSA Winnipeg",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWSA Winnipeg.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-WSA Winnipeg",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-West Virginia Chaos": {
+		"name": "West Virginia Chaos",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWest Virginia Chaos.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-West Virginia Chaos",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Westchester Flames": {
+		"name": "Westchester Flames",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWestchester Flames.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Westchester Flames",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Western Mass Pioneers": {
+		"name": "Western Mass Pioneers",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWestern Mass Pioneers.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Western Mass Pioneers",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Weston FC": {
+		"name": "Weston FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWeston FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Weston FC",
+		"social":{
+			
+		}
+
+	},
+	
+"PDL-Wilmington Hammerheads FC": {
+		"name": "Wilmington Hammerheads FC",
+		"stadium": "Unknown",
+		"address": ["???", "??"],		"coords": [0,0],
+		"crest": "images/PDL/lWilmington Hammerheads FC.png",
+		"colors": ["#000", "#f00"],
+		"website": "",
+		"league": "PDL",
+		
+		"id": "PDL-Wilmington Hammerheads FC",
+		"social":{
+			
+		}
+
+	},
+	
