@@ -5,8 +5,8 @@ Display nearest temas.
 
 
 */
-var api_url = "https://brunjes.org:9000";
-//var api_url = "http://localhost:9000";
+var api_url = "//"+window.location.host+":9000";
+
 
 var ajax = function(url, load) {
 	var xhr = new XMLHttpRequest();
@@ -185,10 +185,7 @@ var formatTeams = function(data){
 		tm_stadium_address.innerHTML = team.address;
 		tm_details.appendChild(tm_stadium_address);
 
-		var team_site=document.createElement("a");
-		team_site.setAttribute("href",team.website);
-		team_site.innerText = team.website;
-		tm_details.prepend(team_site);
+		
 		
 		tm.appendChild(tm_details);
 

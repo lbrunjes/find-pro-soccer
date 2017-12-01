@@ -152,7 +152,7 @@ var rest_api = function(){
 
 		//get manhattan distance less accurate in canada but not a huge issue really
 		this.getDist = function(_x,_y, target){
-			return Math.abs(_x - target[0])+ Math.abs(_y - target[1])
+			return Math.sqrt(Math.pow(_x - target[0],2)+ Math.pow(_y - target[1],2))
 		}
 		this.getDistHav = function(_x,_y, target){
 			
