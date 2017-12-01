@@ -510,24 +510,20 @@
 			"facebook":"bostonbreakers"
 		}
 	},
-	"FKC": {
-		"name": "Formerly FC Kansas City Blues",
+	"UTH": {
+		"name": "Utah Royals",
 		"stadium": "Rio Tinto Stadium",
 		"address": ["9256 State St", "Sandy, UT 84070"],
 		"coords": [40.582544, -111.893576],
-		"crest": "images/NWSL/FKC.png",
+		"crest": "images/NWSL/UTH.png",
 		"colors": ["#00f", "#00f"],
-		"website": "http://www.fckansascity.com/",
+		"website": "https://www.rsl.com/utahroyals",
 		"league": "NWSL",
-		"id": "FKC",
+		"id": "UTH",
 		"social":{
-			"rss":"https://www.fckansascity.com/index?format=RSS",
-		
-			"twitter":"fckansascity",
-			"youtube":"",
-			"instagram":"fckansascityblues",
-			"reddit":"",
-			"facebook":"FCKansasCity"
+			"twitter":"utahroyalsfc",
+			"instagram":"utahroyalsfc",
+			"facebook":"utahroyalsfc"
 		}
 	},
 	"NCC": {
