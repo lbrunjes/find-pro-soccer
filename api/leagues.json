@@ -22,7 +22,7 @@
 			"reddit":"r/NWSL",
 			"facebook":"NWSL"
 		},
-		"teams": ["BOS", "UTHR", "NCC", "ORP", "SBF", "WAS", "CRS", "HOD", "POT", "SER"]
+		"teams": ["BOS", "UTH", "NCC", "ORP", "SBF", "WAS", "CRS", "HOD", "POT", "SER"]
 	},
 	"USL": {
 		"pro": true,

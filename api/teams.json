@@ -517,11 +517,11 @@
 		"coords": [40.582544, -111.893576],
 		"crest": "images/NWSL/UTH.png",
 		"colors": ["#00f", "#00f"],
-		"website": "https://www.rsl.com/utahroyals",
+		"website": "https://www.utahroyalsfc.com/",
 		"league": "NWSL",
 		"id": "UTH",
 		"social":{
-			"twitter":"utahroyalsfc",
+			"twitter":"utahroyals",
 			"instagram":"utahroyalsfc",
 			"facebook":"utahroyalsfc"
 		}
