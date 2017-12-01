@@ -1452,6 +1452,333 @@
 			"reddit":"",
 			"facebook":"NorthCarolinaFC"
 		}
+	},
+	"LANC":{
+		"name": "Lancaster Inferno",
+		"stadium": "Millersville University: Pucillo Field",
+		"address": ["Pucillo Field","Millersville, PA 17551"],
+		"coords": [40.000044,-76.346947],
+		"crest": "images/UWS/LANC.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.lancasterinferno.com",
+		"league": "UWS",
+		"id": "LANC",
+		"social":{
+			"rss":"http://www.lancasterinferno.com/feed"
+		}
+	},
+"LIRRW":{
+		"name": "Long Island Rough Riders",
+		"stadium": "Saint Anthony’s High School",
+		"address": ["275 Wolf Hill Road","South Huntington, NY 11747-1394"],
+		"coords": [40.812414, -73.388461],
+		"crest": "images/UWS/LIRRW.png",
+		"colors": ["#ee3224", "#0067b1", "#ffffff"],
+		"website": "https://liroughriders.com/",
+		"league": "UWS",
+		"id": "LIRRW",
+		"social":{
+			"twitter":"LIRoughRiders",
+			"facebook":"LIRoughRidersSoccer"
+		}
+	},
+"NEMU":{
+		"name": "New England Mutiny",
+		"stadium": "East Longmeadow HS",
+		"address": ["180 Maple St", "East Longmeadow, MA 01028"],
+		"coords": [42.059311, -72.524157],
+		"crest": "images/UWS/NEMU.png",
+		"colors": ["#e7fe12", "#191919", "#ffffff"],
+		"website": "http://www.mutinysoccer.com/",
+		"league": "UWS",
+		"id": "NEMU",
+		"social":{
+			"twitter":"NEMutiny",
+			"instagram":"NEMutiny",
+			"googleplus":"u/0/106428329339355255270/posts",
+			"facebook":"NEMutiny"
+		}
+	},
+"NJCFC":{
+		"name": "New Jersey Copa FC",
+		"stadium": "Saint John Vianney HS",
+		"address": ["540A Line Rd","Holmdel, NJ 07733"],
+		"coords": [40.403027, -74.207078],
+		"crest": "images/UWS/NJCFC.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://fccopa.com/",
+		"league": "UWS",
+		"id": "NJCFC",
+		"social":{
+			"twitter":"fccopa",
+			"youtube":"user/fccopasoccer",
+			"instagram":"fccopa",
+			"facebook":"fccopa"
+		}
+	},
+"NYM":{
+		"name": "New York Magic",
+		"stadium": "Poly Prep Country Day School",
+		"address": ["9216 7th Ave", "Brooklyn, NY 11228"],
+		"coords": [40.610673, -74.025708],
+		"crest": "images/UWS/NYM.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.nymagicsoccer.com/",
+		"league": "UWS",
+		"id": "NYM",
+		"social":{
+			"twitter":"nymagicsoccer",
+			"youtube":"",
+			"instagram":"",
+			"reddit":"",
+			"facebook":"nymagicsoccer"
+		}
+	},
+"HOUA":{
+		"name": "Houston Aces",
+		"stadium": "Houston Sports Park",
+		"address": ["12131 Kirby Dr", "Houston, TX 77045"],
+		"coords": [29.637695, -95.395932],
+		"crest": "images/UWS/HOUA.png",
+		"colors": ["#a0cdee", "#ffffff"],
+		"website": "http://www.thehoustonaces.com/",
+		"league": "UWS",
+		"id": "HOUA",
+		"social":{
+			"twitter":"TheHoustonAces",
+			"youtube":"user/HoustonAces",
+			"instagram":"thehoustonaces",
+			"facebook":"TheHoustonAces"
+		}
+	},
+"RSLW":{
+		"name": "Real Salt Lake Women",
+		"stadium": "Utah Valley University - Clyde Field",
+		"address": ["800 West University Parkway","Orem, UT, 84058"],
+		"coords": [40.278452, -111.719671],
+		"crest": "images/UWS/RSLW.png",
+		"colors": ["#000", "#fff"],
+		"website": "http://www.realsaltlakewomen.com/",
+		"league": "UWS",
+		"id": "RSLW",
+		"social":{
+			"twitter":"RealSaltLakeWmn",
+			"facebook":"28202760"
+		}
+	},
+"SCH":{
+		"name": "Santa Clarita Heat",
+		"stadium": "Master's College",
+		"address": ["21726 Placerita Canyon Rd","Santa Clarita, CA. 91321"],
+		"coords": [34.383092, -118.517686],
+		"crest": "images/UWS/SCH.png",
+		"colors": ["#0001fc", "#ffffff"],
+		"website": "http://www.scblueheat.com/",
+		"league": "UWS",
+		"id": "SCH",
+		"social":{
+			"twitter":"SCBlueHeat",
+			"facebook":"pages/Santa-Clarita-Blue-Heat/279667706096"
+		}
+	},
+"CALGW":{
+		"name": "Calgary Foothills WFC",
+		"stadium": "Calgary Soccer Centre",
+		"address": ["7000 48 St SE","Calgary, AB T2C 4E1, Canada"],
+		"coords": [50.992257, -113.962019],
+		"crest": "images/UWS/CALGW.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://foothillsfc.ca/",
+		"league": "UWS",
+		"id": "CALGW",
+		"social":{
+			"twitter":"FoothillsWFC"
+		}
+	},
+"SOCC":{
+		"name": "So Cal Crush",
+		"stadium": "Crescenta Valley H.S.",
+		"address": ["2900 Community Ave", "La Crescenta, CA 91214"],
+		"coords": [34.221325, -118.243236],
+		"crest": "images/UWS/SOCC.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://socalcrushfc.com/",
+		"league": "UWS",
+		"id": "SOCC",
+		"social":{
+			"twitter":"socalcrushfc",
+			"facebook":"socalcrushfc"
+		}
+	},
+"DETS":{
+		"name": "Detroit Sun",
+		"stadium": "Ultimate Indoor Soccer",
+		"address": ["867 S Blvd E","Pontiac, MI 48341"],
+		"coords": [42.621003, -83.254143],
+		"crest": "images/UWS/DETS.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.detroitsunfc.com",
+		"league": "UWS",
+		"id": "DETS",
+		"social":{
+			"twitter":"detroitsunfc",
+			"facebook":"DetroitSunFC"
+		}
+	},
+"FCIN":{
+		"name": "FC Indiana",
+		"stadium": "Newton Park",
+		"address": ["801 N Michigan St", "Lakeville, IN 46536"],
+		"coords": [41.533853, -86.276037],
+		"crest": "images/UWS/FCIN.png",
+		"colors": ["#d00105", "#ffffff"],
+		"website": "http://fcindiana.org",
+		"league": "UWS",
+		"id": "FCIN",
+		"social":{
+			"twitter":"fcindiana"
+			
+		}
+	},
+"FWG":{
+		"name": "Fort Wayne Gryphons",
+		"stadium": "Warrior Athletic Field",
+		"address": ["1300 E Washington Blvd", "Fort Wayne, IN 46803"],
+		"coords": [41.077921, -85.120907],
+		"crest": "images/UWS/FWG.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.fwunitedfc.com/uws",
+		"league": "UWS",
+		"id": "FWG",
+		"social":{
+			"rss":"http://www.fwunitedfc.com/news_rss_feed?tags=1290727"
+		}
+	},
+"GRFCW":{
+		"name": "Grand Rapids FC",
+		"stadium": "Grandville High School",
+		"address": ["4700 Canal Ave SW", "Grandville, MI 49418"],
+		"coords": [42.878901, -85.766155],
+		"crest": "images/UWS/GRFCW.png",
+		"colors": ["#275799", "#121f48"],
+		"website": "http://grandrapidsfc.com",
+		"league": "UWS",
+		"id": "GRFCW",
+		"social":{
+			"twitter":"grandrapidsfc",
+			"youtube":"channel/UC7IfqUWh3_9dsAki2Isx4zA",
+			"instagram":"grandrapidsfc",
+			"reddit":"r/grandrapidsfc",
+			"facebook":"grandrapidsfc"
+		}
+	},
+"INDYP":{
+		"name": "Indy Premier",
+		"stadium": "Park Tudor School",
+		"address": ["7200 N College Ave","Indianapolis, IN, 46240"],
+		"coords": [39.883913, -86.147301],
+		"crest": "images/UWS/INDYP.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.indypremiersc.org/",
+		"league": "UWS",
+		"id": "INDYP",
+		"social":{
+			"twitter":"IndyPremierSC",
+			
+			"facebook":"IndyPremierSC"
+		}
+	},
+"MIL":{
+		"name": "Michigan Legends",
+		"stadium": "Legacy Center",
+		"address": ["9299 Goble Dr", "Brighton, MI 48116"],
+		"coords": [42.466516, -83.764112],
+		"crest": "images/UWS/MIL.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://LegacySoccerOrg.com",
+		"league": "UWS",
+		"id": "MIL",
+		"social":{
+			"twitter":"MI_LegendsFC"	
+		}
+	},
+"TOV":{
+		"name": "Toledo Villa",
+		"stadium": "Northview High School",
+		"address": ["5403 Silica Dr", "Sylvania, OH 43560"],
+		"coords": [41.712385, -83.713263],
+		"crest": "images/UWS/TOV.png",
+		"colors": ["#000000", "#ff0000"],
+		"website": "http://www.toledovillafc.com/",
+		"league": "UWS",
+		"id": "TOV",
+		"social":{
+			"twitter":"toledovillafc",
+			"facebook":"glasscityfc"
+		}
+	},
+"WNYF":{
+		"name": "Western NY Flash",
+		"stadium": "Niagara University",
+		"address": ["5795 Lewiston Rd, Niagara University, NY 14109"],
+		"coords": [43.137851, -79.032460],
+		"crest": "images/UWS/WNYF.png",
+		"colors": ["#fff200", "#d7183d"],
+		"website": "http://www.wnyflash.com/home/",
+		"league": "UWS",
+		"id": "WNYF",
+		"social":{
+			"twitter":"wnyflash",
+			"facebook":"wnyflash"
+		}
+	},
+"NYS":{
+		"name": "New York Surf",
+		"stadium": "Unknown",
+		"address": ["6 Pennyfield Ave, Bronx, NY 10465"],
+		"coords": [40.807596, -73.797754],
+		"crest": "images/UWS/NYS.png",
+		"colors": ["#000", "#f00"],
+		"website": "http://www.nysurfsoccer.org/",
+		"league": "UWS",
+		"id": "NYS",
+		"social":{
+			"twitter":"nysurfsoccer",
+			"youtube":"channel/UCyIA0T0-KccyctfzDUhK6mw",
+			"instagram":"nysurfsoccer",
+			"facebook":"NY-Surf-Soccer-Club-848136261958014/"
+		}
+	},
+"ROCL":{
+		"name": "Rochester Lady Lancers",
+		"stadium": "Wegmans Sports Complex",
+		"address": ["1127 Dewey Ave","Rochester, NY 14613"],
+		"coords": [43.187529, -77.643024],
+		"crest": "images/UWS/ROCL.png",
+		"colors": ["#fef200", "#003399"],
+		"website": "http://www.rochesterlancers.com/",
+		"league": "UWS",
+		"id": "ROCL",
+		"social":{
+			"twitter":"rlancers",
+			"youtube":"rlancers",
+			"instagram":"rlancers",
+			"facebook":"RLancers"
+		}
+	},
+"LNUW":{
+		"name": "Lansing United",
+		"stadium": "East Lansing Soccer Complex",
+		"address": ["3700 Coleman Rd", "East Lansing, MI 48823"],
+		"coords": [42.771311, -84.492137],
+		"crest": "images/UWS/LNUW.png",
+		"colors": ["#fef200", "#003399"],
+		"website": "http://lanunited.com/",
+		"league": "UWS",
+		"id": "LNUW",
+		"social":{
+			"twitter":"LansingUnited"
+		}
 	}
 	
 }

@@ -363,6 +363,13 @@ var generateSocialIcons = function(team){
 
 	var list = document.createElement("div");
 	list.setAttribute("class", "social");
+
+	var link = document.createElement("a");
+	link.setAttribute("href", team.website);
+
+	link.innerText="site";
+	list.appendChild(link);
+
 	for(var media in team.social){
 		if(team.social[media] ){
 			var link = document.createElement("a");

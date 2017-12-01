@@ -47,5 +47,18 @@
 			"facebook":"NASLFanPage"
 		},
 		"teams": ["CSMS","IND","JAX","MIA","PUR"]
+	},
+	"UWS": {
+		"pro": false,
+		"website": "http://www.uwssoccer.com/",
+		"social":{
+			"twitter":"UWSSoccer",
+			
+			"instagram":"UWSSoccer",
+			"reddit":"r/NASlSoccer",
+			"facebook":"uwoso"
+		},
+		"teams": ["LANC","LIRRW","DETS","NEMU","NJCFC","NYM","HOUA","RSLW","SCH","CALGW","SOCC","FCIN","FWG","GRFCW","INDYP","MIL","TOV","WNYF","NYS","ROCL","LNUW"]
 	}
+
 }

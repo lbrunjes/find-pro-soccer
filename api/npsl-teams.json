@@ -160,20 +160,23 @@
 
 	},
 	
-"NPSL-Grand Rapids FC": {
+"GRFC": {
 		"name": "Grand Rapids FC",
-		"stadium": "Unknown",
-		"address": ["???", "??"],
-	
-		"coords": [0,0],
+		"stadium": "Grandville High School",
+		"address": ["4700 Canal Ave SW", "Grandville, MI 49418"],
+		"coords": [42.878901, -85.766155],
 		"crest": "images/NPSL/logo_Grand_Rapids_FC.svg",
-		"colors": ["#000", "#f00"],
-		"website": "",
+		"colors": ["#275799", "#121f48"],
+		"website": "http://grandrapidsfc.com",
 		"league": "NPSL",
 		
 		"id": "NPSL-Grand Rapids FC",
 		"social":{
-			
+			"twitter":"grandrapidsfc",
+			"youtube":"channel/UC7IfqUWh3_9dsAki2Isx4zA",
+			"instagram":"grandrapidsfc",
+			"reddit":"r/grandrapidsfc",
+			"facebook":"grandrapidsfc"
 		}
 
 	},

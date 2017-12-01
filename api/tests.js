@@ -81,6 +81,12 @@ for(var i in teams){
 		errors++;
 	}
 
+	//TODO colors
+	if( team.colors && team.colors[0] == "#000" && team.colors[1]=="#f00"){
+		console.log("  TEAM colors are default.", team.id, team.name);
+		errors++;
+	}
+
 
 	var hassm=false;
 	for(var sm in team.social){
