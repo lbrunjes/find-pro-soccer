@@ -34,7 +34,7 @@
 			"reddit":"r/USLPRO",
 			"facebook":"USLSoccer"
 		},
-		"teams": ["RIC","ATL2", "COS", "LVL", "OCS", "PIT", "SA", "TAM", "BST", "FCC", "OKC", "POR2", "RMN", "SEA2", "TOR2", "CLS", "PFC", "NYR2", "OTT", "REN", "ROD", "SPR", "TUL", "CLT", "LAG2", "OCB", "PHO", "RGV", "SAC", "STL", "VAN2", "VGS", "FFC","NSH", "NCF", "VGS"]
+		"teams": ["RIC","ATL2", "COS", "LVL", "OCS", "PIT", "SA", "TAM", "BST", "FCC", "OKC", "POR2", "RMN", "SEA2", "TOR2", "CLS", "PFC", "NYR2", "OTT", "REN", "SPR", "TUL", "CLT", "LAG2", "OCB", "PHO", "RGV", "SAC", "STL", "VAN2", "VGS", "FFC","NSH", "NCF", "VGS"]
 	},
 	"NASL": {
 		"pro": true,

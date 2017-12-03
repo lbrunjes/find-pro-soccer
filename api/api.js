@@ -6,13 +6,16 @@ REst api for Soccer Zips.
 
 */
 const fs = require('fs');
+const pg= require('pg');
 
 var rest_api = function(){
 	api = this;
 
-	this.zips = JSON.parse(fs.readFileSync("./zips.json"));
-	this.teams = JSON.parse(fs.readFileSync("./teams.json"));
-	this.leagues = JSON.parse(fs.readFileSync("./leagues.json"));
+	this.zips = JSON.parse(fs.readFileSync("./data/zips.json"));
+	this.teams = JSON.parse(fs.readFileSync("./data/teams.json"));
+	this.leagues = JSON.parse(fs.readFileSync("./data/leagues.json"));
+	this.all_games= [];
+	this.next_home_game = {};
 	
 	this.rest = function(request, response){
 		try{
@@ -150,7 +153,7 @@ var rest_api = function(){
 		return(nearest);
 		}
 
-		//get manhattan distance less accurate in canada but not a huge issue really
+		//get distance less accurate in canada but not a huge issue really
 		this.getDist = function(_x,_y, target){
 			return Math.sqrt(Math.pow(_x - target[0],2)+ Math.pow(_y - target[1],2))
 		}
@@ -169,6 +172,223 @@ var rest_api = function(){
 		
 		}
 
+		// for the data base stuff we should only hit it occasioanly instead of per request. we dont need to be that up to date
+
+		//this is async so it will eventually clobber the team data
+		this.loadTeamDataFromSQL=function(){
+			console.log("loading team data from sql")
+			var client = new pg.Client(settings.sql);
+
+			var query= `select 
+team.name,
+team.short_id as id,
+team.website,
+team.crest_url as crest,
+team.color1,
+team.color2,
+team.color3,
+league.short_id as league,
+stadium.name as stadium,
+stadium.address1,
+stadium.address2,
+stadium.latitude,
+stadium.longitude
+
+from soccerapi.soccerapi.team as team
+inner join soccerapi.soccerapi.league as league on league.id = team.league_id
+inner join soccerapi.soccerapi.stadium as stadium on stadium.id = team.home_stadium_id
+
+
+order by league, team.name`;
+			try{
+				client.connect();
+
+				
+
+				client.query(query, (err, res) => {
+					if(err){
+						console.log("sql error, loading team data",err);
+					}
+					for(var i = 0; i<res.rows.length; i++){
+						var result = res.rows[i];
+						if(!api.teams[result.id]){
+							api.teams[result.id]={};
+						}
+						
+						api.teams[result.id].name = result.name;
+						api.teams[result.id].stadium = result.stadium;
+						api.teams[result.id].address =[result.address1, result.address2]
+						api.teams[result.id].coords = [result.latitude,result.longitude];
+						api.teams[result.id].crest = result.crest;
+						api.teams[result.id].colors = [];
+						for(var i = 1 ; i < 4;i++ ){
+							if(result["color"+i]){
+								api.teams[result.id].colors.push(result["color"+i]);
+							}
+						}
+						api.teams[result.id].website = result.website;
+						api.teams[result.id].league = result.league;
+						api.teams[result.id].id = result.id;
+					}
+					client.end()
+
+				});
+			}
+			catch(ex){
+				console.log("ERROR loading league from SQL",ex.message);
+				client.end();
+			}
+		}
+
+		this.loadSocialDataFromSQL =function(){
+		console.log("loading social data from sql")
+			var client = new pg.Client(settings.sql);
+			var client2 = new pg.Client(settings.sql);
+			var query= `select 
+team.short_id as id,
+account.account,
+lookup.name as type
+
+from soccerapi.soccerapi.team_social_media as tsm
+inner join soccerapi.soccerapi.team as team on team.id = tsm.team_id
+inner join soccerapi.soccerapi.social_media_account as account on account.id = tsm.social_media_account_id
+inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
+where account != ''
+order by id, type`;
+var query2= `select 
+league.short_id as id,
+account.account,
+lookup.name as type
+
+from soccerapi.soccerapi.league_social_media as lsm
+inner join soccerapi.soccerapi.league as league on league.id = lsm.league_id
+inner join soccerapi.soccerapi.social_media_account as account on account.id = lsm.social_media_account_id
+inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
+where account != ''
+order by id, type`;
+			try{
+				client.connect();
+
+				
+
+				client.query(query, (err, res) => {
+					if(err){
+						console.log("sql error, loading team social data",err);
+					}
+					for(var i = 0; i<res.rows.length; i++){
+						var result = res.rows[i];
+						if(!api.teams[result.id]){
+							api.teams[result.id]={};
+						}
+						if(!api.teams[result.id].social){
+							api.teams[result.id].social = {}
+						}
+						api.teams[result.id].social[result.type] = result[account];
+					}
+					client.end()
+
+				});
+			}
+			catch(ex){
+				console.log("ERROR loading league from SQL",ex.message);
+				client.end();
+			}
+			try{
+				client2.connect();
+
+				
+
+				client2.query(query2, (err, res) => {
+					if(err){
+						console.log("sql error, loading team social data",err);
+					}
+					for(var i = 0; i<res.rows.length; i++){
+						var result = res.rows[i];
+						if(!api.leagues[result.id]){
+							api.leagues[result.id]={};
+						}
+						if(!api.leagues[result.id].social){
+							api.leagues[result.id].social = {}
+						}
+						api.leagues[result.id].social[result.type] = result[account];
+					}
+					client.end()
+
+				});
+			}
+			catch(ex){
+				console.log("ERROR loading league from SQL",ex.message);
+				client.end();
+			}
+
+
+		};
+		
+
+		//this is async so it will eventually clobber the league data
+		this.loadLeagueDataFromSQL=function(){
+			console.log("loading league data from sql")
+			var client = new pg.Client(settings.sql);
+
+			var query= `select 
+				string_agg(team.short_id,',') as teams, 
+				league.name, 
+				league.website, 
+				league.short_id as league,
+				league.gender, 
+				league.is_professional as pro, 
+				league.pyramid_level,
+				league.crest_url 
+
+				from soccerapi.soccerapi.team as team 
+				inner join soccerapi.soccerapi.league as league on league.id = team.league_id 
+
+				group by league.id 
+				order by league.short_id`;
+			try{
+				client.connect();
+
+				
+
+				client.query(query, (err, res) => {
+					if(err){
+						console.log("sql error, loading league data",err);
+					}
+					for(var i = 0; i<res.rows.length; i++){
+						var result = res.rows[i];
+						if(!api.leagues[result.name]){
+							api.leagues[result.name]={};
+						}
+						
+						api.leagues[result.name].pro = result.pro;
+						api.leagues[result.name].website = result.website;
+						api.leagues[result.name].teams =result.teams.split(',');
+						api.leagues[result.name].pyramid = result.pyramid_level;
+						api.leagues[result.name].gender = result.gender;
+						api.leagues[result.name].crest = result.crest_url;
+
+					}
+					client.end()
+
+				});
+			}
+			catch(ex){
+				console.log("ERROR loading league from SQL",ex.message);
+				client.end();
+			}
+
+
+		};
+
+		this.reloadFromSql=function(){
+			console.log(new Date(), "reloading")
+			api.loadLeagueDataFromSQL();
+			api.loadTeamDataFromSQL();
+			api.loadSocialDataFromSQL();
+		}
+
+		this.reloadFromSql();
+		setInterval(api.reloadFromSql, 1000*60*15);
 }
 
 

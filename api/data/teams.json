@@ -471,7 +471,7 @@
 	},
 	"VAN": {
 		"name": "Vancouver Whitecaps",
-		"stadium": "CenturyLink Field",
+		"stadium": "BC Place",
 		"address": ["777 Pacific Blvd", "Vancouver, BC V6B 4Y8, Canada"],
 	
 		"coords": [49.276388, -123.112346],
@@ -1263,7 +1263,7 @@
 	},
 	"VGS": {
 		"name": "Las Vegas Lights ",
-		"stadium": "Thunderbird Stadium",
+		"stadium": "Cashman Center",
 		"address": ["850 N Las Vegas Blvd", "Las Vegas, NV 89101"],
 		"coords": [36.179926, -115.129383],
 		"crest": "images/USL/VGS.png",
@@ -1730,7 +1730,7 @@
 	},
 "NYS":{
 		"name": "New York Surf",
-		"stadium": "Unknown",
+		"stadium": "SUNY Maritime",
 		"address": ["6 Pennyfield Ave, Bronx, NY 10465"],
 		"coords": [40.807596, -73.797754],
 		"crest": "images/UWS/NYS.png",

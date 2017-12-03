@@ -1,6 +1,6 @@
 {
   "name": "soccer_api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An api to runbheind the soccer api app.",
   "main": "start.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "license": "MIT",
    "dependencies" :
    {
-   	"xml":"1.0.1"
+   	"xml":"1.0.1",
+    "pg":"7.4.0 "
 
   },
   "repository":

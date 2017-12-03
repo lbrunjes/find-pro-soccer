@@ -7,10 +7,6 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
-
-const api = require("./api.js");
-
-
 global.settings={
 	port:9000,
 	use_https:false,
@@ -35,6 +31,9 @@ if(process.argv.length > 2){
 	}
 
 }
+
+const api = require("./api.js");
+
 
 //setup server using http or https
 if(!settings.use_https){
