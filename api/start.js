@@ -11,7 +11,14 @@ global.settings={
 	port:9000,
 	use_https:false,
 	https_priv_key:"../pki/privkey.pem",
-	https_cert:"../pki/fullchain.pem"
+	https_cert:"../pki/fullchain.pem",
+	sql:{
+		"user":"soccer",
+		"password":"password",
+		"host":"127.0.0.1",
+		"port":5432,
+		"database":"soccerapi"
+	}
 }
 
 if(process.argv.length > 2){

@@ -8,15 +8,29 @@ REst api for Soccer Zips.
 const fs = require('fs');
 const pg= require('pg');
 
+
 var rest_api = function(){
 	api = this;
 
 	this.zips = JSON.parse(fs.readFileSync("./data/zips.json"));
-	this.teams = JSON.parse(fs.readFileSync("./data/teams.json"));
-	this.leagues = JSON.parse(fs.readFileSync("./data/leagues.json"));
+	this.teams = {};//JSON.parse(fs.readFileSync("./data/teams.json"));
+	this.leagues = {};//JSON.parse(fs.readFileSync("./data/leagues.json"));
 	this.all_games= [];
 	this.next_home_game = {};
+	this.pg_client = new pg.Client(settings.sql);
 	
+	this.pg_client.on("connect",(err)=>{
+		console.log("connect", err)
+	});
+	this.pg_client.on("error",(err)=>{
+		console.log("error", err)
+	});
+	this.pg_client.on("end",(err)=>{
+		console.log("end", err)
+	});
+	this.pg_client.connect();
+
+
 	this.rest = function(request, response){
 		try{
 			console.log(request.url);
@@ -85,6 +99,7 @@ var rest_api = function(){
 					var key = api_requested.length>1?api_requested[2] : "xxx";
 					if(api.leagues[key]){
 						var data= {teams:{}, league:""};
+						console.log(api.leagues[key])
 						for(var i =0; i <  api.leagues[key].teams.length;i++){
 							var team = api.leagues[key].teams[i];
 							data.teams[team] = api.teams[team];
@@ -177,7 +192,7 @@ var rest_api = function(){
 		//this is async so it will eventually clobber the team data
 		this.loadTeamDataFromSQL=function(){
 			console.log("loading team data from sql")
-			var client = new pg.Client(settings.sql);
+		
 
 			var query= `select 
 team.name,
@@ -201,19 +216,23 @@ inner join soccerapi.soccerapi.stadium as stadium on stadium.id = team.home_stad
 
 order by league, team.name`;
 			try{
-				client.connect();
+			
 
 				
 
-				client.query(query, (err, res) => {
+				api.pg_client.query(query, (err, res) => {
 					if(err){
 						console.log("sql error, loading team data",err);
 					}
+					console.log("found", res.rows.length, "results")
 					for(var i = 0; i<res.rows.length; i++){
 						var result = res.rows[i];
+
 						if(!api.teams[result.id]){
+							console.log("adding team", result.id);
 							api.teams[result.id]={};
 						}
+
 						
 						api.teams[result.id].name = result.name;
 						api.teams[result.id].stadium = result.stadium;
@@ -221,29 +240,28 @@ order by league, team.name`;
 						api.teams[result.id].coords = [result.latitude,result.longitude];
 						api.teams[result.id].crest = result.crest;
 						api.teams[result.id].colors = [];
-						for(var i = 1 ; i < 4;i++ ){
-							if(result["color"+i]){
-								api.teams[result.id].colors.push(result["color"+i]);
+						for(var j = 1 ; j < 4;j++ ){
+							if(result["color"+j]){
+								api.teams[result.id].colors.push(result["color"+j]);
 							}
 						}
 						api.teams[result.id].website = result.website;
 						api.teams[result.id].league = result.league;
 						api.teams[result.id].id = result.id;
 					}
-					client.end()
+					
 
 				});
 			}
 			catch(ex){
 				console.log("ERROR loading league from SQL",ex.message);
-				client.end();
+				
 			}
 		}
 
 		this.loadSocialDataFromSQL =function(){
 		console.log("loading social data from sql")
-			var client = new pg.Client(settings.sql);
-			var client2 = new pg.Client(settings.sql);
+			
 			var query= `select 
 team.short_id as id,
 account.account,
@@ -257,7 +275,7 @@ where account != ''
 order by id, type`;
 var query2= `select 
 league.short_id as id,
-account.account,
+account.account as account,
 lookup.name as type
 
 from soccerapi.soccerapi.league_social_media as lsm
@@ -267,58 +285,53 @@ inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = medi
 where account != ''
 order by id, type`;
 			try{
-				client.connect();
+				
 
 				
 
-				client.query(query, (err, res) => {
+				api.pg_client.query(query, (err, res) => {
 					if(err){
 						console.log("sql error, loading team social data",err);
 					}
 					for(var i = 0; i<res.rows.length; i++){
 						var result = res.rows[i];
-						if(!api.teams[result.id]){
-							api.teams[result.id]={};
-						}
+						
 						if(!api.teams[result.id].social){
 							api.teams[result.id].social = {}
 						}
-						api.teams[result.id].social[result.type] = result[account];
+						api.teams[result.id].social[result.type] = result.account;
 					}
-					client.end()
+					
 
 				});
 			}
 			catch(ex){
 				console.log("ERROR loading league from SQL",ex.message);
-				client.end();
+				
 			}
 			try{
-				client2.connect();
-
+				
 				
 
-				client2.query(query2, (err, res) => {
+				api.pg_client.query(query2, (err, res) => {
 					if(err){
-						console.log("sql error, loading team social data",err);
+						console.log("sql error, loading league social data",err);
 					}
 					for(var i = 0; i<res.rows.length; i++){
 						var result = res.rows[i];
-						if(!api.leagues[result.id]){
-							api.leagues[result.id]={};
-						}
+						
 						if(!api.leagues[result.id].social){
 							api.leagues[result.id].social = {}
 						}
-						api.leagues[result.id].social[result.type] = result[account];
+						api.leagues[result.id].social[result.type] = result.account;
 					}
-					client.end()
+				
 
 				});
 			}
 			catch(ex){
 				console.log("ERROR loading league from SQL",ex.message);
-				client.end();
+				
 			}
 
 
@@ -328,8 +341,7 @@ order by id, type`;
 		//this is async so it will eventually clobber the league data
 		this.loadLeagueDataFromSQL=function(){
 			console.log("loading league data from sql")
-			var client = new pg.Client(settings.sql);
-
+			
 			var query= `select 
 				string_agg(team.short_id,',') as teams, 
 				league.name, 
@@ -346,35 +358,36 @@ order by id, type`;
 				group by league.id 
 				order by league.short_id`;
 			try{
-				client.connect();
-
 				
-
-				client.query(query, (err, res) => {
+				
+				api.pg_client.query(query, (err, res) => {
+					
 					if(err){
 						console.log("sql error, loading league data",err);
 					}
+					
 					for(var i = 0; i<res.rows.length; i++){
 						var result = res.rows[i];
-						if(!api.leagues[result.name]){
-							api.leagues[result.name]={};
+						if(!api.leagues[result.league]){
+							console.log("adding league", result.league);
+							api.leagues[result.league]={};
 						}
 						
-						api.leagues[result.name].pro = result.pro;
-						api.leagues[result.name].website = result.website;
-						api.leagues[result.name].teams =result.teams.split(',');
-						api.leagues[result.name].pyramid = result.pyramid_level;
-						api.leagues[result.name].gender = result.gender;
-						api.leagues[result.name].crest = result.crest_url;
+						api.leagues[result.league].pro = result.pro;
+						api.leagues[result.league].website = result.website;
+						api.leagues[result.league].teams =result.teams.split(',');
+						api.leagues[result.league].pyramid = result.pyramid_level;
+						api.leagues[result.league].gender = result.gender;
+						api.leagues[result.league].crest = result.crest_url;
 
 					}
-					client.end()
+				
 
 				});
 			}
 			catch(ex){
 				console.log("ERROR loading league from SQL",ex.message);
-				client.end();
+				
 			}
 
 
@@ -388,7 +401,7 @@ order by id, type`;
 		}
 
 		this.reloadFromSql();
-		setInterval(api.reloadFromSql, 1000*60*15);
+		setInterval(api.reloadFromSql, 1000*60*1);
 }
 
 

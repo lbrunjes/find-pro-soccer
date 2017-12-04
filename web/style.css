@@ -68,6 +68,7 @@ min-width: 350px;
 .team{
 	margin-right:1ex;
 	background: #1d1d1d;
+	min-width: 300px;
 
 }
 .team p {
@@ -122,6 +123,7 @@ min-width: 350px;
 #result div#result-list{
 	display:flex;
 	flex-direction: row;
+	flex-wrap:flex;
 	align-items: center;
 	justify-content: space-between;
 }
