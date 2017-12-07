@@ -46,9 +46,9 @@ var db_api = function(){
 		stadium.latitude,
 		stadium.longitude
 
-		from soccerapi.soccerapi.team as team
-		inner join soccerapi.soccerapi.league as league on league.id = team.league_id
-		inner join soccerapi.soccerapi.stadium as stadium on stadium.id = team.home_stadium_id
+		from soccerapi.team as team
+		inner join soccerapi.league as league on league.id = team.league_id
+		inner join soccerapi.stadium as stadium on stadium.id = team.home_stadium_id
 
 
 		order by league, team.name`;
@@ -94,10 +94,10 @@ var db_api = function(){
 		account.account,
 		lookup.name as type
 
-		from soccerapi.soccerapi.team_social_media as tsm
-		inner join soccerapi.soccerapi.team as team on team.id = tsm.team_id
-		inner join soccerapi.soccerapi.social_media_account as account on account.id = tsm.social_media_account_id
-		inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
+		from soccerapi.team_social_media as tsm
+		inner join soccerapi.team as team on team.id = tsm.team_id
+		inner join soccerapi.social_media_account as account on account.id = tsm.social_media_account_id
+		inner join soccerapi.social_media_lookup as lookup on lookup.id = media_type
 		where account != ''
 		order by id, type`;
 		var query2= `select 
@@ -105,10 +105,10 @@ var db_api = function(){
 		account.account as account,
 		lookup.name as type
 
-		from soccerapi.soccerapi.league_social_media as lsm
-		inner join soccerapi.soccerapi.league as league on league.id = lsm.league_id
-		inner join soccerapi.soccerapi.social_media_account as account on account.id = lsm.social_media_account_id
-		inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
+		from soccerapi.league_social_media as lsm
+		inner join soccerapi.league as league on league.id = lsm.league_id
+		inner join soccerapi.social_media_account as account on account.id = lsm.social_media_account_id
+		inner join soccerapi.social_media_lookup as lookup on lookup.id = media_type
 		where account != ''
 		order by id, type`;
 
@@ -165,10 +165,10 @@ var db_api = function(){
 		league.pyramid_level,
 		league.crest_url 
 
-		from soccerapi.soccerapi.team as team 
-		inner join soccerapi.soccerapi.league as league on league.id = team.league_id 
+		from soccerapi.team as team 
+		inner join soccerapi.league as league on league.id = team.league_id 
 
-		group by league.id 
+		group by league.name,league.website,league.short_id , league.gender, league.is_professional, league.pyramid_level, league.crest_url
 		order by league.short_id`;
 
 		
@@ -239,8 +239,8 @@ var db_api = function(){
 		console.log("getting rss feeds")
 		
 		var query= `select sma.account, sma.id
-		from soccerapi.soccerapi.social_media_account  as sma
-		inner join soccerapi.soccerapi.social_media_lookup as sml on sml.id = sma.media_type
+		from soccerapi.social_media_account  as sma
+		inner join soccerapi.social_media_lookup as sml on sml.id = sma.media_type
 		where 
 		sml.name = 'rss' and 
 		sma.active=true	and 
@@ -272,7 +272,7 @@ var db_api = function(){
 	};
 
 	this.updateSMAPollDate=function(id){
-var query = `update soccerapi.soccerapi.social_media_account
+var query = `update soccerapi.social_media_account
 set last_poll = now() where id= $1`;
 
 
@@ -286,7 +286,7 @@ set last_poll = now() where id= $1`;
 
 	this.updateSMCache =function(account_id, raw, title, id, body, link){
 		
-		var query = `insert into soccerapi.soccerapi.social_media_cache
+		var query = `insert into soccerapi.social_media_cache
 (account_id, raw_data,title,service_item_identifier, body, link) 
 values ($1,$2, $3, $4, $5 , $6)`
 

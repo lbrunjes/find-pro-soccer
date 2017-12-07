@@ -252,19 +252,22 @@ var formatLeague = function(data){
 	var header = document.createElement("header");
 	header.setAttribute("class","league_list");
 	var label =document.createElement("h2");
-	label.innerText="All Teams in "+data.league;//
+	label.innerText="All Teams in "+getQS()["league"];//
 	//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
 
 	var lg_img =document.createElement("img");
 	lg_img.setAttribute("class","league_logo_big");
-	lg_img.setAttribute("src","images/"+data.league+"/"+data.league+".svg");
+	lg_img.setAttribute("src",data.league.crest);
 	
 	
 	header.prepend(lg_img);
 	header.appendChild(label);
+	header.appendChild(generateSocialIcons(data.league));
 	el.appendChild(header);
+
+
 	label =document.createElement("div");
-	label.setAttribute("class","league_teams")
+	label.setAttribute("class","league_teams");
 	
 	//deal with zooming the map to the right places.
 	for(var i = 0; i < markers.length; i++){
