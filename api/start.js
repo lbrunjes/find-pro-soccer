@@ -39,8 +39,13 @@ if(process.argv.length > 2){
 
 }
 
-const api = require("./api.js");
+global.api = require("./api.js");
+global.db = require("./db.js");
 
+//get base data
+db.reloadFromSql();
+setInterval(db.reloadFromSql, 1000*60*1);
+db.getActiveRssFeeds();
 
 //setup server using http or https
 if(!settings.use_https){

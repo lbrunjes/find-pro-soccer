@@ -6,7 +6,7 @@ REst api for Soccer Zips.
 
 */
 const fs = require('fs');
-const pg= require('pg');
+
 
 
 var rest_api = function(){
@@ -17,19 +17,7 @@ var rest_api = function(){
 	this.leagues = {};//JSON.parse(fs.readFileSync("./data/leagues.json"));
 	this.all_games= [];
 	this.next_home_game = {};
-	this.pg_client = new pg.Client(settings.sql);
 	
-	this.pg_client.on("connect",(err)=>{
-		console.log("connect", err)
-	});
-	this.pg_client.on("error",(err)=>{
-		console.log("error", err)
-	});
-	this.pg_client.on("end",(err)=>{
-		console.log("end", err)
-	});
-	this.pg_client.connect();
-
 
 	this.rest = function(request, response){
 		try{
@@ -98,12 +86,13 @@ var rest_api = function(){
 					case "league":
 					var key = api_requested.length>1?api_requested[2] : "xxx";
 					if(api.leagues[key]){
-						var data= {teams:{}, league:""};
+						var data= {teams:{}, league:api.leagues[key]};
 						console.log(api.leagues[key])
 						for(var i =0; i <  api.leagues[key].teams.length;i++){
 							var team = api.leagues[key].teams[i];
 							data.teams[team] = api.teams[team];
-							data.league = api.teams[team].league;
+							
+							
 						}
 
 						response.writeHead(200,headers);
@@ -187,221 +176,7 @@ var rest_api = function(){
 		
 		}
 
-		// for the data base stuff we should only hit it occasioanly instead of per request. we dont need to be that up to date
-
-		//this is async so it will eventually clobber the team data
-		this.loadTeamDataFromSQL=function(){
-			console.log("loading team data from sql")
 		
-
-			var query= `select 
-team.name,
-team.short_id as id,
-team.website,
-team.crest_url as crest,
-team.color1,
-team.color2,
-team.color3,
-league.short_id as league,
-stadium.name as stadium,
-stadium.address1,
-stadium.address2,
-stadium.latitude,
-stadium.longitude
-
-from soccerapi.soccerapi.team as team
-inner join soccerapi.soccerapi.league as league on league.id = team.league_id
-inner join soccerapi.soccerapi.stadium as stadium on stadium.id = team.home_stadium_id
-
-
-order by league, team.name`;
-			try{
-			
-
-				
-
-				api.pg_client.query(query, (err, res) => {
-					if(err){
-						console.log("sql error, loading team data",err);
-					}
-					console.log("found", res.rows.length, "results")
-					for(var i = 0; i<res.rows.length; i++){
-						var result = res.rows[i];
-
-						if(!api.teams[result.id]){
-							console.log("adding team", result.id);
-							api.teams[result.id]={};
-						}
-
-						
-						api.teams[result.id].name = result.name;
-						api.teams[result.id].stadium = result.stadium;
-						api.teams[result.id].address =[result.address1, result.address2]
-						api.teams[result.id].coords = [result.latitude,result.longitude];
-						api.teams[result.id].crest = result.crest;
-						api.teams[result.id].colors = [];
-						for(var j = 1 ; j < 4;j++ ){
-							if(result["color"+j]){
-								api.teams[result.id].colors.push(result["color"+j]);
-							}
-						}
-						api.teams[result.id].website = result.website;
-						api.teams[result.id].league = result.league;
-						api.teams[result.id].id = result.id;
-					}
-					
-
-				});
-			}
-			catch(ex){
-				console.log("ERROR loading league from SQL",ex.message);
-				
-			}
-		}
-
-		this.loadSocialDataFromSQL =function(){
-		console.log("loading social data from sql")
-			
-			var query= `select 
-team.short_id as id,
-account.account,
-lookup.name as type
-
-from soccerapi.soccerapi.team_social_media as tsm
-inner join soccerapi.soccerapi.team as team on team.id = tsm.team_id
-inner join soccerapi.soccerapi.social_media_account as account on account.id = tsm.social_media_account_id
-inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
-where account != ''
-order by id, type`;
-var query2= `select 
-league.short_id as id,
-account.account as account,
-lookup.name as type
-
-from soccerapi.soccerapi.league_social_media as lsm
-inner join soccerapi.soccerapi.league as league on league.id = lsm.league_id
-inner join soccerapi.soccerapi.social_media_account as account on account.id = lsm.social_media_account_id
-inner join soccerapi.soccerapi.social_media_lookup as lookup on lookup.id = media_type
-where account != ''
-order by id, type`;
-			try{
-				
-
-				
-
-				api.pg_client.query(query, (err, res) => {
-					if(err){
-						console.log("sql error, loading team social data",err);
-					}
-					for(var i = 0; i<res.rows.length; i++){
-						var result = res.rows[i];
-						
-						if(!api.teams[result.id].social){
-							api.teams[result.id].social = {}
-						}
-						api.teams[result.id].social[result.type] = result.account;
-					}
-					
-
-				});
-			}
-			catch(ex){
-				console.log("ERROR loading league from SQL",ex.message);
-				
-			}
-			try{
-				
-				
-
-				api.pg_client.query(query2, (err, res) => {
-					if(err){
-						console.log("sql error, loading league social data",err);
-					}
-					for(var i = 0; i<res.rows.length; i++){
-						var result = res.rows[i];
-						
-						if(!api.leagues[result.id].social){
-							api.leagues[result.id].social = {}
-						}
-						api.leagues[result.id].social[result.type] = result.account;
-					}
-				
-
-				});
-			}
-			catch(ex){
-				console.log("ERROR loading league from SQL",ex.message);
-				
-			}
-
-
-		};
-		
-
-		//this is async so it will eventually clobber the league data
-		this.loadLeagueDataFromSQL=function(){
-			console.log("loading league data from sql")
-			
-			var query= `select 
-				string_agg(team.short_id,',') as teams, 
-				league.name, 
-				league.website, 
-				league.short_id as league,
-				league.gender, 
-				league.is_professional as pro, 
-				league.pyramid_level,
-				league.crest_url 
-
-				from soccerapi.soccerapi.team as team 
-				inner join soccerapi.soccerapi.league as league on league.id = team.league_id 
-
-				group by league.id 
-				order by league.short_id`;
-			try{
-				
-				
-				api.pg_client.query(query, (err, res) => {
-					
-					if(err){
-						console.log("sql error, loading league data",err);
-					}
-					
-					for(var i = 0; i<res.rows.length; i++){
-						var result = res.rows[i];
-						if(!api.leagues[result.league]){
-							console.log("adding league", result.league);
-							api.leagues[result.league]={};
-						}
-						
-						api.leagues[result.league].pro = result.pro;
-						api.leagues[result.league].website = result.website;
-						api.leagues[result.league].teams =result.teams.split(',');
-						api.leagues[result.league].pyramid = result.pyramid_level;
-						api.leagues[result.league].gender = result.gender;
-						api.leagues[result.league].crest = result.crest_url;
-
-					}
-				
-
-				});
-			}
-			catch(ex){
-				console.log("ERROR loading league from SQL",ex.message);
-				
-			}
-
-
-		};
-
-		this.reloadFromSql=function(){
-			console.log(new Date(), "reloading")
-			api.loadLeagueDataFromSQL();
-			api.loadTeamDataFromSQL();
-			api.loadSocialDataFromSQL();
-		}
-
-		this.reloadFromSql();
-		setInterval(api.reloadFromSql, 1000*60*1);
 }
 
 
