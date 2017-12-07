@@ -1,6 +1,9 @@
-//#!/usr/bin/env nodejs
 /*
 Startup for soccer api
+Lee Brunjes 2017
+
+Loads stuff and does fancy things at startup.
+
 
 */
 const http = require('http');
@@ -45,7 +48,7 @@ global.db = require("./db.js");
 //get base data
 db.reloadFromSql();
 setInterval(db.reloadFromSql, 1000*60*1);
-db.getActiveRssFeeds();
+
 
 //setup server using http or https
 if(!settings.use_https){

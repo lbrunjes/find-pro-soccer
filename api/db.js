@@ -2,7 +2,7 @@
 Database lookup api for Soccer Zips.
 Lee BRunjes 2017 lee.brunjes@gmail.com
 
-
+All database stuff goes through here right now. 
 
 */
 const pg= require('pg');
@@ -49,7 +49,8 @@ var db_api = function(){
 		from soccerapi.team as team
 		inner join soccerapi.league as league on league.id = team.league_id
 		inner join soccerapi.stadium as stadium on stadium.id = team.home_stadium_id
-
+		where 
+		team.active = true
 
 		order by league, team.name`;
 		
@@ -167,6 +168,8 @@ var db_api = function(){
 
 		from soccerapi.team as team 
 		inner join soccerapi.league as league on league.id = team.league_id 
+		where team.active = true and 
+		league.active =true
 
 		group by league.name,league.website,league.short_id , league.gender, league.is_professional, league.pyramid_level, league.crest_url
 		order by league.short_id`;

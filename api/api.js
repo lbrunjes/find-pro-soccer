@@ -1,7 +1,7 @@
 /*
 REst api for Soccer Zips.
-
-
+Lee Brunjes 2017 lee.brunjes@gmail.com
+this is where we used cahced sql data to display data to users.
 
 
 */
@@ -13,8 +13,8 @@ var rest_api = function(){
 	api = this;
 
 	this.zips = JSON.parse(fs.readFileSync("./data/zips.json"));
-	this.teams = {};//JSON.parse(fs.readFileSync("./data/teams.json"));
-	this.leagues = {};//JSON.parse(fs.readFileSync("./data/leagues.json"));
+	this.teams = {};
+	this.leagues = {};
 	this.all_games= [];
 	this.next_home_game = {};
 	

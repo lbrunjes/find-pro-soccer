@@ -97,7 +97,7 @@ min-width: 350px;
 	width:2em;
 	margin:0 1ex 0 0 ;
 }
-.team .social, {
+.team .social{
 	margin : 1em 0;
 	display:flex;
 	flex-direction: row;
@@ -126,7 +126,7 @@ min-width: 350px;
 #result div#result-list{
 	display:flex;
 	flex-direction: row;
-	flex-wrap:flex;
+	flex-wrap:wrap;
 	align-items: center;
 	justify-content: space-between;
 }
