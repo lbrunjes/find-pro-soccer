@@ -69,6 +69,7 @@ min-width: 350px;
 	margin-right:1ex;
 	background: #1d1d1d;
 	min-width: 300px;
+	flex-grow:1;
 
 }
 .team p {

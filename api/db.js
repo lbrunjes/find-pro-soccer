@@ -100,6 +100,7 @@ var db_api = function(){
 		inner join soccerapi.social_media_account as account on account.id = tsm.social_media_account_id
 		inner join soccerapi.social_media_lookup as lookup on lookup.id = media_type
 		where account != ''
+		and team.active = true
 		order by id, type`;
 		var query2= `select 
 		league.short_id as id,
@@ -110,7 +111,9 @@ var db_api = function(){
 		inner join soccerapi.league as league on league.id = lsm.league_id
 		inner join soccerapi.social_media_account as account on account.id = lsm.social_media_account_id
 		inner join soccerapi.social_media_lookup as lookup on lookup.id = media_type
-		where account != ''
+		where account != '' 
+		and league.active = true
+		
 		order by id, type`;
 
 		
@@ -122,11 +125,12 @@ var db_api = function(){
 				}
 				for(var i = 0; i<res.rows.length; i++){
 					var result = res.rows[i];
-					
-					if(!api.teams[result.id].social){
-						api.teams[result.id].social = {}
+					if(api.teams[result.id]){
+						if(!api.teams[result.id].social){
+							api.teams[result.id].social = {}
+						}
+						api.teams[result.id].social[result.type] = result.account;
 					}
-					api.teams[result.id].social[result.type] = result.account;
 				}
 				
 
@@ -141,11 +145,12 @@ var db_api = function(){
 				}
 				for(var i = 0; i<res.rows.length; i++){
 					var result = res.rows[i];
-					
-					if(!api.leagues[result.id].social){
-						api.leagues[result.id].social = {}
+					if(api.leagues[result.id]){
+						if(!api.leagues[result.id].social){
+							api.leagues[result.id].social = {}
+						}
+						api.leagues[result.id].social[result.type] = result.account;
 					}
-					api.leagues[result.id].social[result.type] = result.account;
 				}
 			});
 		
