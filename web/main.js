@@ -262,12 +262,30 @@ var formatLeague = function(data){
 	
 	header.prepend(lg_img);
 	header.appendChild(label);
-	header.appendChild(generateSocialIcons(data.league));
+	
 	el.appendChild(header);
+	var details  =document.createElement("div");
+	details.setAttribute("class", "league_details");
+	
+	var d_pyramid_img = document.createElement("img");
+	d_pyramid_img.setAttribute("src", "images/icons/pyramid-"+data.league.pyramid+".svg")
+	var d_pyramid =document.createElement("p");
+	d_pyramid.innerText = " Pyramid level: "+data.league.pyramid + " "+(data.league.gender=="M"?"♂":"♀");
+	d_pyramid.prepend(d_pyramid_img);
+	details.appendChild(d_pyramid);
 
+	details.appendChild(generateSocialIcons(data.league));
+	el.appendChild(details);
+
+	var l_header =document.createElement("header");
+	label.setAttribute("class","league_team_header");
+	l_header.innerText = "Teams ("+Object.keys(data.teams).length+")";
+	el.appendChild(l_header);
 
 	label =document.createElement("div");
 	label.setAttribute("class","league_teams");
+
+
 	
 	//deal with zooming the map to the right places.
 	for(var i = 0; i < markers.length; i++){
