@@ -49,6 +49,9 @@ var startup = function(){
 		var qs = getQS();
 		lookupcoords(qs["lat"],qs["lng"]);
 	}
+	else{
+		//Display something nice?
+	}
 
 }
 
@@ -94,6 +97,7 @@ var lookupcoords= function(lat, lng){
 
 }
 var markers = [];
+
 var approxDist = function(input, target){
 	var radius_earth = 3959; //miles (AMERAICA)
 	var pi_180 = 0.017453292519943295;
@@ -136,67 +140,12 @@ var formatTeams = function(data){
 
 
 			var team =data.teams[league].team;
-//		console.log(league, team, closestteams[league]);
-
-		// var lg =document.createElement("div");
-		// lg.setAttribute("class","league");
-		
-		
-
-		//add team
-		var tm =document.createElement("div");
-		tm.setAttribute("class","team");
-		
-		var tm_header =document.createElement("header");
-
-		var tm_logo =document.createElement("img");
-		tm_logo.setAttribute("class","team_crest");
-		tm_logo.setAttribute("src",team.crest);
-		tm_header.appendChild(tm_logo);
-
-		var tm_name =document.createElement("h3");
-		tm_name.innerText=team.name;
-		tm_header.appendChild(tm_name);
-		
-		//add logo for league
-		var lg_el =document.createElement("a");
-		//tm_details.setAttribute("href","?league="+league);
-		lg_el.setAttribute("onclick", "lookupleague(\""+league+"\")");
-		lg_el.setAttribute("class","league_logo");
-		
-		var lg_img =document.createElement("img");
-		lg_img.setAttribute("class","league_logo");
-		lg_img.setAttribute("src","images/"+league+"/"+league+".svg");
-		
-		
-		lg_el.prepend(lg_img);
-		tm_header.prepend(lg_el);
-
-		tm.appendChild(tm_header);
+			label.appendChild(formatTeam(data.teams[league].team));
 
 		
 		
-		var tm_details =document.createElement("p");
-		tm_details.innerHTML = "<br/>"+team.stadium +"<br/> (About " + approxDist(data.input, team.coords) + " Miles  Away)";
-		var tm_stadium_address =document.createElement("br");
-		tm_details.appendChild(tm_stadium_address);
-		tm_stadium_address =document.createElement("a");
-		tm_stadium_address.setAttribute("href","https://www.google.com/maps/dir//"+team.address);
-		tm_stadium_address.innerHTML = team.address;
-		tm_details.appendChild(tm_stadium_address);
 
-		
-		
-		tm.appendChild(tm_details);
 
-		tm_details =document.createElement("p");
-		tm_details.innerHTML = "Next home game: 2018/NA/NA";
-		tm_details.appendChild(generateSocialIcons(team));
-
-		tm.appendChild(tm_details);
-		
-
-		label.appendChild(tm);
 
 		//add crest to maps
 		var icon = L.icon({
@@ -207,8 +156,8 @@ var formatTeams = function(data){
 		});
 		var okay=true;
 		for(var i =0; i < markers.length;i++){
-			if(markers[i]._latlng.lat == team.coords[0] &&
-				markers[i]._latlng.lng == team.coords[1]){
+			if(markers[i]._latlng.lat == data.teams[league].team.coords[0] &&
+				markers[i]._latlng.lng == data.teams[league].team.coords[1]){
 		//		console.log(team.name, " moved up slightly");
 	okay = false;
 	break;
@@ -299,31 +248,10 @@ var formatLeague = function(data){
 	for(var teamcode in data.teams){
 
 
-		var team =data.teams[teamcode];
+		var team = data.teams[teamcode];
+		label.appendChild(formatTeam(data.teams[teamcode]));
 
 
-
-	//add team
-	var tm =document.createElement("div");
-	tm.setAttribute("class","team");
-	
-	var tm_header =document.createElement("header");
-
-	var tm_logo =document.createElement("img");
-	tm_logo.setAttribute("class","team_crest");
-	tm_logo.setAttribute("src",team.crest);
-	tm_header.appendChild(tm_logo);
-
-	var tm_name =document.createElement("h3");
-	tm_name.innerText=team.name;
-	tm_header.appendChild(tm_name);
-	
-	
-	tm.appendChild(tm_header);
-	tm.appendChild(generateSocialIcons(team));
-	
-
-	label.appendChild(tm);
 
 	//add crest to maps
 	var icon = L.icon({
@@ -336,7 +264,6 @@ var formatLeague = function(data){
 	for(var i =0; i < markers.length;i++){
 		if(markers[i]._latlng.lat == team.coords[0] &&
 			markers[i]._latlng.lng == team.coords[1]){
-		//		console.log(team.name, " moved up slightly");
 	okay = false;
 	break;
 }
@@ -367,9 +294,97 @@ el.appendChild(label);
 
 	};
 //	console.log(min,max);
-map.fitBounds([min,max]);
+map.fitBounds([min,max],  {padding: [50,50]});
 
 };
+
+
+//display next home AND away game
+var formatGames=function(team){
+
+	var toGameDate =function(datestring){
+		
+		var d =  new Date(datestring);
+		var months=["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug","Sep", "Oct", "Nov", "Dec"];
+		return months[d.getMonth()] + " "+ d.getDate();
+	}
+
+	var el = document.createElement("div");
+	el.setAttribute("class", "next-games");
+
+	if(team.next.home){
+		var h = document.createElement("div");
+		h.setAttribute("class", "home");
+
+
+		h.innerText = "Next Home Game: "+toGameDate(team.next.home.start)+" vs "+team.next.home.away_team;
+		if(team.next.home.stadium != team.stadium){
+			var a = document.createElement("a");
+			a.setAttribute("href","https://www.google.com/maps/dir//"+team.next.home.address);
+			h.innerText += " at "
+			a.innerText =  team.next.home.stadium;
+			h.appendChild(a);
+		}
+		el.appendChild(h);
+	}
+	if(team.next.away){
+		var a = document.createElement("div");
+		
+		a.setAttribute("class", "away");
+		a.innerText = "Next Away Game: "+toGameDate(team.next.away.start)+" vs "+ team.next.away.home_team +" at ";
+		
+		var l = document.createElement("a");
+		l.setAttribute("href","https://www.google.com/maps/dir//"+team.next.away.address);
+		l.innerText =  team.next.away.stadium;
+		a.appendChild(l);
+			
+		el.appendChild(a)
+	}
+
+	return el;
+
+}
+var formatTeam =function(team){
+	var tm =document.createElement("div");
+	tm.setAttribute("class","team");
+	
+	var tm_header =document.createElement("header");
+
+	var tm_logo =document.createElement("img");
+	tm_logo.setAttribute("class","team_crest");
+	tm_logo.setAttribute("src",team.crest);
+	tm_header.appendChild(tm_logo);
+
+	var tm_name =document.createElement("h3");
+	tm_name.innerText=team.name;
+	tm_header.appendChild(tm_name);
+
+
+	//dispaly league log0
+	var lg_el =document.createElement("a");
+
+	lg_el.setAttribute("onclick", "lookupleague(\""+team.league+"\")");
+	lg_el.setAttribute("class","league_logo");
+	
+	var lg_img =document.createElement("img");
+	lg_img.setAttribute("class","league_logo");
+	lg_img.setAttribute("src","images/"+team.league+"/"+team.league+".svg");
+	
+	
+	lg_el.prepend(lg_img);
+	tm_header.prepend(lg_el);
+	
+	
+	tm.appendChild(tm_header);
+	tm.appendChild(generateSocialIcons(team));
+
+	tm.appendChild(formatGames(team));
+
+
+	
+	return tm;
+		
+}
 
 var generateSocialIcons = function(team){
 	var urls={
@@ -382,11 +397,18 @@ var generateSocialIcons = function(team){
 	var list = document.createElement("div");
 	list.setAttribute("class", "social");
 
+	if(team.stadium){
+		var link = document.createElement("a");
+		link.setAttribute("href", "https://www.google.com/maps/dir//"+team.address);
+		link.innerText=team.stadium;
+		list.appendChild(link);
+	}
+
 	var link = document.createElement("a");
 	link.setAttribute("href", team.website);
-
 	link.innerText="site";
 	list.appendChild(link);
+	
 
 	for(var media in team.social){
 		if(team.social[media] ){

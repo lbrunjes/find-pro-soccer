@@ -44,7 +44,12 @@ var db_api = function(){
 		stadium.address1,
 		stadium.address2,
 		stadium.latitude,
-		stadium.longitude
+		stadium.longitude,
+
+		(select upcoming_games.game_id from soccerapi.upcoming_games where home_id = team.id) as next_home
+		,
+		(select upcoming_games.game_id from soccerapi.upcoming_games where away_id = team.id) as next_away
+
 
 		from soccerapi.team as team
 		inner join soccerapi.league as league on league.id = team.league_id
@@ -82,6 +87,18 @@ var db_api = function(){
 					api.teams[result.id].website = result.website;
 					api.teams[result.id].league = result.league;
 					api.teams[result.id].id = result.id;
+
+					api.teams[result.id].next = {"home":false, "away":false};
+					
+					if(result.next_home && api.games[result.next_home]){
+						api.teams[result.id].next.home = api.games[result.next_home];
+						console.log("foudn game")
+					}
+					if(result.next_away && api.games[result.next_away]){
+						api.teams[result.id].next.away = api.games[result.next_away]
+					}
+					
+
 				}
 			});
 		
@@ -207,8 +224,51 @@ var db_api = function(){
 		
 	};
 
+	this.loadUpcomingGamesFromSQL = function(){
+console.log("loading league data from sql")
+		
+		var query= `select 
+		*
+		from soccerapi.upcoming_games
+		`;
+
+		
+			db.pg_client.query(query, (err, res) => {
+				
+				if(err){
+					console.log("sql error, loading game data",err);
+				}
+				
+				for(var i = 0; i<res.rows.length; i++){
+					var result = res.rows[i];
+					if(!api.games[result.game_id]){
+						console.log("adding gmae", result.game_id);
+						api.games[result.game_id]={};
+					}
+					
+					api.games[result.game_id].id = result.game_id;
+					api.games[result.game_id].start = result.start;
+					api.games[result.game_id].notes = result.notes;
+					api.games[result.game_id].stadium = result.stadium;
+					api.games[result.game_id].address = [result.address1, result.address2];
+					api.games[result.game_id].coords = [result.latitude, result.longitude];
+					api.games[result.game_id].home = result.home_short;
+					api.games[result.game_id].home_team = result.home_team;
+					api.games[result.game_id].away = result.away_short;
+					api.games[result.game_id].away_team = result.away_team;
+
+
+
+				}
+
+
+			});
+
+	};
+
 	this.reloadFromSql=function(){
-		console.log(new Date(), "reloading")
+		console.log(new Date(), "reloading");
+		db.loadUpcomingGamesFromSQL();
 		db.loadLeagueDataFromSQL();
 		db.loadTeamDataFromSQL();
 		db.loadSocialDataFromSQL();

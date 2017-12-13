@@ -15,8 +15,8 @@ var rest_api = function(){
 	this.zips = JSON.parse(fs.readFileSync("./data/zips.json"));
 	this.teams = {};
 	this.leagues = {};
-	this.all_games= [];
-	this.next_home_game = {};
+	this.games= {};
+	
 	
 
 	this.rest = function(request, response){

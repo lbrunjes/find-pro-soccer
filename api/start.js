@@ -47,7 +47,7 @@ global.db = require("./db.js");
 
 //get base data
 db.reloadFromSql();
-setInterval(db.reloadFromSql, 1000*60*1);
+setInterval(db.reloadFromSql, 1000*60*30);
 
 
 //setup server using http or https
