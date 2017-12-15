@@ -46,9 +46,9 @@ var db_api = function(){
 		stadium.latitude,
 		stadium.longitude,
 
-		(select upcoming_games.game_id from soccerapi.upcoming_games where home_id = team.id) as next_home
+		(select upcoming_games.game_id from soccerapi.upcoming_games where home_id = team.id ORDER BY start LIMIT 1) as next_home
 		,
-		(select upcoming_games.game_id from soccerapi.upcoming_games where away_id = team.id) as next_away
+		(select upcoming_games.game_id from soccerapi.upcoming_games where away_id = team.id ORDER BY start LIMIT 1) as next_away
 
 
 		from soccerapi.team as team
