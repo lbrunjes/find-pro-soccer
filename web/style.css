@@ -60,6 +60,9 @@ footer{
 	justify-content: space-between;
 
 }
+.league_teams .league_logo{
+	display:none;
+}
 .league_teams div{
 flex-basis: 25%;
 min-width: 350px;
