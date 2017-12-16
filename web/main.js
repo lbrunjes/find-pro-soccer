@@ -368,7 +368,7 @@ var formatTeam =function(team){
 	
 	var lg_img =document.createElement("img");
 	lg_img.setAttribute("class","league_logo");
-	lg_img.setAttribute("src","images/"+team.league+"/"+team.league+".svg");
+	lg_img.setAttribute("src","images/"+team.league+"/"+team.league+(team.league!= "WPSL" && team.league!="NPSL" && team.league!="PDL"?".svg":".png");
 	
 	
 	lg_el.prepend(lg_img);
