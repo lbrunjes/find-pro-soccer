@@ -2,4 +2,5 @@ api/production.json
 api/development.json
 api/node_modules
 *.backup
-
+Tools/bin
+Tools/obj

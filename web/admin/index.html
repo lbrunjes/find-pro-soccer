@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+	<title>Soccer Near You</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css" media="all"/>
+	<script src="../main.js"></script>
+	<style>
+	input, textarea{
+		width:90%;
+		font-size:16px;
+	}
+	td{
+		vertical-align: top;
+	}
+	</style>
+<script>
+	var admin = function(){
+		var admin = this;
+		this.data={
+			teams:{},
+			leagues:{},
+			stadiums:{},
+			games:{},
+		}
+		this.jsonToHtml=function(json, doc){
+			if(!doc){doc = document;}
+			var el = null;
+			if(json === null){
+				 el = doc.createElement("span");
+				 el.innerText = "null";
+			}
+			switch(typeof(json)){
+				case "undefined":
+				 el = doc.createElement("span");
+				 el.innerText = "undefined";
+				 break;
+				case "string":
+				case "boolean":
+				case "number":
+				 el = doc.createElement("span");
+				 el.innerText = json;
+				break;
+				case "object":
+				el = doc.createElement("table");
+
+				for(key in json){
+					var tr= doc.createElement("tr");
+					var td_key = doc.createElement("td");
+					var td_val = doc.createElement("td");
+					td_key.appendChild(admin.jsonToHtml(key));
+					tr.appendChild(td_key);
+					td_val.appendChild(admin.jsonToHtml(json[key]));
+					tr.appendChild(td_val)
+					el.appendChild(tr);
+				}
+				break;
+			}
+			return el;
+
+		};
+		
+		this.getDataDump = function(){
+			ajax(api_url+"/admin-dump", function(res){
+				admin.data = JSON.parse(res);
+			});
+		};
+
+		this.importGames = function(){
+
+		};
+		this.applyRegexToData=function(regex ,data, el){
+			console.log(regex,data);
+			if(!regex ){
+				return;
+			}
+			var result = [];
+			var re = new RegExp(regex, 'g');
+
+			do{
+				var match = re.exec(data);
+				if(match){
+					result.push(match);
+				}
+
+			}while(match);
+			console.log(result);
+			if(el){
+				while(el.children.length>0){
+					el.removeChild(el.children[0]);
+				}
+				var result_html =admin.jsonToHtml(result);
+				console.log(result_html);
+				el.appendChild(result_html);
+			}
+			else{
+				console.log("no html", el)
+			}
+			return data;
+		}
+		this.viewData=function(){
+			var el = document.getElementById("result");
+			while(el.children.length>0){
+				el.removeChild(el.children[0]);
+			}
+			el.appendChild(admin.jsonToHtml(admin.data));
+		}
+
+	};
+	admin = new admin();
+
+	//get data after we load 
+	document.addEventListener("DOMContentLoaded", admin.getDataDump);
+</script>
+</head>
+<body>
+	<header>
+		
+		Admin Page for the soccer site, so I can stop using a database tool
+			
+	
+	</header>
+	<div id="display">
+
+		<div id="result">
+			
+		</div>
+		<div id="games">
+			<textarea id="game_input"></textarea>
+			<input id="regex" value="(.+?),\s*(.+)"/>
+			<div id="regexPreview"></div>
+			<button onclick="admin.applyRegexToData(document.getElementById('regex').value,
+			 document.getElementById('game_input').value, 
+			 document.getElementById('game_intermediate_output'))"> Do it</button>
+			<div id="game_intermediate_output">
+			</div>
+		</div>
+		<div id="data">
+		</div>
+		<nav id="actions">
+			Actions:
+			<button onclick="admin.importGames()">Import Games</button>
+			<button onclick="admin.viewData()">View Data</button>
+		</nav>
+		
+	
+	</div>
+	<footer>
+		<a href="..">Main Page</a>
+	</footer>
+</body>
+</html>

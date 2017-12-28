@@ -223,13 +223,49 @@ var db_api = function(){
 			});
 		
 	};
+	this.loadStadiumsFromSQL = function(){
+		var query= `select * from soccerapi.stadium`;
+		db.pg_client.query(query, (err, res) => {
+				
+			if(err){
+				console.log("sql error, loading game data",err);
+			}
+			
+			for(var i = 0; i<res.rows.length; i++){
+				api.stadiums[res.rows[i].id] = res.rows[i];
+			}
+		});
+	};
 
 	this.loadUpcomingGamesFromSQL = function(){
 console.log("loading league data from sql")
 		
 		var query= `select 
-		*
-		from soccerapi.upcoming_games
+home.short_id as home_id,
+home.name as home_name,
+home.league_id as home_league,
+
+away.short_id as away_id,
+away.name as away_name,
+away.league_id as away_league,
+
+stadium.name as stadium_name,
+stadium.address1 as stadium_address1,
+stadium.address2 as stadium_address2,
+stadium.latitude as stadium_latitude,
+stadium.longitude as stadium_longitude,
+
+game.start as game_start,
+game.notes as game_notes
+
+
+from soccerapi.game
+inner join soccerapi.team as home on game.home_team = home.id
+inner join soccerapi.team as away on game.away_team = away.id
+inner join soccerapi.stadium as stadium on game.stadium = stadium.id
+
+where start > now()
+order by game.start, home_id
 		`;
 
 		
@@ -241,27 +277,41 @@ console.log("loading league data from sql")
 				
 				for(var i = 0; i<res.rows.length; i++){
 					var result = res.rows[i];
-					if(!api.games[result.game_id]){
-						console.log("adding gmae", result.game_id);
-						api.games[result.game_id]={};
-					}
 					
-					api.games[result.game_id].id = result.game_id;
-					api.games[result.game_id].start = result.start;
-					api.games[result.game_id].notes = result.notes;
-					api.games[result.game_id].stadium = result.stadium;
-					api.games[result.game_id].address = [result.address1, result.address2];
-					api.games[result.game_id].coords = [result.latitude, result.longitude];
-					api.games[result.game_id].home = result.home_short;
-					api.games[result.game_id].home_team = result.home_team;
-					api.games[result.game_id].away = result.away_short;
-					api.games[result.game_id].away_team = result.away_team;
-
+					
+					var game = {
+						home:{
+							id:result.home_id, 
+							name:result.home_name,
+							league_id:result.home_league
+						},
+						away:{
+							id:result.away_id,
+							name:result.away_name,
+							league_id:result.away_league
+						},
+						stadium:{
+							name:result.stadium_name,
+							address:[result.stadium_address1, result.stadium_address2],
+							coords:[result.stadium_latitude, result.stadium_longitude]
+						},
+						start:result.game_start,
+						notes:result.game_notes,
+						id:result.game_id
+					};
+					if(!api.games[result.home_id]){
+					
+						api.games[result.home_id]=[];
+					}
+					if(!api.games[result.away_id]){
+					
+						api.games[result.away_id]=[];
+					}
+					api.games[result.home_id].push(game);
+					api.games[result.away_id].push(game);
 
 
 				}
-
-
 			});
 
 	};
@@ -273,6 +323,7 @@ console.log("loading league data from sql")
 		db.loadTeamDataFromSQL();
 		db.loadSocialDataFromSQL();
 		db.getActiveRssFeeds();
+		//db.loadNewsCache();
 	}
 
 	
@@ -301,6 +352,50 @@ console.log("loading league data from sql")
 	
 	this.addToMediaCache=function(teamCode, account, type){
 		console.log("not yet");
+	}
+	this.loadNewsCache=function(){
+var query= `select 
+team.short_id,
+title, 
+body, 
+link , 
+service_item_identifier as id, 
+response_time
+
+from soccerapi.social_media_cache as smc
+
+inner join soccerapi.team_social_media as tsm on tsm.social_media_account_id = smc.account_id
+inner join soccerapi.team as team on tsm.team_id = team.id
+
+
+order by  team.short_id, response_time desc`
+		db.pg_client.query(query,(err, res) => {
+	
+			if(err){
+				console.log("sql error, getting news cache",err);
+			}
+			api.news_cache = {};
+			for(var i = 0; i < res.rows.length; i++){
+					var item ={
+						title: res.rows[i].title,
+						body:res.rows[i].body,
+						link:res.rows[i].link,
+						id:res.rows[i].id,
+						response_time:res.rows[i].response_time,
+						team:res.rows[i].short_id
+					};
+
+					if(!api.news_cache[res.rows[i].short_id]){
+						api.news_cache[res.rows[i].short_id]=[];
+					}
+					
+					
+					api.news_cache[res.rows[i].short_id].push(item);
+					
+			}
+
+		});
+
 	}
 
 	this.getActiveRssFeeds =function(){
@@ -380,28 +475,28 @@ values ($1,$2, $3, $4, $5 , $6)`
 
 	this.scanFeeds = function(feeds){
 		
-		for(var i in  feeds){
-			(function(feed){
+		// for(var i in  feeds){
+		// 	(function(feed){
 				
-				parser.parseURL(feed.account, function(err, parsed){
-					console.log(feed, parsed);
-					db.updateSMAPollDate(feed.id);
-				if(err){
-					console.log(feed.account, err)
-				}
-				else{
+		// 		parser.parseURL(feed.account, function(err, parsed){
+		// 			console.log(feed, parsed);
+		// 			db.updateSMAPollDate(feed.id);
+		// 		if(err){
+		// 			console.log(feed.account, err)
+		// 		}
+		// 		else{
 
 				
-					if(parsed &&parsed.feed && parsed.feed.entries){
-						for(var i =0; i < parsed.feed.entries.length ;i++){
-							var entry = parsed.feed.entries[i];
-							db.updateSMCache(feed.id, JSON.stringify(entry),entry.title, entry.guid||entry.link, entry.contentSnippet, entry.link);
-						}
-					}
-				}
-			}) ;
-		})(feeds[i]);;
-		}
+		// 			if(parsed &&parsed.feed && parsed.feed.entries){
+		// 				for(var i =0; i < parsed.feed.entries.length ;i++){
+		// 					var entry = parsed.feed.entries[i];
+		// 					db.updateSMCache(feed.id, JSON.stringify(entry),entry.title, entry.guid||entry.link, entry.contentSnippet, entry.link);
+		// 				}
+		// 			}
+		// 		}
+		// 	}) ;
+		// })(feeds[i]);;
+		// }
 	}
 
 

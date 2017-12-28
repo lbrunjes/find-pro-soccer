@@ -16,6 +16,8 @@ var rest_api = function(){
 	this.teams = {};
 	this.leagues = {};
 	this.games= {};
+	this.stadiums={};
+	this.news_cache={};
 	
 	
 
@@ -74,7 +76,11 @@ var rest_api = function(){
 					var key = api_requested.length>1?api_requested[2] : "xxx";
 					if(api.teams[key]){
 						response.writeHead(200,headers);
-						response.end(JSON.stringify(api.teams[key]));
+						response.end(JSON.stringify({
+							"team":api.teams[key], 
+							"games":(api.games[key]?api.games[key]:[]),
+							"news":(api.news_cache[key]?api.news_cache[key]:[])
+						}));
 					}
 					else{
 						response.writeHead(404,headers);
@@ -103,6 +109,26 @@ var rest_api = function(){
 						response.end(JSON.stringify({"teams not found": "Invalid post code, expected /team/DCU"}));
 					}
 					break;
+
+					//TODO might not be great to publically expose
+					case "admin-dump":
+					if(request.connection.remoteAddress == '127.0.0.1' || request.connection.remoteAddress == '::ffff:127.0.0.1' ){
+
+						response.writeHead(200,headers);
+						response.end(JSON.stringify({"teams":api.teams,
+							leagues:api.leagues,
+							stadiums:api.stadiums,
+							games:api.games,
+
+						}));
+					}else{
+						response.writeHead(400,headers);
+						response.end(JSON.stringify({"not local": "User is not at a local address: "+request.connection.remoteAddress}));
+					}
+					
+					break;
+
+
 
 					
 					default:

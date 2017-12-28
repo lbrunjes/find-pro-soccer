@@ -1,0 +1,11 @@
+# .htaccess
+Header set Access-Control-Allow-Origin "*"
+
+order deny,allow
+deny from all
+allow from 127.0.0.1
+allow from ::ffff:127.0.0.1
+#AuthUserFile /var/www/soccerapi/authlist
+#AuthName "Soccer Api Admin"
+#AuthType Basic
+#require valid-user
