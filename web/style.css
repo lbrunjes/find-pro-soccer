@@ -143,3 +143,7 @@ min-width: 350px;
 	border:1px solid #000;
 }
 
+#result nav a {
+	display:inline-block;
+	margin-right:1em;
+}

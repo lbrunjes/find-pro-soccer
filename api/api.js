@@ -15,7 +15,8 @@ var rest_api = function(){
 	this.zips = JSON.parse(fs.readFileSync("./data/zips.json"));
 	this.teams = {};
 	this.leagues = {};
-	this.games= {};
+	this.games= {}; //used to lookup teams
+	this.games_list= {}; //raw game data
 	this.stadiums={};
 	this.news_cache={};
 	
@@ -71,6 +72,15 @@ var rest_api = function(){
 						response.end(JSON.stringify({"teams":teams, "input":[api_requested[2],api_requested[3]]}));
 
 					break;
+					case "near": //coords/lat/lng/dist
+					
+						var teams = api.lookupTeamsByRadius(api_requested[2],api_requested[3], api_requested[4]?api_requested[4]:100);
+
+console.log(api_requested);
+						response.writeHead(200,headers);
+						response.end(JSON.stringify({"teams":teams, "input":[api_requested[2],api_requested[3], api_requested[4]]}));
+
+					break;
 
 					case "team":
 					var key = api_requested.length>1?api_requested[2] : "xxx";
@@ -119,6 +129,7 @@ var rest_api = function(){
 							leagues:api.leagues,
 							stadiums:api.stadiums,
 							games:api.games,
+							game_list: api.game_list
 
 						}));
 					}else{
@@ -148,7 +159,19 @@ var rest_api = function(){
 			}
 
 		}
+		this.lookupTeamsByRadius = (lat, long, dist)=>{
+			var teams = [];
+			for(var i in  api.teams){
+				var x = api.getDistHav(lat,long, api.teams[i].coords)
+				console.log(api.teams[i].name, x)
+				if(x < dist){
 
+					teams.push(api.teams[i]);
+				}
+			}
+			return teams;
+
+		};
 
 		this.lookupTeamsByLatLong = (lat, long, league)=>{
 

@@ -24,6 +24,11 @@
 			stadiums:{},
 			games:{},
 		}
+		this.html={
+			select_stadium: document.createElement("select"),
+			select_team:document.createElement("select"),
+			select_league:document.createElement("select")
+		};
 		this.jsonToHtml=function(json, doc){
 			if(!doc){doc = document;}
 			var el = null;
@@ -64,6 +69,28 @@
 		this.getDataDump = function(){
 			ajax(api_url+"/admin-dump", function(res){
 				admin.data = JSON.parse(res);
+
+				admin.html.select_team = document.createElement("select");
+				for(var i in admin.data.teams){
+					var option = document.createElement("option");
+					option.innerText = admin.data.teams[i].name + " ("+admin.data.teams[i].league +")";
+					option.setAttribute("value" ,i);
+					admin.html.select_team.appendChild(option);
+				}
+				admin.html.select_league = document.createElement("select"); 
+				for(var i in admin.data.leagues){
+					var option = document.createElement("option");
+					option.innerText = i ;
+					option.setAttribute("value", i);
+					admin.html.select_league.appendChild(option);
+				}
+				admin.html.select_stadium = document.createElement("select");
+				for(var i in admin.data.stadiums){
+					var option = document.createElement("option");
+					option.innerText = admin.data.stadiums[i].name + " ("+admin.data.stadiums[i].address2 +")";
+					option.setAttribute("value", admin.data.stadiums[i].id);
+					admin.html.select_stadium.appendChild(option);
+				}
 			});
 		};
 
@@ -80,8 +107,13 @@
 
 			do{
 				var match = re.exec(data);
+
 				if(match){
-					result.push(match);
+					var row = [];
+					for(var i = 0 ; i < match.length;i++ ){
+						row.push(match[i]);
+					}
+					result.push(row);
 				}
 
 			}while(match);
@@ -100,11 +132,716 @@
 			return data;
 		}
 		this.viewData=function(){
+			document.getElementById("editor").style.display="none";
+
 			var el = document.getElementById("result");
+			el.style.display="block";
 			while(el.children.length>0){
 				el.removeChild(el.children[0]);
 			}
-			el.appendChild(admin.jsonToHtml(admin.data));
+
+			//add jumpdown.
+
+			var nav = document.createElement("nav");
+			nav.setAttribute("class", "resultjump")
+			var jump = document.createElement("a");
+			jump.setAttribute("href", "#teams")
+			jump.innerText = "Teams";
+			nav.appendChild(jump);
+			jump = document.createElement("a");
+			jump.setAttribute("href", "#leagues")
+			jump.innerText = "Leagues";
+			nav.appendChild(jump);
+			jump = document.createElement("a");
+			jump.setAttribute("href", "#stadiums")
+			jump.innerText = "Stadiums";
+			nav.appendChild(jump);
+			jump = document.createElement("a");
+			jump.setAttribute("href", "#games")
+			jump.innerText = "Games";
+			nav.appendChild(jump);
+			el.appendChild(nav);
+
+
+			var header = document.createElement("h3");
+			header.setAttribute("id", "teams");
+			header.innerText = "Teams"
+
+			el.appendChild(header);
+			var table = document.createElement("table");
+			table.setAttribute("id", "teamlist");
+			var thead = document.createElement("tr");
+			var th = document.createElement("th");
+			th.innerText = "Crest";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Team";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "League";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Home stadium";
+			thead.appendChild(th);
+
+			// th = document.createElement("th");
+			// th.innerText = "Site";
+			// thead.appendChild(th);
+			
+			table.appendChild(thead);
+
+
+
+			for(var id in admin.data.teams){
+				var tr = document.createElement("tr");
+				
+				var td = document.createElement("td");
+				var crest =  document.createElement("img");
+				crest.setAttribute("src", "../"+admin.data.teams[id].crest);
+				crest.setAttribute("alt", admin.data.teams[id].name + " Crest");
+				td.appendChild(crest);
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				td.innerText = admin.data.teams[id].name+ " ";
+				var link =document.createElement("a");
+				link.setAttribute("onclick", "admin.editTeam('"+admin.data.teams[id].id+"')");
+				link.innerText = "edit";
+				td.appendChild(link);
+				tr.appendChild(td);
+				td = document.createElement("td");
+				td.innerText = admin.data.teams[id].league;
+				tr.appendChild(td);
+				td = document.createElement("td");
+				td.innerText = admin.data.teams[id].stadium 
+				tr.appendChild(td);
+
+				//details
+				// td = document.createElement("td");
+				// link =document.createElement("a");
+				// link.setAttribute("href", admin.data.teams[id].website);
+				// link.innerText = admin.data.teams[id].website;
+				// td.appendChild(link);
+				
+				tr.appendChild(td);
+				
+
+				table.appendChild(tr);
+			}
+			el.appendChild(table);
+			
+
+
+			header = document.createElement("h3");
+			header.setAttribute("id", "leagues");
+			header.innerText = "Leagues"
+
+			el.appendChild(header);
+
+			table = document.createElement("table");
+			table.setAttribute("id", "teamlist");
+			thead = document.createElement("tr");
+			th = document.createElement("th");
+			th.innerText = "Crest";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Name";
+			thead.appendChild(th);
+				th = document.createElement("th");
+			th.innerText = " ";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "No. Teams";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Gender";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Pyramid level";
+			thead.appendChild(th);
+			th = document.createElement("th");
+			th.innerText = "Professional";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Website";
+			thead.appendChild(th);
+			table.appendChild(thead);
+
+			for(var id in admin.data.leagues){
+				var tr = document.createElement("tr");
+				
+				var td = document.createElement("td");
+				var crest =  document.createElement("img");
+				crest.setAttribute("src", "../"+admin.data.leagues[id].crest);
+				crest.setAttribute("alt",id + " Crest");
+				td.appendChild(crest);
+				tr.appendChild(td);
+				
+
+				td = document.createElement("td");
+				td.innerText = id;
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				
+				var link =document.createElement("a");
+				link.setAttribute("onclick", "admin.editLeague('"+id+"')");
+				link.innerText = "edit";
+				td.appendChild(link);
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				td.innerText = admin.data.leagues[id].teams.length;
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				td.innerText = admin.data.leagues[id].gender;
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				td.innerText = admin.data.leagues[id].pyramid 
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				td.innerText = (admin.data.leagues[id].pro?"Professional":"Semi-Pro/Amateur");
+				tr.appendChild(td);
+
+				td = document.createElement("td");
+				link =document.createElement("a");
+				link.setAttribute("href", admin.data.leagues[id].website);
+				link.innerText = admin.data.leagues[id].website;
+				td.appendChild(link);
+				tr.appendChild(td);
+
+			
+
+				table.appendChild(tr);
+			}
+			el.appendChild(table);
+
+			//TODO
+			
+			header = document.createElement("h3");
+			header.setAttribute("id", "stadiums");
+			header.innerText = "Stadiums"
+			el.appendChild(header);
+
+			table = document.createElement("table");
+			table.setAttribute("id", "stadiumlist");
+			thead = document.createElement("tr");
+			
+			th = document.createElement("th");
+			th.innerText = " ";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Name";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Location ";
+			thead.appendChild(th);
+			table.appendChild(thead);
+
+			for(var id in admin.data.stadiums){
+				var tr = document.createElement("tr");
+
+
+				td = document.createElement("td");
+				link =document.createElement("a");
+				link.setAttribute("onclick", "admin.editStadium('"+id+"')"); //Note this is because we keep sorting from the db and I suck
+				link.innerText ="edit";
+				td.appendChild(link);
+				tr.appendChild(td);
+
+				var td = document.createElement("td");
+				td.innerText = admin.data.stadiums[id].name 
+				tr.appendChild(td);
+
+
+				var td = document.createElement("td");
+				td.innerText =admin.data.stadiums[id].address1 +"\n"+  admin.data.stadiums[id].address2 
+				tr.appendChild(td);
+
+				table.appendChild(tr);
+
+			}
+			el.appendChild(table);
+
+
+
+			
+
+			header = document.createElement("h3");
+			header.setAttribute("id", "games");
+			header.innerText = "Upcoming games"
+
+			el.appendChild(header);
+
+			table = document.createElement("table");
+			table.setAttribute("id", "gamelist");
+			thead = document.createElement("tr");
+
+			th = document.createElement("th");
+			th.innerText = " ";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Home";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Away";
+			thead.appendChild(th);
+			th = document.createElement("th");
+			th.innerText = "Stadium";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Kickoff";
+			thead.appendChild(th);
+
+			th = document.createElement("th");
+			th.innerText = "Notes";
+			thead.appendChild(th);
+			
+			table.appendChild(thead);
+
+
+			for(var id in admin.data.game_list){
+				var tr = document.createElement("tr");
+
+				var td = document.createElement("td");
+				link =document.createElement("a");
+				link.setAttribute("onclick", "admin.editGame("+admin.data.game_list[id].id+")");
+				link.innerText = "edit";
+				td.appendChild(link);
+				tr.appendChild(td);
+				
+				var td = document.createElement("td");
+				td.innerText = admin.data.teams[admin.data.game_list[id].home].name;
+				tr.appendChild(td);
+
+				var td = document.createElement("td");
+				td.innerText = admin.data.teams[admin.data.game_list[id].away].name;
+				tr.appendChild(td);
+
+				var td = document.createElement("td");
+				td.innerText = admin.data.game_list[id].stadium;
+				tr.appendChild(td);
+				var td = document.createElement("td");
+				td.innerText = admin.data.game_list[id].start;
+				tr.appendChild(td);
+				
+				var td = document.createElement("td");
+				td.innerText = admin.data.game_list[id].notes;
+				tr.appendChild(td);
+
+
+				table.appendChild(tr);
+			}
+			el.appendChild(table);
+		
+
+		}
+
+		this.editTeam = function(teamcode){
+			console.log("Team Editor:", teamcode);
+			var editor = document.getElementById("editor");
+			editor.style.display="block";
+			document.getElementById("result").style.display= "none";
+
+			while(editor.children.length>0){
+				editor.removeChild(editor.children[0]);
+			}
+
+			var form  = document.createElement("form");
+			form.setAttribute("onsubmit","admin.save(this)");
+			form.setAttribute("type","team");
+			var header = document.createElement("h3");
+			header.innerText = teamcode?"Editing "+teamcode:"Adding New Team";
+			form.appendChild(header);
+
+			var p = document.createElement("p");
+			var label = document.createElement("label");
+			label.setAttribute("for", "name");
+			label.innerText = "Name";
+			p.appendChild(label);
+			var input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "name");
+			input.setAttribute("value", teamcode?admin.data.teams[teamcode].name:"");
+			p.appendChild(input);
+			form.appendChild(p)
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "id");
+			label.innerText = "Short ID";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "id");
+			input.setAttribute("value", teamcode?admin.data.teams[teamcode].id:"");
+
+			if(teamcode){
+				input.setAttribute("disabled", "disabled");
+			}
+			else{
+				//TODO CHECK VS Values for new teams
+			
+			}	
+
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "league");
+			label.innerText = "League";
+			p.appendChild(label);
+			//TODO use select
+			 input  = admin.html.select_league.cloneNode(true);
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "league");
+			input.setAttribute("value", teamcode?admin.data.teams[teamcode].league:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "stadium");
+			label.innerText = "Home Stadium ";
+			var link= document.createElement("a");
+			link.setAttribute("onclick", "admin.editStadium()");
+			link.innerText = "New Stadium";
+			label.appendChild(link);
+			p.appendChild(label);
+			//TODO use select
+			input  = admin.html.select_stadium.cloneNode(true);
+			
+			p.appendChild(input);
+			form.appendChild(p);
+
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "crest");
+			label.innerText = "crest URL";
+			p.appendChild(label);
+			 input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "crest");
+			input.setAttribute("value", teamcode?admin.data.teams[teamcode].crest:"images/");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "website");
+			label.innerText = "Website";
+			p.appendChild(label);
+			 input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "website");
+			input.setAttribute("value", teamcode?admin.data.teams[teamcode].website:"https://");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "submit");
+			label.innerText = "";
+			p.appendChild(label);
+			 input  = document.createElement("input");
+			input.setAttribute("type", "submit");
+			input.setAttribute("name", "submit");
+			input.setAttribute("value", teamcode?"Update":"Create");
+			p.appendChild(input);
+			form.appendChild(p);
+
+
+
+			editor.setAttribute("style","");
+			editor.appendChild(form);
+
+
+			if(admin.data.games[teamcode]){
+				header = document.createElement("h3");
+				header.innerText = "Upcoming Games";
+				form.appendChild(header);
+
+				editor.appendChild(admin.jsonToHtml(admin.data.games[teamcode]));
+			}
+
+			if(teamcode){
+				header = document.createElement("h3");
+				header.innerText = "Raw Data for to debug";
+				form.appendChild(header);
+				editor.appendChild(admin.jsonToHtml(admin.data.teams[teamcode]));
+			}
+
+
+
+		};
+
+		this.editLeague = function(league){
+			console.log("Edit league", league);
+			
+			var editor = document.getElementById("editor");
+			editor.style.display="block";
+			document.getElementById("result").style.display= "none";
+
+			while(editor.children.length>0){
+				editor.removeChild(editor.children[0]);
+			}
+
+			var form  = document.createElement("form");
+			form.setAttribute("onsubmit","admin.save(this)");
+			form.setAttribute("type","league");
+			var header = document.createElement("h3");
+			header.innerText = league?"Editing "+league:"Adding New League";
+			form.appendChild(header);
+
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "leaguename");
+			label.innerText = "Name";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "leaguename");
+			input.setAttribute("value", league?admin.data.leagues[league].name:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "shortname");
+			label.innerText = "Abbreviation";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "shortname");
+			input.setAttribute("value", league?league:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "gender");
+			label.innerText = "gender";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "gender");
+			input.setAttribute("value", league?admin.data.leagues[league].gender:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "pyramid");
+			label.innerText = "Pyramid level";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "number");
+			input.setAttribute("name", "pyramid");
+			input.setAttribute("value", league?admin.data.leagues[league].pyramid:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "professional");
+			label.innerText = "is Professional";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "checkbox");
+			input.setAttribute("name", "professional");
+			input.setAttribute("value", league?admin.data.leagues[league].professional:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "website");
+			label.innerText = "Website";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "url");
+			input.setAttribute("name", "website");
+			input.setAttribute("value", league?admin.data.leagues[league].website:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "submit");
+			label.innerText = "";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "submit");
+			input.setAttribute("name", "submit");
+			input.setAttribute("value", league?"Update":"Create");
+			p.appendChild(input);
+			form.appendChild(p);
+
+
+
+			editor.appendChild(form);
+
+		};
+		this.editStadium = function(id){
+			console.log("Edit Stadium", id)
+			
+			var editor = document.getElementById("editor");
+			editor.style.display="block";
+			document.getElementById("result").style.display= "none";
+
+			while(editor.children.length>0){
+				editor.removeChild(editor.children[0]);
+			}
+
+			var form  = document.createElement("form");
+			form.setAttribute("onsubmit","admin.save(this)");
+			form.setAttribute("type","stadium");
+			var header = document.createElement("h3");
+			header.innerText = id?"Editing Stadium # "+admin.data.stadiums[id].id:"Adding New Stadium";
+			form.appendChild(header);
+
+
+			
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "stadium_name");
+			label.innerText = "Name";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "stadium_name");
+			input.setAttribute("value", id?admin.data.stadiums[id].name:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "address1");
+			label.innerText = "Address 1";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "address1");
+			input.setAttribute("value", id?admin.data.stadiums[id].address1:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "address2");
+			label.innerText = "address 2";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "text");
+			input.setAttribute("name", "address2");
+			input.setAttribute("value", id?admin.data.stadiums[id].address2:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "latitude");
+			label.innerText = "Latitude";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "number");
+			input.setAttribute("name", "latitude");
+			input.setAttribute("value", id?admin.data.stadiums[id].latitude:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "longitude");
+			label.innerText = "Longitude";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "number");
+			input.setAttribute("name", "longitude");
+			input.setAttribute("value", id?admin.data.stadiums[id].longitude:"");
+			p.appendChild(input);
+			form.appendChild(p);
+
+
+			p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "submit");
+			label.innerText = "";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "submit");
+			input.setAttribute("name", "submit");
+			input.setAttribute("value", id?"Update":"Create");
+			p.appendChild(input);
+			form.appendChild(p);
+
+
+
+			editor.appendChild(form);
+
+
+		};
+		this.editGame = function(id){
+			console.log("Edit Game", id)
+			
+			var editor = document.getElementById("editor");
+			document.getElementById("result").style.display= "none";
+
+			while(editor.children.length>0){
+				editor.removeChild(editor.children[0]);
+			}
+
+			var form  = document.createElement("form");
+			form.setAttribute("onsubmit","admin.save(this)");
+			form.setAttribute("type","game");
+			var header = document.createElement("h3");
+			header.innerText = id?"Editing Game #"+id:"Adding New Game";
+			form.appendChild(header);
+
+ 			header = document.createElement("h3");
+			header.innerText ="TODO";
+			form.appendChild(header);
+
+				p = document.createElement("p");
+			label = document.createElement("label");
+			label.setAttribute("for", "submit");
+			label.innerText = "";
+			p.appendChild(label);
+			input  = document.createElement("input");
+			input.setAttribute("type", "submit");
+			input.setAttribute("name", "submit");
+			input.setAttribute("value", id?"Update":"Create");
+			p.appendChild(input);
+			form.appendChild(p);
+
+			editor.appendChild(form);
+
+		};
+
+		this.save=function(form){
+			console.log("saving this", form);
+
+		return false;
 		}
 
 	};
@@ -126,7 +863,7 @@
 		<div id="result">
 			
 		</div>
-		<div id="games">
+		<div id="editor" style="display:none;">
 			<textarea id="game_input"></textarea>
 			<input id="regex" value="(.+?),\s*(.+)"/>
 			<div id="regexPreview"></div>
@@ -136,12 +873,15 @@
 			<div id="game_intermediate_output">
 			</div>
 		</div>
-		<div id="data">
-		</div>
+	
 		<nav id="actions">
 			Actions:
 			<button onclick="admin.importGames()">Import Games</button>
 			<button onclick="admin.viewData()">View Data</button>
+			<button onclick="admin.editTeam()">Add Team</button>
+			<button onclick="admin.editLeague()">Add League</button>
+			<button onclick="admin.editStadium()">Add Stadium</button>
+			<button onclick="admin.editGame()">Add Game</button>
 		</nav>
 		
 	

@@ -47,7 +47,12 @@ var startup = function(){
 	}
 	else if(location.search.indexOf("lat=")>=0 && location.search.indexOf("lng=")>=0){
 		var qs = getQS();
+		if(!qs["rng"]){
 		lookupcoords(qs["lat"],qs["lng"]);
+		}
+		else{
+			lookuprange(qs["lat"],qs["lng"], qs["rng"]);
+		}
 	}
 	else{
 		//Display something nice?
@@ -96,6 +101,17 @@ var lookupcoords= function(lat, lng){
 		})
 
 }
+var lookuprange= function(lat, lng ,radius){
+
+
+	ajax(api_url+"/near/"+lat+"/"+lng+"/"+radius, 
+		function(res){
+			history.replaceState({}, "Looking up that radius ("+lat+","+lng+","+radius+")", location.pathname+"?lat="+lat+"&lng="+lng+"&rng="+radius);
+
+			formatRange(JSON.parse(res));
+		})
+
+}
 var markers = [];
 
 var approxDist = function(input, target){
@@ -117,12 +133,16 @@ var formatTeams = function(data){
 	while(el.children.length>0){
 		el.removeChild(el.children[0]);
 	}
-	// var label =document.createElement("h3");
-	// 	label.innerText="Nearest Teams";//
-		//Math.round(data.input[0] *100)/100 + ","+ Math.round(data.input[1] *100)/100  ;
-
-		
-		// el.appendChild(label);
+	var header = document.createElement("header");
+	header.setAttribute("class","league_list");
+	var label =document.createElement("h2");
+	label.innerText = "Nearest Team to you in each league"
+	header.appendChild(label);
+	var link = document.createElement("a");
+	link.innerText = "Show All Nearby Teams"
+	link.setAttribute("onclick","lookuprange("+data.input[0]+","+data.input[1]+",100)");
+	header.appendChild(link);
+	el.appendChild(header);
 
 		var label =document.createElement("div");
 		label.setAttribute("id","result-list");
@@ -133,7 +153,7 @@ var formatTeams = function(data){
 		markers=[];
 
 
-		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
+		markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately) <a onclick='lookuprange("+data.input[0]+","+data.input[1]+",100)'>Show All Nearby Teams</a>"));
 
 
 		for(var league in data.teams){
@@ -192,6 +212,90 @@ el.appendChild(label);
 map.fitBounds([min,max]);
 
 };
+var formatRange =function( data){
+	var el = document.getElementById("result");
+	while(el.children.length>0){
+		el.removeChild(el.children[0]);
+	}
+	var header = document.createElement("header");
+	header.setAttribute("class","league_list");
+	var label =document.createElement("h2");
+	label.innerText = "All Teams  near you ("+Object.keys(data.teams).length+")";
+	header.appendChild(label);
+	el.appendChild(header);
+
+	
+
+	label =document.createElement("div");
+	label.setAttribute("class","league_teams");
+
+
+	
+	//deal with zooming the map to the right places.
+	for(var i = 0; i < markers.length; i++){
+		map.removeLayer(markers[i]);
+	}
+	markers=[];
+
+	markers.push(L.marker(data.input).addTo(map).bindPopup("You (Approximately)"));
+
+
+
+	for(var teamcode in data.teams){
+
+
+		var team = data.teams[teamcode];
+		label.appendChild(formatTeam(data.teams[teamcode]));
+
+
+
+	//add crest to maps
+	var icon = L.icon({
+		iconUrl: team.crest,
+		iconSize:[64,64],
+		iconAnchor:[32,64],
+
+	});
+	var okay=true;
+	for(var i =0; i < markers.length;i++){
+		if(markers[i]._latlng.lat == team.coords[0] &&
+			markers[i]._latlng.lng == team.coords[1]){
+	okay = false;
+	break;
+}
+}
+
+if(!okay){
+	icon.options.iconAnchor[1] -= 32 + Math.random() *32;
+	icon.options.iconAnchor[0] -=  Math.random() *32;
+}
+
+
+markers.push(L.marker(team.coords, {icon:icon,
+	riseOnHover:true}).addTo(map)
+.bindPopup(" Open <a href='"+team.website+"' target='_blank'>"+team.name+"</a> Site"));
+
+
+}
+el.appendChild(label);
+
+	//establish a boudnig box for stuff so the suer can see it.
+	var max =[-90,-180];
+	var min = [90,180]
+	for(var i =0; i < markers.length;i++){
+		min[0] = min[0] < markers[i]._latlng.lat?min[0]: markers[i]._latlng.lat;
+		min[1] = min[1] < markers[i]._latlng.lng?min[1]: markers[i]._latlng.lng;
+		max[0] = max[0] > markers[i]._latlng.lat?max[0]: markers[i]._latlng.lat;
+		max[1] = max[1] > markers[i]._latlng.lng?max[1]: markers[i]._latlng.lng;
+
+	};
+//	console.log(min,max);
+map.fitBounds([min,max],  {padding: [50,50]});
+
+};
+
+
+
 //display teams on the teams div
 var formatLeague = function(data){
 	var el = document.getElementById("result");
@@ -213,6 +317,7 @@ var formatLeague = function(data){
 	header.appendChild(label);
 	
 	el.appendChild(header);
+
 	var details  =document.createElement("div");
 	details.setAttribute("class", "league_details");
 	
@@ -225,6 +330,7 @@ var formatLeague = function(data){
 
 	details.appendChild(generateSocialIcons(data.league));
 	el.appendChild(details);
+
 
 	var l_header =document.createElement("header");
 	label.setAttribute("class","league_team_header");

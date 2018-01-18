@@ -216,6 +216,8 @@ var db_api = function(){
 					api.leagues[result.league].pyramid = result.pyramid_level;
 					api.leagues[result.league].gender = result.gender;
 					api.leagues[result.league].crest = result.crest_url;
+					api.leagues[result.league].name = result.name;
+					
 
 				}
 
@@ -224,21 +226,21 @@ var db_api = function(){
 		
 	};
 	this.loadStadiumsFromSQL = function(){
-		var query= `select * from soccerapi.stadium`;
+		var query= `select 
+		id, name, address1, address2, latitude, longitude 
+		 from soccerapi.stadium order by name, address2`;
 		db.pg_client.query(query, (err, res) => {
 				
 			if(err){
-				console.log("sql error, loading game data",err);
+				console.log("sql error, loading stadium data",err);
 			}
+			api.stadiums = res.rows;
 			
-			for(var i = 0; i<res.rows.length; i++){
-				api.stadiums[res.rows[i].id] = res.rows[i];
-			}
 		});
 	};
 
 	this.loadUpcomingGamesFromSQL = function(){
-console.log("loading league data from sql")
+console.log("loading game data from sql")
 		
 		var query= `select 
 home.short_id as home_id,
@@ -249,6 +251,7 @@ away.short_id as away_id,
 away.name as away_name,
 away.league_id as away_league,
 
+stadium.id as stadium_id,
 stadium.name as stadium_name,
 stadium.address1 as stadium_address1,
 stadium.address2 as stadium_address2,
@@ -256,7 +259,8 @@ stadium.latitude as stadium_latitude,
 stadium.longitude as stadium_longitude,
 
 game.start as game_start,
-game.notes as game_notes
+game.notes as game_notes,
+game.id as game_id
 
 
 from soccerapi.game
@@ -274,7 +278,7 @@ order by game.start, home_id
 				if(err){
 					console.log("sql error, loading game data",err);
 				}
-				
+				api.game_list = [];
 				for(var i = 0; i<res.rows.length; i++){
 					var result = res.rows[i];
 					
@@ -311,6 +315,16 @@ order by game.start, home_id
 					api.games[result.away_id].push(game);
 
 
+					api.game_list.push({
+						id:result.game_id,
+						home:result.home_id,
+						away:result.away_id,
+						start:result.game_start,
+						notes:result.game_notes,
+						stadium: result.stadium_name,
+						stadium_id: result.stadium_id,
+						
+					})
 				}
 			});
 
@@ -324,6 +338,7 @@ order by game.start, home_id
 		db.loadSocialDataFromSQL();
 		db.getActiveRssFeeds();
 		//db.loadNewsCache();
+		db.loadStadiumsFromSQL();
 	}
 
 	
